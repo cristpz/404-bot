@@ -143,8 +143,8 @@ const random2dnsfwtrap = ['https://cdn.discordapp.com/attachments/46693112470333
 'https://cdn.discordapp.com/attachments/466931124703330305/484320642775384085/b0da7938-d53d-4c89-b75f-1ba34bd41d48.png',
 ]
 
-module.exports.run = async (bot, message, args) => {
-
+module.exports.run = async (client, message, args, level) => {
+if (!message.channel.nsfw) return message.channel.send(":warning: This channel is not marked as **NSFW**")
 message.channel.send(`${message.author} l-lewd...~`, {
     file: random2dnsfwtrap[Math.floor(Math.random() * random2dnsfwtrap.length)]
 });
