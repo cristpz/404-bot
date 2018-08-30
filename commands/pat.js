@@ -10,14 +10,12 @@ const randompat = ['https://i.pinimg.com/originals/a0/6d/65/a06d65ad49f019aaae3f
 'https://i.pinimg.com/originals/06/6d/57/066d573fa2b6876f2e8dbf36b68fa061.gif',
 'https://vignette.wikia.nocookie.net/acchikocchi/images/7/7c/Tumblr_nrtze7wEz41tlazn5o2_500.gif/revision/latest?cb=20160525144718',
 ]
-module.exports.run = async (bot, message, args) => {
-  if(!message.mentions.members.first().user.username === message.isMentioned(message.author) ) {
 
- const patEmbed = new Discord.RichEmbed()
- .setColor("3a0be7")
- .setTitle(`${message.author.username} patted ${message.mentions.members.first().user.username}`)
- .setImage('file: randompat[Math.floor(Math.random() * randompat.length)]')
- message.channel.send(patEmbed);
+module.exports.run = async (client, message, args, level) => {
+ if(!message.mentions.members.first().user.username === message.isMentioned(message.author) ) {
+message.channel.send(`${message.author} patted ${message.mentions.members.first().user.username}`, {
+    file: randompat[Math.floor(Math.random() * randompat.length)]
+  });
  }
 }
 
