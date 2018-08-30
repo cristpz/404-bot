@@ -112,8 +112,8 @@ if(cmd === `${prefix}info`){
   .addField("Command Count", "36 currently")
   .addField("Cars", " `nsx` `cliowilliams` `accord` `sc300` `lanos` `matiz` `polonez` `206` `207` `306` `307` `406` `407` ")
   .addField("Fun", " `8ball` `cat` `dog` `google` `pick` `ratewaifu` ")
-  .addField("Actions", " `kill` `suicide` `pat` ")
-  .addField("Lewd (NSFW only)", " `lewdneko` `lewdtrap` ")
+  .addField("Actions", " `kill` `suicide` `pat` `hug` ")
+  .addField("Lewd (NSFW only)", " `lewdneko` `lewdtrap` `fuck (soon)` ")
   .addField("Moderation", " `kick` `ban` `addrole` `removerole` `prefix` ")
   .addField("Miscellaneous", " `ping` `avatar` `hello` `salute` `die` `nou` `botowner` ")
 
