@@ -1,0 +1,21 @@
+{
+  "name": "404bot",
+  "version": "1.0.0",
+  "description": "a basic multi-purpose bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "now script launched!"
+  },
+  "author": "crist",
+  "license": "ISC",
+  "dependencies": {
+    "discord-eco": "0.0.10",
+    "discord.js": "^11.3.2",
+    "google": "^2.1.0",
+    "mongoose": "^5.2.10",
+    "superagent": "^3.8.3"
+  },
+  "devDependencies": {
+    "eslint": "^5.1.0"
+  }
+}
