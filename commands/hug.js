@@ -11,7 +11,7 @@ const randompat = ['https://media1.tenor.com/images/49a21e182fcdfb3e96cc9d9421f8
 'https://i.imgur.com/pME21N2.gif',
 'https://pa1.narvii.com/5925/bfd5fdfa6132c17a1c768a88536afb0589f7aeb6_hq.gif',
 'https://media.giphy.com/media/wnsgren9NtITS/giphy.gif',\
-'https://media.tenor.com/images/ac5a0c47918dece5e69c1cc9fbb416a9/tenor.gif'
+'https://media.tenor.com/images/ac5a0c47918dece5e69c1cc9fbb416a9/tenor.gif',
 ]
 
 module.exports.run = async (client, message, args, level) => {
