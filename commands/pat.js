@@ -7,7 +7,6 @@ const randompat = ['https://i.pinimg.com/originals/a0/6d/65/a06d65ad49f019aaae3f
 'https://pa1.narvii.com/6625/e4444261c20ffce57d8168a8496bfe90e5ca362a_hq.gif',
 'https://archive-media-0.nyafuu.org/bant/image/1512/39/1512395039994.gif',
 'https://i.pinimg.com/originals/06/6d/57/066d573fa2b6876f2e8dbf36b68fa061.gif',
-'https://vignette.wikia.nocookie.net/acchikocchi/images/7/7c/Tumblr_nrtze7wEz41tlazn5o2_500.gif/revision/latest?cb=20160525144718',
 ]
 
 module.exports.run = async (client, message, args, level) => {
