@@ -1,3 +1,5 @@
+const discord = require("discord.js");
+
 exports.run = async (client, msg, [question, ...option]) => {
     if (!question) { return msg.reply("You need to provide a question."); }
     else if (option.length < 2) { return msg.reply("You need to provide at least two options!"); }
