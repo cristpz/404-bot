@@ -13,7 +13,7 @@ const randompat = ['https://i.pinimg.com/originals/a0/6d/65/a06d65ad49f019aaae3f
 
 module.exports.run = async (client, message, args, level) => {
  if(!message.mentions.members.first().user.username === message.isMentioned(message.author) ) {
-message.channel.send(`**${message.author}** patted **${message.mentions.members.first().user.username}**`, {
+message.channel.send(`**${message.author.username}** patted **${message.mentions.members.first().user.username}**`, {
     file: randompat[Math.floor(Math.random() * randompat.length)]
   });
  }
