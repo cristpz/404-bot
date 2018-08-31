@@ -35,7 +35,6 @@ bot.on("guildCreate", guild => {
 
 bot.on("guildDelete", guild => {
   console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
-  bot.user.setActivity(`Serving ${bot.guilds.size} servers`);
 });
 
 bot.on("message", async message => {
@@ -116,10 +115,7 @@ if(cmd === `${prefix}info`){
   .addField("Lewd (NSFW only)", " `lewdneko` `lewdtrap` `fuck` ")
   .addField("Moderation", " `kick` `ban` `addrole` `removerole` `prefix` ")
   .addField("Miscellaneous", " `ping` `avatar` `hello` `salute` `die` `nou` `botowner` ")
-
-
-  .addField("Add me to your discord server aswell:", "https://discordapp.com/api/oauth2/authorize?client_id=468180436032421898&permissions=8&scope=bot")
-  .addField("Limited permissions invite link:", "https://discordapp.com/oauth2/authorize?client_id=468180436032421898&permissions=1609952374&scope=bot")
+  .addField("Vote/Invite", "https://discordbots.org/bot/468180436032421898")
   .addField("Join my discord server:", "https://discord.gg/Jtb6gs5")
   .addField("Since", "Monday 16th of July 2018");
 
