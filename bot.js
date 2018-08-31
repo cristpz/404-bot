@@ -116,8 +116,6 @@ if(cmd === `${prefix}info`){
   .addField("Moderation", " `kick` `ban` `addrole` `removerole` `prefix` ")
   .addField("Miscellaneous", " `ping` `avatar` `hello` `salute` `die` `nou` `botowner` ")
   .addField("Vote/Invite", "https://discordbots.org/bot/468180436032421898")
-  .addField("Join my discord server:", "https://discord.gg/Jtb6gs5")
-  .addField("Since", "Monday 16th of July 2018");
 
    return message.channel.send(botembed);
   }
