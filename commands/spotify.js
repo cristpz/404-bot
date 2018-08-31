@@ -26,7 +26,7 @@ module.exports.run = (client, message, args) => {
             return message.channel.send(spotifyembed);
 
         } catch (error) {
-            return message.channel.send(`\`[ERROR ❌]\`, ${user.username} may not be listening to a registered sound`);
+            return message.channel.send("[ERROR ❌]", ${user.username} may not be listening to a registered sound`);
         }
 
     } else {
