@@ -855,7 +855,119 @@ if(cmd === `${prefix}say`) {
     message.delete().catch(O_o=>{});
     message.channel.send(sayMessage);
 }
+if(cmd === `${prefix}hakosuka`) {
+    return message.channel.send(`
+**Overview**
 
+Production: Feb 1969 – 1972
+Designer: Shinichiro Sakurai
+
+**Body and chassis**
+
+Body style:	
+4-door sedan
+2-door coupe
+
+Layout: FR layout
+
+**Powertrain**
+
+Engine: 2.0 L S20 I6
+Transmission: 5-speed manual
+
+**Dimensions**
+
+Wheelbase: 2,570 mm (101.2 in)
+Length: 4,400 mm (173.2 in)
+Width: 1,665 mm (65.6 in)
+Height: 1,370 mm (53.9 in)
+Curb weight: 1,100 kg (2,425.1 lb)
+
+(Note: Hakosuka (Japanese: ハコスカ) was a name given by fans of the PGC and KPGC10 Skyline GT-R's.)
+
+Image Link: https://upload.wikimedia.org/wikipedia/commons/c/cc/C10GT-R.jpg`)
+}
+if(cmd === `${prefix}corolla`) {
+    return message.channel.send(`
+ **Overview**
+Manufacturer: Toyota Motor Corporation
+Also called: Toyota Sprinter Carib
+Toyota Sprinter
+Chevrolet Prizm
+Production: May 1995–March 2002
+Assembly: Cambridge, Ontario, Canada (TMMC)
+Adapazari, Turkey
+Fremont, California (NUMMI)
+Toyota City, Japan
+Durban, South Africa
+Indaiatuba, Brazil
+Santa Rosa, Laguna, Philippines
+Karawang, Indonesia
+Chachoengsao, Thailand
+Thames, New Zealand (CKD)
+
+**Body and chassis**
+
+Class: Compact car
+Body style: 4-door sedan
+2-door coupé (Japan)
+3-door hatchback
+5-door liftback
+5-door station wagon
+Layout: FF layout
+Platform: Toyota Corolla
+
+**Powertrain**
+
+Engine:	
+//Petrol
+1,331 cc 4E-FE I4 (E110)
+1,398 cc 4ZZ-FE I4
+1,498 cc 5A-FE I4
+1,587 cc 4A-GE/4A-FE I4
+1,598 cc 3ZZ-FE I4
+1,762 cc 7A-FE I4 (AE112/115)
+
+//Diesel
+1,974 cc 2C-III I4
+2,184 cc 3C-E I4
+
+Transmission: 5-speed manual
+6-speed manual (Japan/Europe)
+3/4-speed automatic
+
+**Dimensions**
+
+Wheelbase: 2,465 mm (97.0 in)
+Length: Hatchback (4,120 mm (162 in))
+Liftback (4,270 mm (168 in))
+Saloon (4,315 mm (169.9 in))
+Station wagon: 4,340 mm (171 in)
+Width: 1,690 mm (67 in)
+Height: Hatchback, liftback, sedan (1,380 mm (54 in))
+Wagon (1,445 mm (56.9 in))
+Kerb weight: 1,095 kg (2,414 lb)
+
+**Chronology**
+
+Predecessor: Corolla E100
+Successor: Corolla E120
+
+Image Link: https://upload.wikimedia.org/wikipedia/commons/6/60/1995_Toyota_Corolla_01.jpg`)
+}
+if(cmd === `${prefix}corollawrc`) {
+	return message.channel.send(`
+The Toyota Corolla WRC (World Rally Car) is special purpose rally car based on the European Corolla 3 door Hatchback, and powered by a modified 3S-GTE engine and 4WD system from the Toyota Celica GT-Four ST205.
+
+It was launched in July 1997, and made its debut in the 1997 Rally of Finland with 1994 World Rally Champion, Didier Auriol, and Marcus Grönholm behind the wheel.
+
+For 1998 WRC season, double World Rally Champions Carlos Sainz and Luis Moya joined the Toyota Team Europe, and won the 1998 Monte Carlo Rally. It was the first victory for 
+the Corolla WRC. Didier Auriol won the 1999 China Rally, and Toyota won the 1999 manufacturer's title while the company stopped participating in rallying, in order to prepare for a 
+switch to Formula One in 2002.
+
+Image Link: https://upload.wikimedia.org/wikipedia/commons/e/eb/Toyota_Corolla_WRC_01.jpg`)
+}
+	
 });
 
 bot.login(process.env.BOT_TOKEN);
