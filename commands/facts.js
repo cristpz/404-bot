@@ -3,12 +3,12 @@ const superagent = require("superagent");
 
 module.exports.run = async (bot, message, args) => {
 
-  let {body} = await superagent
+  let {text} = await superagent
   .get(`https://nekos.life/api/v2/img/fact`);
 
   let nekoembed = new Discord.RichEmbed()
   .setColor("#3a0be7")
-  .setImage(body.url);
+  .setImage(text.url);
 
   message.channel.send(nekoembed);
 
