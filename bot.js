@@ -110,7 +110,7 @@ if(cmd === `${prefix}info`){
   .setThumbnail(bicon)
   .addField("Command Count", "41 currently")
   .addField("Cars", " `nsx` `cliowilliams` `accord` `sc300` `lanos` `matiz` `polonez` `206` `207` `306` `307` `406` `407` `hakosuka` `corolla` `corollawrc` ")
-  .addField("Fun", " `8ball` `cat` `dog` `google` `pick` `ratewaifu` ")
+  .addField("Fun", " `8ball` `cat` `dog` `google` `pick` `rate` `ratewaifu` ")
   .addField("Actions", " `kill` `suicide` `pat` `hug` ")
   .addField("Lewd (NSFW only)", " `lewdneko` `lewdtrap` `fuck` ")
   .addField("Moderation", " `kick` `ban` `addrole` `removerole` `prefix` ")
