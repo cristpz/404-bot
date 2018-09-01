@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
 
   let hugembed = new Discord.RichEmbed()
   .setColor("#3a0be7")
-  .setTitle('${message.author.username} hugged ${message.mentions.members.first().user.username}')
+  .setTitle(`${message.author.username} hugged ${message.mentions.members.first().user.username}`)
   .setImage(body.url);
 
   message.channel.send(hugembed);
@@ -16,5 +16,5 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-  name: "dog"
+  name: "hug"
 }
