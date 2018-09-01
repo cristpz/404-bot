@@ -108,7 +108,7 @@ if(cmd === `${prefix}info`){
   .setDescription(`**Hello ${message.author}, I'm 404, a basic multi-purpose bot made by Akemi#4040**`)
   .setColor("#3a0be7")
   .setThumbnail(bicon)
-  .addField("Command Count", "43 currently")
+  .addField("Command Count", "44 currently")
   .addField("Cars", " `nsx` `cliowilliams` `accord` `sc300` `lanos` `matiz` `polonez` `206` `207` `306` `307` `406` `407` `hakosuka` `corolla` `corollawrc` ")
   .addField("Fun", " `8ball` `cat` `dog` `google` `pick` `rate` `ratewaifu` ")
   .addField("Actions", " `kill` `suicide` `pat` `hug` `kiss` ")
