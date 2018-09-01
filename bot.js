@@ -108,8 +108,8 @@ if(cmd === `${prefix}info`){
   .setDescription(`**Hello ${message.author}, I'm 404, a basic multi-purpose bot made by Akemi#4040**`)
   .setColor("#3a0be7")
   .setThumbnail(bicon)
-  .addField("Command Count", "50 currently")
-  .addField("Cars", " `nsx` `cliowilliams` `accord` `sc300` `lanos` `matiz` `polonez` `206` `207` `306` `307` `406` `407` `hakosuka` `corolla` `corollawrc` ")
+  .addField("Command Count", "55 currently")
+  .addField("Cars", " `nsx` `cliowilliams` `accord` `sc300` `lanos` `matiz` `polonez` `206` `207` `306` `307` `406` `407` `hakosuka` `corolla` `corollawrc` `a4` `impreza` `eclipse` `w8` `gt40` ")
   .addField("Fun", " `8ball` `cat` `dog` `google` `pick` `rate` `ratewaifu` `neko` `generateavatar` ")
   .addField("Actions", " `suicide` `slap` `pat` `hug` `cuddle` `kiss` ")
   .addField("Lewd (NSFW only)", " `lewdneko` `lewdtrap` `fuck` `randomhentai` `spank` `bj` ")
@@ -263,7 +263,7 @@ Curb weight: 3,485 lb (1,581 kg) (1992 SC 300 manual)
 3,505 lb (1,590 kg) (1992 SC 300 automatic)
 3,604 lb (1,635 kg) (1992 SC 400)
 
-Image Link: https://cdn.discordapp.com/attachments/462742060215304204/467868924780740609/StreetLegal_Redline2015-03-0616-28-28-14.png`)
+Image Link: https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/1996_Lexus_SC_300_3.0L_front_6.13.18.jpg/1024px-1996_Lexus_SC_300_3.0L_front_6.13.18.jpg`)
 }
 
 if (cmd === `${prefix}salute`) {
@@ -890,6 +890,7 @@ Image Link: https://upload.wikimedia.org/wikipedia/commons/c/cc/C10GT-R.jpg`)
 if(cmd === `${prefix}corolla`) {
     return message.channel.send(`
  **Overview**
+
 Manufacturer: Toyota Motor Corporation
 Also called: Toyota Sprinter Carib
 Toyota Sprinter
@@ -966,6 +967,218 @@ the Corolla WRC. Didier Auriol won the 1999 China Rally, and Toyota won the 1999
 switch to Formula One in 2002.
 
 Image Link: https://upload.wikimedia.org/wikipedia/commons/e/eb/Toyota_Corolla_WRC_01.jpg`)
+}
+	 if(cmd === `${prefix}a4`){
+   return message.channel.send(`
+**Overview**
+Production: 2015–present
+Model years: 2016–present
+Designer: Frank Rimili
+Ruediger Mueller (interior)
+
+**Body and chassis**
+
+Body style: 4-door saloon/sedan,
+5-door Avant (estate/wagon)
+Platform: Volkswagen Group B9 (MLB/MLP) platform
+Related: 
+Audi A5
+Audi Q7
+
+**Powertrain**
+
+Engine:	
+Inline-four petrol engine
+V6 petrol engine
+Inline-four diesel engine
+V6 diesel engine
+Transmission: 6-speed manual
+7-speed S-tronic
+8-speed Tiptronic
+
+**Dimensions**
+
+Wheelbase: 2,820 mm (111.0 in)
+Length: 4,726 mm (186.1 in)
+Width: 1,842 mm (72.5 in)
+Height: 1,427 mm (56.2 in)
+
+Image Link: https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Audi_A4_Avant_2.0_TFSI_quattro.jpg/1024px-Audi_A4_Avant_2.0_TFSI_quattro.jpg`);
+}
+	 if(cmd === `${prefix}w8`){
+   return message.channel.send(`
+**Overview**
+
+Manufacturer: Vector Aeromotive Corporation
+Also called: Vector W8 Twin-Turbo
+Production: 
+1989–1993
+22 produced
+Model years: 1990–1993
+Assembly: Wilmington, Los Angeles, California
+Designer: Gerald Wiegert
+David Kostka
+
+**Body and chassis**
+
+Class: Sports car (S)
+Body style: 2-door coupé
+Layout: Rear transverse mid-engine, rear-wheel drive
+Platform: Carbon fiber and Kevlar body panels bonded on an aluminum honeycomb monocoque
+
+**Powertrain**
+
+Engine: 6.0 L Rodeck twin-turbocharged V8
+Transmission: 3-speed General Motors Turbo-Hydramatic 425 automatic
+
+**Dimensions**
+
+Wheelbase: 103.0 in (2,616 mm)
+Length: 172.0 in (4,369 mm)
+Width: 76.0 in (1,930 mm)
+Height: 42.5 in (1,080 mm)
+Curb weight: 1,506 kg (3,320 lb) (est.)
+
+**Chronology**
+
+Predecessor: Vector W2
+Successor: Vector WX-3
+
+Image Link: https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/VectorW8.jpg/1024px-VectorW8.jpg`);
+}
+	 if(cmd === `${prefix}impreza`){
+   return message.channel.send(`
+**Overview**
+
+Production: 
+2016–present
+2017–present (XV)
+
+**Body and chassis**
+
+Body style: 
+4-door sedan (GK)
+5-door hatchback (GT)
+Platform: Subaru Global Platform
+
+**Powertrain**
+
+Engine: 
+1.6 L H4 (gasoline)
+2.0 L DAVCS 152 hp (113 kW) H4 (gasoline)
+Transmission: 5-speed manual
+6-speed manual (XV)
+CVT automatic
+
+**Dimensions**
+
+Wheelbase: 2,670 mm (105.1 in)
+Length: Sedan (4,625 mm (182.1 in))
+Hatchback (4,460 mm (175.6 in))
+XV (4,465 mm (175.8 in))
+Width: 1,775 mm (69.9 in)
+XV (1,800 mm (70.9 in))
+Height: Sedan (1,455 mm (57.3 in))
+Hatchback (1,480 mm (58.3 in))
+XV (1,615 mm (63.6 in))
+Curb weight: 1,386–1,433 kg (3,056–3,159 lb)
+Image Link: https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/2017_Subaru_Impreza_%28GT7%29_2.0i-S_hatchback_%282018-08-06%29_01.jpg/1024px-2017_Subaru_Impreza_%28GT7%29_2.0i-S_hatchback_%282018-08-06%29_01.jpg`);
+}
+	 if(cmd === `${prefix}eclipse`){
+   return message.channel.send(`
+**Overview**
+
+Production:	
+2005-2011
+2007-2011 (Spyder)
+Model years: 
+2006-2012
+2007-2012 (Spyder)
+Assembly: United States: Normal, Illinois (Diamond-Star Motors)
+
+**Body and chassis**
+
+Body style: 
+2-door convertible
+2-door coupe
+Layout: FF layout
+Platform: Mitsubishi PS platform
+Related: 
+Mitsubishi Endeavor
+Mitsubishi Galant
+
+**Powertrain**
+
+Engine: 
+2.4 L 162 hp (121 kW) 4G69 I4
+3.8 L 263 hp (196 kW) 6G75 V6
+Transmission: 4-speed automatic (F4A4B)
+5-speed automatic (F4A5A)
+5-speed manual
+6-speed manual
+
+**Dimensions**
+
+Wheelbase: 2,576 mm (101.4 in)
+Length: 2006-08 (4,564 mm (179.7 in))
+2009-2011 (4,583 mm (180.4 in))
+Width: 1,834 mm (72.2 in)
+Height: 2006-2010 (1,359 mm (53.5 in))
+2006–2010 Spyder (1,382 mm (54.4 in))
+2006–2010 GT Spyder (1,389 mm (54.7 in))
+2011 (1,351 mm (53.2 in))
+2011 Spyder (1,375 mm (54.1 in))
+Curb weight: 2.4 coupe (1,485 kg (3,274 lb))
+V6 coupe (1,575 kg (3,472 lb))
+2.4 convertible (1,575 kg (3,472 lb))
+V6 convertible (1,665 kg (3,671 lb))
+Image Link: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/4th-Mitsubishi-Eclipse-convertible.jpg/1024px-4th-Mitsubishi-Eclipse-convertible.jpg`);
+}
+	 if(cmd === `${prefix}gt40`){
+   return message.channel.send(`
+**Overview**
+
+Manufacturer: Ford Advanced Vehicles
+John Wyer Automotive Engineering
+Kar Kraft
+Shelby American
+Production: 
+1964-1969
+105 produced
+Assembly: 
+Slough, UK (Mk I, Mk II, and Mk III)
+Wixom, Michigan, United States (Mk IV)
+
+**Body and chassis**
+
+Class:	
+Group 4 sports car
+Group 6 sports prototype
+Body style:	
+Coupé
+Roadster
+
+**Powertrain**
+
+Engine: 4181 cc (255 CID) V-8
+4737 cc (289 CID) V-8
+6997 cc (427 CID) V-8
+4942 cc (302 CID) V-8
+Transmission: 5-speed manual
+
+**Dimensions**
+
+Wheelbase: 95 in (2,413 mm)
+Length: 160 in (4,064 mm)
+Width: 70 in (1,778 mm)
+Height: 40.5 in (1,029 mm)
+Curb weight: 2,682 lb (1,217 kg) (1966, Mk IIA)
+
+**Chronology**
+
+Successor: Ford P68 (racing heritage)
+Ford GT (street heritage)
+Image Link: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/GT40_at_Goodwood.jpg/1024px-GT40_at_Goodwood.jpg`);
 }
 	
 });
