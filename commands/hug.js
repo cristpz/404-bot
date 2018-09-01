@@ -2,7 +2,6 @@ const superagent = require("snekfetch");
 const Discord = require('discord.js')
 
 module.exports.run = async (client, message, args, level) => {
-     if(!message.mentions.members.first().user.username === message.isMentioned(message.author) ) {
     superagent.get('https://nekos.life/api/v2/img/hug')
         .end((err, response) => {
       const hugEmbed = new Discord.RichEmbed()
