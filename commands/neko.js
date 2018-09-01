@@ -2,14 +2,14 @@ const discord = require("discord.js");
 const superagent = require("snekfetch");
 
 
-module.exports.run = async (client, message, args, level) => {
+module.exports.run = async (client, message, args) => {
     superagent.get('https://nekos.life/api/neko')
         .end((err, response) => {
-      const lewdembed = new Discord.RichEmbed()
+      const nekoembed = new Discord.RichEmbed()
       .setDescription("Nya~!")
       .setImage(response.body.url)
       .setColor("#3a0be7")
-  message.channel.send(lewdembed);
+  message.channel.send(nekoembed);
     })
 }
 
