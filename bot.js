@@ -114,7 +114,7 @@ if(cmd === `${prefix}info`){
   .addField("Actions", " `kill` `suicide` `pat` `hug` `kiss` ")
   .addField("Lewd (NSFW only)", " `lewdneko` `lewdtrap` `fuck` ")
   .addField("Moderation", " `kick` `ban` `addrole` `removerole` `prefix` ")
-  .addField("Miscellaneous", " `ping` `avatar` `hello` `salute` `die` `nou` `botowner` ")
+  .addField("Miscellaneous", " `ping` `avatar` `hello` `salute` `die` `nou` `botowner` `botusers` ")
   .addField("Vote/Invite", "https://discordbots.org/bot/468180436032421898")
 
    return message.channel.send(botembed);
