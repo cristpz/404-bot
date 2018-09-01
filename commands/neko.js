@@ -1,18 +1,16 @@
-const Discord = require("discord.js");
-const superagent = require("superagent");
+const superagent = require("snekfetch");
+const Discord = require('discord.js')
 
-module.exports.run = async (bot, message, args) => {
-
-  let {body} = await superagent
-  .get(`https://nekos.life/api/neko`);
-
-  let catembed = new Discord.RichEmbed()
-  .setColor("#3a0be7")
-  .setTitle("Nya~!")
-  .setImage(body.file);
-
-  message.channel.send(catembed);
-
+module.exports.run = async (client, message, args, level) => {
+    if (!message.channel.nsfw) return message.channel.send(":warning: This channel is not marked as **NSFW**")
+    superagent.get('https://nekos.life/api/neko')
+        .end((err, response) => {
+      const nekoembed = new Discord.RichEmbed()
+      .setDescription("Nya~!")
+      .setImage(response.body.url)
+      .setColor("#3a0be7")
+  message.channel.send(nekoembed);
+    })
 }
 
 module.exports.help = {
