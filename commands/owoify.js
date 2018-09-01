@@ -5,12 +5,8 @@ module.exports.run = async (bot, message, args) => {
 
   let {body} = await superagent
   .get(`https://nekos.life/api/v2/owoify`);
-
-  let owoembed = new Discord.RichEmbed()
-  .setColor("#3a0be7")
-  .setImage(body.msg);
-
-  message.channel.send(owoembed);
+  
+return message.channel.send(body.msg);
 
 }
 
