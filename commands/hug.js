@@ -6,7 +6,7 @@ module.exports.run = async (client, message, args, level) => {
     superagent.get('https://nekos.life/api/v2/img/hug')
         .end((err, response) => {
       const hugEmbed = new Discord.RichEmbed()
-      .setDescription(`${message.author.username} hugged ${message.mentions.members.first{}.user.username}`)
+      .setDescription(`${message.author} hugged ${message.mentions.members.first().user.username}`)
       .setImage(response.body.url)
       .setColor("#3a0be7")
   message.channel.send(hugEmbed);
