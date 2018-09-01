@@ -2,6 +2,7 @@ const superagent = require("snekfetch");
 const Discord = require('discord.js')
 
 module.exports.run = async (client, message, args, level) => {
+     return message.channel.send
     superagent.get('https://nekos.life/api/v2/img/neko')
         .end((err, response) => {
       const nekombed = new Discord.RichEmbed()
