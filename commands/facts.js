@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
 
   let nekoembed = new Discord.RichEmbed()
   .setColor("#3a0be7")
-  .setImage(text.url);
+  .setTitle(text.url);
 
   message.channel.send(nekoembed);
 
