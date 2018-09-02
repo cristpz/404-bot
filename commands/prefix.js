@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
   });
 
   let sEmbed = new Discord.RichEmbed()
-  .setColor("#FF9900")
+  .setColor("#3a0be7")
   .setTitle("Prefix Set!")
   .setDescription(`Set to ${args[0]}`);
 
