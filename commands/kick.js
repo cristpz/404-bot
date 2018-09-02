@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const errors = require("../utils/errors.js");
 
 module.exports.run = async (bot, message, args) => {
-
+    message.delete();
     if(!message.member.hasPermission("KICK_MEMBERS")) return errors.noPerms(message, "KICK_MEMBERS");
     if(args[0] == "help"){
       message.reply("Usage: 404kick <user> <reason>");
@@ -21,11 +21,8 @@ module.exports.run = async (bot, message, args) => {
     .addField("Kicked In", message.channel)
     .addField("Reason", kReason);
 
-    let kickChannel = message.guild.channels.find(`name`, "incidents");
-    if(!kickChannel) return message.channel.send("Can't find incidents channel.");
-
     message.guild.member(kUser).kick(kReason);
-    kickChannel.send(kickEmbed);
+  return  message.channel.send(kickEmbed);
 }
 
 module.exports.help = {
