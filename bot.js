@@ -87,19 +87,26 @@ bot.on("message", async message => {
   }
 
 if(cmd === `${prefix}serverinfo`){
+ let guild = msg.guild;
+    let name = guild.name;
+    let createdAt = moment(guild.createdAt).format('MMMM Do YYYY, h:mm:ss a');
+    let channels = guild.channels.size;
+    let owner = guild.owner.user.tag;
+    let memberCount = guild.memberCount;
+    let large = guild.large;
+    let iconUrl = guild.iconURL;
+    let region = guild.region;
+    let afk = msg.guild.channels.get(guild.afkChannelID) === undefined ? 'None' : msg.guild.channels.get(guild.afkChannelID).name;
 
-let sicon = message.guild.iconURL;
-let serverembed = new Discord.RichEmbed()
-  .setDescription("Server Info")
-  .setColor("#3a0be7")
-  .setThumbnail(sicon)
-  .addField("Server Name", message.guild.name)
-  .addField("Active Since", message.guild.createdAt)
-  .addField("Server Owner", message.guild.owner)
-  .addField("You joined", message.member.joinedAt)
-  .addField("Member Count", message.guild.memberCount);
+    const embed = new Discord.RichEmbed()
+        .setTitle('Guild Information')
+        .addField('Channels', `**Channel Count:** ${channels}\n**AFK Channel:** ${afk}`, true)
+        .addField('Members', `**Member Count:** ${memberCount}\n**Owner:** ${owner}\n**Owner ID:** ${guild.owner.id}`, true)
+        .addField('More', `**Created at:** ${createdAt}\n**Large Guild?:** ${large ? 'Yes' : 'No'}\n**Region:** ${region}`)
+        .setThumbnail(iconUrl)
+        .setTimestamp();
 
-  return message.channel.send(serverembed);
+   return message.channel.send(embed);
 }
 
 if(cmd === `${prefix}info`){
