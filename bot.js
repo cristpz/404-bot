@@ -1196,6 +1196,10 @@ Curb weight: 1,274 kg (2,809 lb)
 
 Image Link: https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/HondaS2000-004.jpg/1280px-HondaS2000-004.jpg`);	 
 }
+	client.on('message', message=> {
+    if (message.isMentioned(client.user)) {
+    message.reply(`Greetings ${message.author}, my prefix is `404`, use 404info for more!`);
+}
 });
 
 bot.login(process.env.BOT_TOKEN);
