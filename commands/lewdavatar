@@ -1,20 +1,18 @@
-const Discord = require("discord.js");
-const superagent = require("superagent");
+const superagent = require("snekfetch");
+const Discord = require('discord.js')
 
-module.exports.run = async (bot, message, args) => {
-
-  let {body} = await superagent
-  .get(`https://nekos.life/api/v2/img/nsfw_avatar`);
-
-  let generateembed = new Discord.RichEmbed()
-  .setColor("#3a0be7")
-  .setTitle(`Here's an automatically generated lewd avatar~!`)
-  .setImage(body.url);
-
-  message.channel.send(generateembed);
-
+module.exports.run = async (client, message, args, level) => {
+    if (!message.channel.nsfw) return message.channel.send(":warning: This channel is not marked as **NSFW**")
+    superagent.get('https://nekos.life/api/v2/img/nsfw_avatar')
+        .end((err, response) => {
+      const lewdembed = new Discord.RichEmbed()
+      .setImage(response.body.url)
+      .setTitle(`Here's an automatically generated lewd avatar~!`)
+      .setColor("#3a0be7")
+  message.channel.send(lewdembed);
+    })
 }
 
-module.exports.help = {
-  name: "lewdavatar"
+    module.exports.help = {
+      name: "lewdavatar"
 }
