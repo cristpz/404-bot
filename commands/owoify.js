@@ -8,8 +8,6 @@ async function work() {
   console.log(owo);
 }
 
-work();
-
 module.exports.help = {
   name: "hi"
 }
