@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
 
   let generateembed = new Discord.RichEmbed()
   .setColor("#3a0be7")
-  .setTitle(`Here's an automatically generated gasm emoji~!`)
+  .setTitle(`Here's an automatically generated gasm emote~!`)
   .setImage(body.url);
 
   message.channel.send(generateembed);
