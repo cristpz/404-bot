@@ -12,6 +12,7 @@
     "discord-eco": "0.0.10",
     "discord.js": "^11.3.2",
     "google": "^2.1.0",
+    "jimp": "^0.3.11",
     "mongoose": "^5.2.10",
     "nekos.life": "^1.1.4",
     "superagent": "^3.8.3"
