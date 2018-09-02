@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
       //prettier-ignore
       let motivateembed = new Discord.RichEmbed()
         .setTitle("Motivational Message")
-        .setDescription(`**${motivate.title}** | Scraped from [r/GetMotivated](https://www.reddit.com/r/GetMotivated)`)
+        .setDescription(`**${motivate.title}** | From [r/GetMotivated](https://www.reddit.com/r/GetMotivated)`)
         .setColor("#3a0be7")
         .setImage(motivate.content);
 
