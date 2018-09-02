@@ -17,7 +17,6 @@ module.exports.run = async (bot, message, args) => {
 
     let banEmbed = new Discord.RichEmbed()
     .setDescription("~Ban~")
-    .setHeader('https://www.youtube.com/watch?v=th4Czv1j3F8')
     .setColor("#3a0be7")
     .addField("Banned User", `${bUser} with ID ${bUser.id}`)
     .addField("Banned By", `<@${message.author.id}> with ID ${message.author.id}`)
