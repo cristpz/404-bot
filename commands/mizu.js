@@ -2,9 +2,9 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
   let mizuembed = new Discord.RichEmbed()
+  .setTitle(`Happy Birthday Mizu~!
+  I hope you live a great life, with a big tiddy gf and a v6 clio.`)
   .setDescription(`
-  Happy Birthday Mizu~!
-  I hope you live a great life, with a big tiddy gf and a v6 clio.
   (I know 1 language isn't enough so here have 50 of those)
   
     Albanian: “Gëzuar ditëlindjen”
