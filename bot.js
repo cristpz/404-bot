@@ -1082,6 +1082,7 @@ Height: Sedan (1,455 mm (57.3 in))
 Hatchback (1,480 mm (58.3 in))
 XV (1,615 mm (63.6 in))
 Curb weight: 1,386–1,433 kg (3,056–3,159 lb)
+
 Image Link: https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/2017_Subaru_Impreza_%28GT7%29_2.0i-S_hatchback_%282018-08-06%29_01.jpg/1024px-2017_Subaru_Impreza_%28GT7%29_2.0i-S_hatchback_%282018-08-06%29_01.jpg`);
 }
 	 if(cmd === `${prefix}eclipse`){
@@ -1132,6 +1133,7 @@ Curb weight: 2.4 coupe (1,485 kg (3,274 lb))
 V6 coupe (1,575 kg (3,472 lb))
 2.4 convertible (1,575 kg (3,472 lb))
 V6 convertible (1,665 kg (3,671 lb))
+
 Image Link: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/4th-Mitsubishi-Eclipse-convertible.jpg/1024px-4th-Mitsubishi-Eclipse-convertible.jpg`);
 }
 	 if(cmd === `${prefix}gt40`){
@@ -1178,7 +1180,36 @@ Curb weight: 2,682 lb (1,217 kg) (1966, Mk IIA)
 
 Successor: Ford P68 (racing heritage)
 Ford GT (street heritage)
+
 Image Link: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/GT40_at_Goodwood.jpg/1024px-GT40_at_Goodwood.jpg`);
+}
+	 if(cmd === `${prefix}s2k`){
+   return message.channel.send(`
+**Overview**
+
+Production: 1999–2003
+Assembly: Takanezawa R&D Plant, Takanezawa, Tochigi, Japan
+
+**Body and chassis**
+
+Class: Sports car, Roadster
+Body style: 2-door convertible
+
+**Powertrain**
+
+Engine: 2.0L I-4 F20C
+Transmission: 6-speed manual
+
+**Dimensions**
+
+Wheelbase: 2,400 mm (94.5 in)
+Length: 4,120 mm (162.2 in)
+Width: 1,750 mm (68.9 in)
+Height: 1,285 mm (50.6 in)
+Curb weight: 1,274 kg (2,809 lb)
+
+Image Link: https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/HondaS2000-004.jpg/1280px-HondaS2000-004.jpg`);
+		 
 }
 	
 });
