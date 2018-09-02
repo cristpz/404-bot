@@ -95,9 +95,9 @@ if(cmd === `${prefix}info`){
   .addField("Command Count", "58 currently")
   .addField("Cars", " `nsx` `cliowilliams` `accord` `sc300` `lanos` `matiz` `polonez` `206` `207` `306` `307` `406` `407` `hakosuka` `corolla` `corollawrc` `a4` `impreza` `eclipse` `w8` `gt40` `s2k` ")
   .addField("Fun", " `8ball` `cat` `dog` `google` `pick` `rate` `ratewaifu` `neko` `generateavatar` `yn` ")
-  .addField("Actions", " `suicide` `slap` `pat` `hug` `cuddle` `kiss` ")
+  .addField("Actions", " `suicide` `slap` `pat` `hug` `cuddle` `kiss` `smug` ")
   .addField("Lewd (NSFW only)", " `lewdneko` `lewdtrap` `fuck` `randomhentai` `spank` `bj` `lewdholo` ")
-  .addField("Moderation", " `kick` `ban` `addrole` `removerole` `prefix` ")
+  .addField("Moderation", " `kick` `ban` `addrole` `removerole` ")
   .addField("Miscellaneous", " `ping` `avatar` `hello` `salute` `die` `nou` `botowner` `botusers` ")
   .addField("Vote/Invite", "https://discordbots.org/bot/468180436032421898")
 
