@@ -108,8 +108,8 @@ if(cmd === `${prefix}info`){
   .setDescription(`**Hello ${message.author}, I'm 404, a basic multi-purpose bot made by Akemi#4040**`)
   .setColor("#3a0be7")
   .setThumbnail(bicon)
-  .addField("Command Count", "57 currently")
-  .addField("Cars", " `nsx` `cliowilliams` `accord` `sc300` `lanos` `matiz` `polonez` `206` `207` `306` `307` `406` `407` `hakosuka` `corolla` `corollawrc` `a4` `impreza` `eclipse` `w8` `gt40` ")
+  .addField("Command Count", "58 currently")
+  .addField("Cars", " `nsx` `cliowilliams` `accord` `sc300` `lanos` `matiz` `polonez` `206` `207` `306` `307` `406` `407` `hakosuka` `corolla` `corollawrc` `a4` `impreza` `eclipse` `w8` `gt40` `s2k` ")
   .addField("Fun", " `8ball` `cat` `dog` `google` `pick` `rate` `ratewaifu` `neko` `generateavatar` `yn` ")
   .addField("Actions", " `suicide` `slap` `pat` `hug` `cuddle` `kiss` ")
   .addField("Lewd (NSFW only)", " `lewdneko` `lewdtrap` `fuck` `randomhentai` `spank` `bj` `lewdholo` ")
@@ -144,7 +144,7 @@ The Honda NSX, marketed in North America as the Acura NSX, is a two-seat, mid-en
 
 The origins of the NSX trace back to 1984, with the HP-X (Honda Pininfarina eXperimental)[1] concept, which was a mid-engined 3.0 L V6 engined rear wheel drive sports car.
 Honda committed to the project, with the intention of meeting or exceeding the performance of the then V8 engined Ferrari range, while offering reliability and a lower price point.
-The concept thus evolved and had its name changed to NS-X, which stood for "New", "Sportscar" "eXperimental",[2] although the production model was launched as the NSX.
+The concept thus evolved and had its name changed to NS-X, which stood for "New", "Sportscar" "eXperimental", although the production model was launched as the NSX.
 
 Image Link: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Honda_NSX_reg_1991_2977_cc.JPG/1200px-Honda_NSX_reg_1991_2977_cc.JPG`)
 }
@@ -1208,10 +1208,8 @@ Width: 1,750 mm (68.9 in)
 Height: 1,285 mm (50.6 in)
 Curb weight: 1,274 kg (2,809 lb)
 
-Image Link: https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/HondaS2000-004.jpg/1280px-HondaS2000-004.jpg`);
-		 
+Image Link: https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/HondaS2000-004.jpg/1280px-HondaS2000-004.jpg`);	 
 }
-	
 });
 
 bot.login(process.env.BOT_TOKEN);
