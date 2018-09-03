@@ -94,13 +94,13 @@ if(cmd === `${prefix}info`){
   .setDescription(`**Hello ${message.author}, I'm 404, a basic multi-purpose bot made by Akemi#4040**`)
   .setColor("#3a0be7")
   .setThumbnail(bicon)
-  .addField("Command Count", "68 currently")
+  .addField("Command Count", "69 currently")
   .addField("Cars", " `nsx` `cliowilliams` `accord` `sc300` `lanos` `matiz` `polonez` `206` `207` `306` `307` `406` `407` `hakosuka` `corolla` `corollawrc` `a4` `impreza` `eclipse` `w8` `gt40` `s2k` ")
   .addField("Fun", " `8ball` `cat` `dog` `google` `pick` `rate` `ratewaifu` `neko` `generateavatar` `yn` `lizard` `gasmoji` `coinflip` `define` `motivate` ")
   .addField("Actions", " `suicide` `slap` `pat` `hug` `cuddle` `kiss` `smug` `poke` `feed` ")
   .addField("Lewd (NSFW only)", " `lewdneko` `lewdtrap` `fuck` `randomhentai` `randomhentaigif` `spank` `bj` `lewdholo` `lewdkitsune` `feet` ")
   .addField("Moderation", " `kick` `ban` `addrole` `removerole` ")
-  .addField("Miscellaneous", " `ping` `avatar` `hello` `salute` `die` `nou` `botowner` `botusers` ")
+  .addField("Miscellaneous", " `ping` `avatar` `hello` `salute` `die` `nou` `botowner` `botusers` `donate` ")
   .addField("Vote/Invite", "https://discordbots.org/bot/468180436032421898")
 
    return message.channel.send(botembed);
