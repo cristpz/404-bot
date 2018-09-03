@@ -4,7 +4,7 @@ module.exports.run = async (bot, message, args) => {
    let embed = new Discord.RichEmbed()
     .setTitle("A thing I created for those people who could spare any amount of cash.")
     .setDescription("Any kind of donation is fully appreciated.")
-    .setHeader("https://cdn.discordapp.com/attachments/484337085264822282/485994626679963649/donate.png")
+    .setThumbnail("https://cdn.discordapp.com/attachments/484337085264822282/485994626679963649/donate.png")
     .addField("Patreon", "https://www.patreon.com/404bot")
     .addField("PayPal", "https://www.paypal.me/dametucosita");
   message.channel.send(embed); 
