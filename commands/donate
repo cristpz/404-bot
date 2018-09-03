@@ -5,12 +5,10 @@ module.exports.run = async (bot, message, args) => {
   let embed = new Discord.RichEmbed()
     .setTitle("A thing I created for those people who could spare any amount of cash.")
     .setDescription("Any kind of donation is fully appreciated.")
-    .setImage(
-      "https://cdn.discordapp.com/attachments/484337085264822282/485994626679963649/donate.png"
-    )
+    .setImage("https://cdn.discordapp.com/attachments/484337085264822282/485994626679963649/donate.png")
     .addField("Patreon", "https://www.patreon.com/404bot")
     .addField("PayPal", "https://www.paypal.me/dametucosita");
-  return message.channel.send(embed); //Sends message
+  return message.channel.send(embed); 
 };
 
 module.exports.help = {
