@@ -30,9 +30,9 @@ bot.on("ready", async () => {
     bot.user.setStatus('available')
     bot.user.setPresence({
         game: {
-            name: 'with ${bot.users.size} users',
-            type: "PLAYING",
-            url: "https://www.youtube.com/watch?v=FMN3AtsXqA0"
+            name: '${bot.users.size} users | 404info',
+            type: "STREAMING",
+            url: "https://www.twitch.tv/monstercat"
         }
     });
 });
