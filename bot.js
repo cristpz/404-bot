@@ -28,7 +28,7 @@ bot.on("ready", async () => {
 	
 let statuses = ['${bot.users.size} users', '404info', 'my name jeff', 'happy birthday mizu'];
 	
-client.on('ready', () => {
+bot.on('ready', () => {
 setInterval(function() {
 let status = statuses[Math.floor(Math.random()=statuses.length)];
 	bot.user.setPresence({ game: { name: status }, status: 'online' });
