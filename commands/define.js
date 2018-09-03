@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
   //Checks if there were multiple definitions
   if (define.length == '3') {
     let embed = new Discord.RichEmbed()
-      .setTitle(`Definition of ${term.toUpperCase()} from Urban Dictionary ##`)
+      .setTitle(`Definition of ${term.toUpperCase()} from Urban Dictionary`)
       .setDescription(`**View all**: ${define.url}\n**Note**: If you like the bot and want it to be active, use the **\`404donate\`** command to support the bot's hosting costs.`)
       .setThumbnail(`https://www.digzoo.com/sites/default/files/2017-09/image1_31.jpeg`)
       .setColor("#3a0be7")
