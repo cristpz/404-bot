@@ -104,7 +104,7 @@ if(cmd === `${prefix}info`){
   .addField("Vote/Invite", "https://discordbots.org/bot/468180436032421898")
   .addField("Patreon", "https://www.patreon.com/404bot")
   .addField("PayPal", "https://www.paypal.me/dametucosita")
-  .setHeader("https://cdn.discordapp.com/attachments/484337085264822282/485994626679963649/donate.png")
+  .addImage("https://cdn.discordapp.com/attachments/484337085264822282/485994626679963649/donate.png")
 
    return message.channel.send(botembed);
   }
