@@ -22,18 +22,14 @@ fs.readdir("./commands/", (err, files) => {
   });
 
 });
+let statuses = ['${bot.users.size} users', '404info', 'Happy Birthday Mizu!'];
 
-bot.on("ready", async () => {
-  console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-	
-let statuses = ['${bot.users.size} users', '404info', 'my name jeff', 'happy birthday mizu'];
-	
-bot.on("ready", async () => {
-setInterval(function() {
+bot.on('ready', () => {
+setInterval(function(){
 let status = statuses[Math.floor(Math.random()=statuses.length)];
-	bot.user.setActivity(status, {type: "WATCHING"});
-}, 3000)
-});
+	bot.user.setPresence({ game: { name: status }, status: 'online' });
+  }, 3000)
+})
 		
 	
 bot.on("guildCreate", guild => {
