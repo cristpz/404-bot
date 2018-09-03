@@ -22,12 +22,11 @@ fs.readdir("./commands/", (err, files) => {
   });
 
 });
-bot.on('ready', () => {
-setInterval(function(){
-let statuses = ['${bot.users.size} users', '404info', 'Happy Birthday Mizu!'];
-let status = Math.floor((Math.random() * statuses.length));
-	bot.user.setPresence({ activity: { name: status }, status: 'online' });
-  }, 3000);
+bot.on("ready", async () => {
+
+  console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
+  bot.user.setActivity("${bot.users.size} users | 404info", {type: "WATCHING"});
+
 });
 		
 	
