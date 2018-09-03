@@ -27,7 +27,7 @@ bot.on("ready", async () => {
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
 	
  bot.on('ready', () => {
-    bot.user.setStatus('available')
+    bot.user.setStatus('online')
     bot.user.setPresence({
         game: {
             name: '${bot.users.size} users | 404info',
