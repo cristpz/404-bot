@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
     Bosnian: “Sretan rođendan”
     Bulgarian: “Chestit Rozhden den”
     Catalan: “Per molts anys”
-    Cheinese: “Shēngrì kuàilè”
+    Chinese: “Shēngrì kuàilè”
     Czech: “Všechno nejlepší k narozeninám”
     Danish: “Tillykke med fødselsdagen”
     Dutch: Fijne verjaardag”
