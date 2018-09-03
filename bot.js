@@ -26,16 +26,15 @@ fs.readdir("./commands/", (err, files) => {
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
 	
- bot.on('ready', () => {
-    bot.user.setStatus('online')
-    bot.user.setPresence({
-        game: {
-            name: '${bot.users.size} users | 404info',
-            type: "STREAMING",
-            url: "https://www.twitch.tv/monstercat"
-        }
-    });
-});
+let statuses = ['${bot.users.size} users', '404info', 'my name jeff', 'happy birthday mizu'];
+	
+client.on('ready', () => {
+setInterval(function() {
+let status = statuses[Math.floor(Math.random()=statuses.length)];
+	bot.user.setPresence({ game: { name: status }, status: 'online' });
+	bot.user.setPresence({ activity: { name: status }, status 'online' });
+}, 3000)
+		
 	
 bot.on("guildCreate", guild => {
   console.log(`New guild added : ${guild.name}, owned by ${guild.owner.user.username}`);
