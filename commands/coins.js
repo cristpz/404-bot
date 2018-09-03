@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
 
   let coinEmbed = new Discord.RichEmbed()
   .setColor("#3a0be7")
-  .addField("💸", uCoins);
+  .addField("💸Drachmas (Greek Money)💸", uCoins);
 
   message.channel.send(coinEmbed);
 }
