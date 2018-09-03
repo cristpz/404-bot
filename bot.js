@@ -27,7 +27,7 @@ let statuses = ['${bot.users.size} users', '404info', 'Happy Birthday Mizu!'];
 bot.on('ready', () => {
 setInterval(function(){
 let status = statuses[Math.floor(Math.random()=statuses.length)];
-	bot.user.setPresence({ game: { name: status }, status: 'online' });
+	bot.user.setPresence({ activity: { name: status }, status: 'online' });
   }, 3000);
 });
 		
