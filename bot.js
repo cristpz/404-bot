@@ -26,9 +26,17 @@ fs.readdir("./commands/", (err, files) => {
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
 	
-  bot.user.setActivity(`${bot.users.size} users | 404info`, {type: "STREAMING"});
+ bot.on('ready', () => {
+    bot.user.setStatus('available')
+    bot.user.setPresence({
+        game: {
+            name: 'with ${bot.users.size} users',
+            type: "PLAYING",
+            url: "https://www.youtube.com/watch?v=FMN3AtsXqA0"
+        }
+    });
 });
-
+	
 bot.on("guildCreate", guild => {
   console.log(`New guild added : ${guild.name}, owned by ${guild.owner.user.username}`);
 });
@@ -1204,7 +1212,7 @@ Image Link: https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/HondaS2000
     let embed = new Discord.RichEmbed()
     .setTitle("404 Bot")
     .addField("Prefix", `\`${prefix}\``, true)
-    .addField("Help", `\`${prefix}help\``, true)
+    .addField("Help", `\`${prefix}info\``, true)
     .setThumbnail(bot.user.displayAvatarURL)
     .setColor("#3a0be7");
     message.channel.send(embed);
