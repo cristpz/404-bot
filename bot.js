@@ -94,6 +94,7 @@ if(cmd === `${prefix}info`){
   .setDescription(`**Hello ${message.author}, I'm 404, a basic multi-purpose bot made by Akemi#4040**`)
   .setColor("#3a0be7")
   .setThumbnail(bicon)
+  .setImage("https://cdn.discordapp.com/attachments/484337085264822282/485994626679963649/donate.png")
   .addField("Command Count", "68 currently")
   .addField("Cars", " `nsx` `cliowilliams` `accord` `sc300` `lanos` `matiz` `polonez` `206` `207` `306` `307` `406` `407` `hakosuka` `corolla` `corollawrc` `a4` `impreza` `eclipse` `w8` `gt40` `s2k` ")
   .addField("Fun", " `8ball` `cat` `dog` `google` `pick` `rate` `ratewaifu` `neko` `generateavatar` `yn` `lizard` `gasmoji` `coinflip` `define` `motivate` ")
@@ -104,7 +105,6 @@ if(cmd === `${prefix}info`){
   .addField("Vote/Invite", "https://discordbots.org/bot/468180436032421898")
   .addField("Patreon", "https://www.patreon.com/404bot")
   .addField("PayPal", "https://www.paypal.me/dametucosita")
-  .addImage("https://cdn.discordapp.com/attachments/484337085264822282/485994626679963649/donate.png")
 
    return message.channel.send(botembed);
   }
