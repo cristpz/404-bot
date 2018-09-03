@@ -30,9 +30,9 @@ let statuses = ['${bot.users.size} users', '404info', 'my name jeff', 'happy bir
 	
 bot.on("ready", async () => {
 setInterval(function() {
-let status = Math.floor((Math.random() * statuses.length));
+let status = statuses[Math.floor(Math.random()=statuses.length)];
 	bot.user.setActivity(status, {type: "WATCHING"});
-
+}, 3000)
 });
 		
 	
