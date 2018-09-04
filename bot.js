@@ -128,7 +128,7 @@ if(cmd === `${prefix}info`){
   .addField("Vote/Invite", "https://discordbots.org/bot/468180436032421898")
   .addField("Patreon", "https://www.patreon.com/404bot")
   .addField("PayPal", "https://www.paypal.me/dametucosita")
-  .setHeader("Check 404subreddits for more commands!");
+  .setFooter("Check 404subreddits for more commands!");
 
    return message.channel.send(botembed);
   }
