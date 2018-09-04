@@ -24,7 +24,7 @@ fs.readdir("./commands/", (err, files) => {
 bot.on("ready", async () => {
 
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-  bot.user.setActivity(`${bot.users.size} users | 404info`, {type: "WATCHING"});
+  bot.user.setActivity(`${bot.users.size} users | 404help`, {type: "WATCHING"});
 
 });
 		
@@ -108,7 +108,7 @@ if(cmd === `${prefix}subreddits`){
    return message.channel.send(redditembed);
   }
 
-if(cmd === `${prefix}info`){
+if(cmd === `${prefix}help`){
 
   let bicon = bot.user.displayAvatarURL;
   let botembed = new Discord.RichEmbed()
