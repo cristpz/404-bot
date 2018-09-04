@@ -53,7 +53,7 @@ module.exports.run = async (bot, message, args) => {
 
     async function getSubReddit() {
       let memeSubs = [
-        "",
+        "Jeep",
       ]; //List of meme subreddits
 
       let randomSub = randomNumber(memeSubs.length); //Randomely selects a subreddit
@@ -115,5 +115,5 @@ module.exports.run = async (bot, message, args) => {
 };
 
 module.exports.help = {
-  name: "reddit"
+  name: "jeepreddit"
 };
