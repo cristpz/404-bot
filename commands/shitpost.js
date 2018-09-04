@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
     if (num == "NaN" || num > 10 || num < 2)
       //Checks if <number> meets requirements. b/w 2-10
       return message.channel.send(
-        "Error. Spam number needs to be a **valid** number (2-10).\n`404shitpost` for random meme\n`404shitpost <number>` for generating <number> memes "
+        "Error. Spam number needs to be a **valid** number (2-10).\n`404shitpost` for random shitpost\n`404shitpost <number>` for generating <number> memes "
       ); //Error message
 
     //Generates <number> random memes
