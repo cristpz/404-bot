@@ -122,7 +122,7 @@ if(cmd === `${prefix}help`){
   .addField("Actions", " `suicide` `slap` `pat` `hug` `cuddle` `kiss` `smug` `poke` `feed` ")
   .addField("Lewd (NSFW only)", " `lewdneko` `lewdtrap` `fuck` `randomhentai` `randomhentaigif` `spank` `bj` `lewdholo` `lewdkitsune` `feet` ")
   .addField("Moderation", " `kick` `ban` `addrole` `removerole` ")
-  .addField("Miscellaneous", " `ping` `avatar` `hello` `salute` `die` `nou` `botowner` `botusers` ")
+  .addField("Miscellaneous", " `ping` `avatar` `hello` `salute` `die` `nou` `botowner` `botusers` `help` `info` ")
   .addField("Vote/Invite", "https://discordbots.org/bot/468180436032421898")
   .addField("Patreon", "https://www.patreon.com/404bot")
   .addField("PayPal", "https://www.paypal.me/dametucosita")
