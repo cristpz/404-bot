@@ -1,6 +1,6 @@
 {
   "name": "404bot",
-  "version": "1.0.0",
+  "version": "0.2.3",
   "description": "a basic multi-purpose bot",
   "main": "index.js",
   "scripts": {
