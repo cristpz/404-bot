@@ -84,7 +84,7 @@ module.exports.run = async (bot, message, args) => {
         .on("error", err => {
           //console.error(err);
           return message.channel.send(
-            "Error occurred while retrieving memes. Try again. `.meme`.\n\n h **If this problem keeps arising, make sure you've joined my support server to report any issues with the bot**"
+            "Error occurred while retrieving memes. Try again. `404meme`.\n\n h **If this problem keeps arising, make sure you've joined my support server to report any issues with the bot**"
           );
         });
       let randomMeme = randomNumber(100); //Randomely selects a post out of 100 posts
