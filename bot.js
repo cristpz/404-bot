@@ -115,7 +115,6 @@ if(cmd === `${prefix}help`){
   .setDescription(`**Hello ${message.author}, I'm 404, a basic multi-purpose bot made by Akemi#4040**`)
   .setColor("#3a0be7")
   .setThumbnail(bicon)
-  .setImage("https://cdn.discordapp.com/attachments/484337085264822282/485994626679963649/donate.png")
   .addField("Command Count", "165 currently")
   .addField("Cars", " `nsx` `cliowilliams` `accord` `sc300` `lanos` `matiz` `polonez` `206` `207` `306` `307` `406` `407` `hakosuka` `corolla` `corollawrc` `a4` `impreza` `eclipse` `w8` `gt40` `s2k` ")
   .addField("Fun", " `8ball` `cat` `dog` `google` `pick` `rate` `ratewaifu` `neko` `generateavatar` `yn` `lizard` `gasmoji` `coinflip` `define` `motivate` `meme` `shitpost` ")
