@@ -57,7 +57,6 @@ module.exports.run = async (bot, message, args) => {
       let memeSubs = [
         "shitpost",
         "ShitPostCrusaders",
-        "surrealmemes",
       ]; //List of meme subreddits
 
       let randomSub = randomNumber(memeSubs.length); //Randomely selects a subreddit
