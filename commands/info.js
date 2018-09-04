@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
     .setTitle("Bot Information")
     .setColor("#3a0be7")
     .setThumbnail(bot.user.displayAvatarURL)
-    .addField("Name", `[${bot.user.username}](https://discordbots.org/bot/468180436032421898)`)
+    .addField("Name", `${bot.user.username}`)
     .addField("Version", `${package.version}`)
     .addField("Running on", `${bot.guilds.size} servers`)
     .addField("Developed by", `<@306104099185623042>`)
