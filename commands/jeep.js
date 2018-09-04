@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
     if (num == "NaN" || num > 10 || num < 2)
       //Checks if <number> meets requirements. b/w 2-10
       return message.channel.send(
-        "Error. Spam number needs to be a **valid** number (2-10).
+        "Error. Spam number needs to be a **valid** number (2-10)."
       ); //Error message
 
     //Generates <number> random memes
@@ -53,7 +53,7 @@ module.exports.run = async (bot, message, args) => {
 
     async function getSubReddit() {
       let memeSubs = [
-        "Jeep",
+        "",
       ]; //List of meme subreddits
 
       let randomSub = randomNumber(memeSubs.length); //Randomely selects a subreddit
@@ -115,5 +115,5 @@ module.exports.run = async (bot, message, args) => {
 };
 
 module.exports.help = {
-  name: "jeepreddit"
+  name: "reddit"
 };
