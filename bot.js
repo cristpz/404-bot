@@ -97,6 +97,17 @@ bot.on("message", async message => {
 
     return;
 }
+if(cmd === `${prefix}subreddits`){
+
+  let bicon = bot.user.displayAvatarURL;
+  let botembed = new Discord.RichEmbed()
+  .setDescription(`**Hello ${message.author}, those are the subreddit commands that I placed on another command, since discord's char limit is 2000**`)
+  .setColor("#3a0be7")
+  .setThumbnail(bicon)
+  .addField("Subreddits"," `jeepreddit` `toyotareddit` `audireddit` `ferrarireddit` `porschereddit` `mazdareddit` `mazdaprotegereddit` `hondareddit` `s2000reddit` `crownvictoriareddit` `hyundaireddit` `mr2reddit` `fordreddit` `lexusreddit` `corvettereddit` `corollareddit` `ft86reddit` `scionreddit` `mitsubishireddit` `dsmreddit` `4g63reddit` `300zxreddit` `mustangreddit` `peugeotreddit` `citroenreddit` `teslamotorsreddit` `voltreddit` `mercedesreddit` `jaguarreddit` `pontiacreddit` `volkswagenreddit` `beetlereddit` `fahrvergnugenreddit` `dodgereddit` `moparreddit` `subarureddit` `240sxreddit` `miatareddit` `camaroreddit` `landroverreddit` `serieslandroverreddit` `bmwreddit` `tiburonreddit` `saabreddit` `toyotasuprareddit` `volvoreddit` `infinitireddit` `dieselreddit` `rotariesreddit` `autosreddit` `drivingreddit` `4wheelsnewsreddit` `askcarsalesreddit` `topgearreddit` `usercarsreddit` `cartalkreddit` `cartalkukreddit` `mechanicadvicereddit` `autodetailingreddit` `shittycarmodsreddit` `projectcarreddit` `caravreddit` `carpornreddit` `f1pornreddit` `rallypornreddit` `motorsportpornreddit` `spottedreddit` `exoticspottingreddit` `justtrolledintotheshopreddit` `askashittymechanicreddit` `automotivetrainingreddit` `motorsportsreddit` `formula1reddit` `indycarreddit` `formulaereddit` `wecreddit` `wtccreddit` `roadrallysreddit` `driftingreddit` `racingreddit` `kartingreddit` `rallyreddit` `autoxreddit` `autocrossreddit` `nascarreddit` `overlandingreddit` `4x4reddit` `startmotorsportreddit` `stancereddit` `fitmentreddit` `trucksreddit` `jdmreddit` `importsreddit` `musclecarreddit` `mylittlemotorheadreddit` ")
+  
+   return message.channel.send(botembed);
+  }
 
 if(cmd === `${prefix}info`){
 
@@ -106,9 +117,9 @@ if(cmd === `${prefix}info`){
   .setColor("#3a0be7")
   .setThumbnail(bicon)
   .setImage("https://cdn.discordapp.com/attachments/484337085264822282/485994626679963649/donate.png")
-  .addField("Command Count", "166 currently")
+  .addField("Command Count", "165 currently")
   .addField("Cars", " `nsx` `cliowilliams` `accord` `sc300` `lanos` `matiz` `polonez` `206` `207` `306` `307` `406` `407` `hakosuka` `corolla` `corollawrc` `a4` `impreza` `eclipse` `w8` `gt40` `s2k` ")
-  .addField("Subreddits"," `carsreddit` `jeepreddit` `toyotareddit` `audireddit` `ferrarireddit` `porschereddit` `mazdareddit` `mazdaprotegereddit` `hondareddit` `s2000reddit` `crownvictoriareddit` `hyundaireddit` `mr2reddit` `fordreddit` `lexusreddit` `corvettereddit` `corollareddit` `ft86reddit` `scionreddit` `mitsubishireddit` `dsmreddit` `4g63reddit` `300zxreddit` `mustangreddit` `peugeotreddit` `citroenreddit` `teslamotorsreddit` `voltreddit` `mercedesreddit` `jaguarreddit` `pontiacreddit` `volkswagenreddit` `beetlereddit` `fahrvergnugenreddit` `dodgereddit` `moparreddit` `subarureddit` `240sxreddit` `miatareddit` `camaroreddit` `landroverreddit` `serieslandroverreddit` `bmwreddit` `tiburonreddit` `saabreddit` `toyotasuprareddit` `volvoreddit` `infinitireddit` `dieselreddit` `rotariesreddit` `autosreddit` `drivingreddit` `4wheelsnewsreddit` `askcarsalesreddit` `topgearreddit` `usercarsreddit` `cartalkreddit` `cartalkukreddit` `mechanicadvicereddit` `autodetailingreddit` `shittycarmodsreddit` `projectcarreddit` `caravreddit` `carpornreddit` `f1pornreddit` `rallypornreddit` `motorsportpornreddit` `spottedreddit` `exoticspottingreddit` `justtrolledintotheshopreddit` `askashittymechanicreddit` `automotivetrainingreddit` `motorsportsreddit` `formula1reddit` `indycarreddit` `formulaereddit` `wecreddit` `wtccreddit` `roadrallysreddit` `driftingreddit` `racingreddit` `kartingreddit` `rallyreddit` `autoxreddit` `autocrossreddit` `nascarreddit` `overlandingreddit` `4x4reddit` `startmotorsportreddit` `stancereddit` `fitmentreddit` `trucksreddit` `jdmreddit` `importsreddit` `musclecarreddit` `mylittlemotorheadreddit` ")
+  .addField("Subreddits"," `jeepreddit` `toyotareddit` `audireddit` `ferrarireddit` `porschereddit` `mazdareddit` `mazdaprotegereddit` `hondareddit` `s2000reddit` `crownvictoriareddit` `hyundaireddit` `mr2reddit` `fordreddit` `lexusreddit` `corvettereddit` `corollareddit` `ft86reddit` `scionreddit` `mitsubishireddit` `dsmreddit` `4g63reddit` `300zxreddit` `mustangreddit` `peugeotreddit` `citroenreddit` `teslamotorsreddit` `voltreddit` `mercedesreddit` `jaguarreddit` `pontiacreddit` `volkswagenreddit` `beetlereddit` `fahrvergnugenreddit` `dodgereddit` `moparreddit` `subarureddit` `240sxreddit` `miatareddit` `camaroreddit` `landroverreddit` `serieslandroverreddit` `bmwreddit` `tiburonreddit` `saabreddit` `toyotasuprareddit` `volvoreddit` `infinitireddit` `dieselreddit` `rotariesreddit` `autosreddit` `drivingreddit` `4wheelsnewsreddit` `askcarsalesreddit` `topgearreddit` `usercarsreddit` `cartalkreddit` `cartalkukreddit` `mechanicadvicereddit` `autodetailingreddit` `shittycarmodsreddit` `projectcarreddit` `caravreddit` `carpornreddit` `f1pornreddit` `rallypornreddit` `motorsportpornreddit` `spottedreddit` `exoticspottingreddit` `justtrolledintotheshopreddit` `askashittymechanicreddit` `automotivetrainingreddit` `motorsportsreddit` `formula1reddit` `indycarreddit` `formulaereddit` `wecreddit` `wtccreddit` `roadrallysreddit` `driftingreddit` `racingreddit` `kartingreddit` `rallyreddit` `autoxreddit` `autocrossreddit` `nascarreddit` `overlandingreddit` `4x4reddit` `startmotorsportreddit` `stancereddit` `fitmentreddit` `trucksreddit` `jdmreddit` `importsreddit` `musclecarreddit` `mylittlemotorheadreddit` ")
   .addField("Fun", " `8ball` `cat` `dog` `google` `pick` `rate` `ratewaifu` `neko` `generateavatar` `yn` `lizard` `gasmoji` `coinflip` `define` `motivate` `meme` `shitpost` ")
   .addField("Actions", " `suicide` `slap` `pat` `hug` `cuddle` `kiss` `smug` `poke` `feed` ")
   .addField("Lewd (NSFW only)", " `lewdneko` `lewdtrap` `fuck` `randomhentai` `randomhentaigif` `spank` `bj` `lewdholo` `lewdkitsune` `feet` ")
@@ -117,6 +128,7 @@ if(cmd === `${prefix}info`){
   .addField("Vote/Invite", "https://discordbots.org/bot/468180436032421898")
   .addField("Patreon", "https://www.patreon.com/404bot")
   .addField("PayPal", "https://www.paypal.me/dametucosita")
+  .setHeader("Check 404subreddits for more commands!");
 
    return message.channel.send(botembed);
   }
