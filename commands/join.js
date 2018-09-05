@@ -12,18 +12,6 @@ module.exports.run = async (client, message) => {
   return message.channel.send(`Now tuned into: ${message.member.voiceChannel}. Ready and awaiting orders!`);
 };
 
-module.exports.conf = {
-  enabled: true,
-  runIn: ["text"],
-  aliases: [],
-  permLevel: 0,
-  botPerms: [],
-  requiredFuncs: [],
-};
-
 module.exports.help = {
-  name: "join",
-  description: "Joins the VC that you are in.",
-  usage: "",
-  usageDelim: "",
+    name: "join",
 };
