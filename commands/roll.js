@@ -1,7 +1,7 @@
 const discord = require("discord.js");
 
 module.exports.run = (client, message, sides) => {
-    if (sides.length < 1) { sides = 6; }
+    if (sides.length < 1) { sides = 100; }
     if (sides === 0) { return message.channel.send("You can't roll from 0!"); }
 
     if (Number.isInteger(Number(sides))) {
