@@ -1,13 +1,15 @@
 const discord = require("discord.js");
 
 module.exports.run = async (client, msg, [user]) => {
-    var data = await client.funcs.userSearch(msg, {user: [user], name: this.help.name});
+let user = message.mentions.users.first() || message.author;
     
-    if (data.valid !== false) { 
-        client.users.fetch(data.user[0].id).then(avatar => { msg.channel.send("", { files: [avatar.displayAvatarURL()]}); }); 
-    }
-};
+    let avatarembed = new Discord.RichEmbed()
+    .setAuthor(`${user.username}`)
+    .setImage(user.displayAvatarURL)
+    
+    message.channel.send(avatarembed);
+}
   
 module.exports.help = {
-    name: "avatar",
-};
+    name: "avatar"
+}
