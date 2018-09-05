@@ -1,3 +1,5 @@
+const discord = require("discord.js");
+
 exports.run = async (client, msg, [Name, ID]) => {
     const prefix = msg.guild.settings.prefix || client.config.prefix;
 
