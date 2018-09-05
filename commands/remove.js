@@ -1,3 +1,5 @@
+const discord = require("discord.js");
+
 exports.run = async (client, message, [songID]) => {
     const voiceChannel = message.member.voiceChannel;
     if (!message.member.voiceChannel) { return message.channel.send("You are not in the voice channel."); }
