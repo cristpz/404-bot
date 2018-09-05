@@ -22,16 +22,6 @@ module.exports.run = async (client, message) => {
   message.channel.send({embed});
 };
 
-module.exports.conf = {
-  enabled: true,
-  runIn: ["text"],
-  aliases: ["np", "whatsplaying", "whatsplayinglad"],
-  permLevel: 0,
-  botPerms: []
-};
-
 module.exports.help = {
-  name: "nowplaying",
-  description: "See what's currently playing in VC.",
-  usage: ""
+    name: "nowplaying",
 };
