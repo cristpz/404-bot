@@ -1,4 +1,6 @@
-exports.run = (client, message, sides) => {
+const discord = require("discord.js");
+
+module.exports.run = (client, message, sides) => {
     if (sides.length < 1) { sides = 6; }
     if (sides === 0) { return message.channel.send("You can't roll from 0!"); }
 
@@ -10,17 +12,6 @@ exports.run = (client, message, sides) => {
     }
  };
 
-exports.conf = {
-    enabled: true,
-    runIn: ["text"],
-    aliases: [],
-    permLevel: 0,
-    botPerms: [],
-};
-
-exports.help = {
+module.exports.help = {
     name: "roll",
-    description: "Roll a dice!",
-    usage: "[sides:str]",
-    usageDelim: "",
 };
