@@ -92,18 +92,6 @@ module.exports.run = async (client, msg, [term]) => {
     });
 };
 
-module.exports.conf = {
-    enabled: true,
-    runIn: ["text"],
-    aliases: [],
-    permLevel: 0,
-    botPerms: ["ATTACH_FILES"],
-    cooldown: 30
-};
-
 module.exports.help = {
     name: "mal",
-    description: "Fetch a user's profile on MyAnimeList",
-    usage: "[term:str]",
-    extendedHelp: "There is a 30 second cooldown for each profile search to not spam the MAL site."
 };
