@@ -2,7 +2,7 @@ const discord = require("discord.js");
 const moment = require("moment");
 require("moment-duration-format");
 
-exports.run = async (client, message) => {
+module.exports.run = async (client, message) => {
   if (!message.guild.voiceConnection) { return message.channel.send("But I'm not in a voice channel..."); }
 
   const handler = client.queue.get(message.guild.id);
@@ -22,7 +22,7 @@ exports.run = async (client, message) => {
   message.channel.send({embed});
 };
 
-exports.conf = {
+module.exports.conf = {
   enabled: true,
   runIn: ["text"],
   aliases: ["np", "whatsplaying", "whatsplayinglad"],
@@ -30,7 +30,7 @@ exports.conf = {
   botPerms: []
 };
 
-exports.help = {
+module.exports.help = {
   name: "nowplaying",
   description: "See what's currently playing in VC.",
   usage: ""
