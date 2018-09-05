@@ -1,12 +1,13 @@
+const discord = require("discord.js");
 const ms = require("ms");
 
-exports.run = async (client, message, [time, reason]) => {
+module.exports.run = async (client, message, [time, reason]) => {
   if (!client.lockit) { client.lockit = []; }
   let validUnlocks = ["release", "unlock", "u"];
   if (!time) { return message.reply("I need a set time to lock the channel down for!"); }
 
   const Lockembed = new client.methods.Embed()
-    .setColor("3a0be7")
+    .setColor("#3a0be7")
     .setTimestamp()
     .setTitle("🔒 LOCKDOWN NOTICE 🔒")
     .setDescription(`This channel has been locked down by ${message.author.tag} for ${time}`);
@@ -20,7 +21,7 @@ exports.run = async (client, message, [time, reason]) => {
 
   if (message.channel.permissionsFor(message.author.id).has("MUTE_MEMBERS") === false) { 
     const embed = new client.methods.Embed()  
-      .setColor("3a0be7")
+      .setColor("#3a0be7")
       .setTimestamp()
       .setTitle("❌ Error: missing permissions! ❌")
       .setDescription("You do not have the correct permissions for this command!");
