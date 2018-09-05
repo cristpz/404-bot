@@ -1,6 +1,6 @@
 const discord = require("discord.js");
 
-exports.run = async (client, message) => {
+module.exports.run = async (client, message) => {
   const voiceChannel = message.member.voiceChannel;
   if (!message.member.voiceChannel) { return message.channel.send("You are not in a voice channel..."); }
 
@@ -12,7 +12,7 @@ exports.run = async (client, message) => {
   return message.channel.send(`Now tuned into: ${message.member.voiceChannel}. Ready and awaiting orders!`);
 };
 
-exports.conf = {
+module.exports.conf = {
   enabled: true,
   runIn: ["text"],
   aliases: [],
@@ -21,7 +21,7 @@ exports.conf = {
   requiredFuncs: [],
 };
 
-exports.help = {
+module.exports.help = {
   name: "join",
   description: "Joins the VC that you are in.",
   usage: "",
