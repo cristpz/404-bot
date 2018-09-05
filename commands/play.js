@@ -2,7 +2,7 @@ const discord = require("discord.js");
 const yt = require("ytdl-core");
 const discord = require("discord.js");
 
-exports.run = async (client, msg) => {
+module.exports.run = async (client, msg) => {
   const handler = client.queue.get(msg.guild.id);
   if (!handler) { throw `Add some songs to the queue first with ${msg.guild.settings.prefix}queueadd [Youtube URL]`; }
 
@@ -43,7 +43,7 @@ exports.run = async (client, msg) => {
   return null;
 };
 
-exports.conf = {
+module.exports.conf = {
   enabled: true,
   runIn: ["text"],
   aliases: [],
@@ -51,7 +51,7 @@ exports.conf = {
   botPerms: []
 };
 
-exports.help = {
+module.exports.help = {
   name: "play",
   description: "Plays the queue of music.",
   usage: "[songURL:str]"
