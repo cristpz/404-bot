@@ -20,19 +20,6 @@ module.exports.run = async (client, msg, [Name, ID]) => {
     } else { msg.channel.send({files: [`https://cdn.discordapp.com/emojis/${emoji[0][0]}.${type}`]}); }
 };
 
-module.exports.conf = {
-    enabled: true,
-    runIn: ["text"],
-    aliases: ["e", "emote"],
-    permLevel: 0,
-    botPerms: ["ATTACH_FILES", "ADD_REACTIONS", "MANAGE_MESSAGES"]
-};
-
 module.exports.help = {
     name: "emoji",
-    description: "Displays an enlargened emoji.",
-    usage: "[Name:str] [messageID:str]",
-    usageDelim: " ",
-    extendedHelp: "Bring in your pool of emotes from other servers! Either use the big image or use the alias of react and add a message ID to react to a message instead!",
-    humanUse: "(name)_([If reacting] messageID)"
 };
