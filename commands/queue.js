@@ -29,19 +29,6 @@ module.exports.run = (client, message, page) => {
   return message.channel.send({embed});
 };
 
-module.exports.conf = {
-  enabled: true,
-  runIn: ["text"],
-  aliases: [],
-  permLevel: 0,
-  botPerms: [],
-  requiredFuncs: [],
-};
-
 module.exports.help = {
-  name: "queue",
-  description: "Displays the music queue.",
-  usage: "[page:int]",
-  usageDelim: "",
-  extendedHelp: "",
+    name: "queue",
 };
