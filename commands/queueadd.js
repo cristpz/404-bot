@@ -1,3 +1,4 @@
+const discord = require("discord.js");
 const yt = require("ytdl-core");
 const getInfoAsync = require("util").promisify(yt.getInfo);
 const url = require("url");
