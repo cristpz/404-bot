@@ -2,7 +2,7 @@ const discord = require("discord.js");
 const moment = require("moment");
 require("moment-duration-format");
 
-exports.run = (client, message, page) => {
+module.exports.run = (client, message, page) => {
   const handler = client.queue.get(message.guild.id);
   if (!handler) { throw `I've tried to find your list of songs but it doesn't look like you have a queue. Better add some by using ${message.guild.settings.prefix}add.`; }
 
@@ -29,7 +29,7 @@ exports.run = (client, message, page) => {
   return message.channel.send({embed});
 };
 
-exports.conf = {
+module.exports.conf = {
   enabled: true,
   runIn: ["text"],
   aliases: [],
@@ -38,7 +38,7 @@ exports.conf = {
   requiredFuncs: [],
 };
 
-exports.help = {
+module.exports.help = {
   name: "queue",
   description: "Displays the music queue.",
   usage: "[page:int]",
