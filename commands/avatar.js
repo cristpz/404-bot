@@ -1,4 +1,4 @@
-const discord = require("discord.js");
+const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
 let user = message.mentions.users.first() || message.author;
