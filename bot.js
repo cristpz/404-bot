@@ -97,6 +97,9 @@ bot.on("message", async message => {
 
     return;
 }
+	if(cmd === `crist`) {
+		return message.channel.send(`that faggot deserves painful death`);
+}
 if(cmd === `${prefix}subreddits`){
   let bicon = bot.user.displayAvatarURL;
   let redditembed = new Discord.RichEmbed()
