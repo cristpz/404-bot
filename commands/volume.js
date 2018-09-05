@@ -1,5 +1,7 @@
+const discord = require("discord.js");
+
 exports.run = async (client, msg, [volume]) => {
-  if (!msg.guild.voiceConnection) { throw "I am not connected in a voice channel, please add some songs to the mix first!"; }
+  if (!msg.guild.voiceConnection) { throw "I am not connected in a voice channel, please add some songs to the queue first!"; }
   const handler = client.queue.get(msg.guild.id);
   if (!handler || handler.playing === false) { throw "Kind of hard to adjust the volume if I am not playing music."; }
 
