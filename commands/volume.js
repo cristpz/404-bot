@@ -1,6 +1,6 @@
 const discord = require("discord.js");
 
-exports.run = async (client, msg, [volume]) => {
+module.exports.run = async (client, msg, [volume]) => {
   if (!msg.guild.voiceConnection) { throw "I am not connected in a voice channel, please add some songs to the queue first!"; }
   const handler = client.queue.get(msg.guild.id);
   if (!handler || handler.playing === false) { throw "Kind of hard to adjust the volume if I am not playing music."; }
@@ -17,7 +17,7 @@ exports.run = async (client, msg, [volume]) => {
   msg.send(`${emote[0]} ${emote[1]} the volume! Volume: ${Math.round(dispatcher.volume * 50)}%`);
 };
 
-exports.conf = {
+module.exports.conf = {
   enabled: true,
   runIn: ["text"],
   aliases: ["vol"],
@@ -25,7 +25,7 @@ exports.conf = {
   botPerms: []
 };
 
-exports.help = {
+module.exports.help = {
   name: "volume",
   description: "Manage the volume for current song.",
   usage: "[volume:int]"
