@@ -3,7 +3,7 @@ const yt = require("ytdl-core");
 const getInfoAsync = require("util").promisify(yt.getInfo);
 const url = require("url");
 
-exports.run = async (client, msg, [song]) => {
+module.exports.run = async (client, msg, [song]) => {
   const YTRegExp = new RegExp(/(?:v.|d\/|e\/)([\w-_]{11})/);
   var songID = url.parse(song).path.split("/")[1];
   var id = songID.match(YTRegExp);
@@ -24,7 +24,7 @@ exports.run = async (client, msg, [song]) => {
   msg.send(`🎵 Added **${info.title}** to the queue 🎶`);
 };
 
-exports.conf = {
+module.exports.conf = {
   enabled: true,
   runIn: ["text"],
   aliases: [],
@@ -32,10 +32,10 @@ exports.conf = {
   botPerms: []
 };
 
-exports.help = {
+module.exports.help = {
   name: "queueadd",
   description: "Adds a song the the queue.",
   usage: "[song:str]",
 };
 
-exports.init = (client) => { client.queue = new client.methods.Collection(); };
+module.exports.init = (client) => { client.queue = new client.methods.Collection(); };
