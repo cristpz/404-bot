@@ -2,7 +2,7 @@
   "name": "404bot",
   "version": "0.2.5+",
   "description": "a basic multi-purpose bot",
-  "main": "index.js",
+  "main": "bot.js",
   "scripts": {
     "start": "now script launched!"
   },
