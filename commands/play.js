@@ -1,4 +1,5 @@
 const yt = require("ytdl-core");
+const discord = require("discord.js");
 
 exports.run = async (client, msg) => {
   const handler = client.queue.get(msg.guild.id);
