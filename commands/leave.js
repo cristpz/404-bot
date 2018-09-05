@@ -7,18 +7,6 @@ module.exports.run = async (client, message) => {
     return message.channel.send(`I have left ${message.member.voiceChannel}.`);
   };
 
-module.exports.conf = {
-    enabled: true,
-    runIn: ["text"],
-    aliases: [],
-    permLevel: 0,
-    botPerms: [],
-    requiredFuncs: [],
-  };
-
 module.exports.help = {
     name: "leave",
-    description: "Leaves the VC that you are in.",
-    usage: "",
-    usageDelim: "",
-  };
+};
