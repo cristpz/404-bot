@@ -1,4 +1,3 @@
-const discord = require("discord.js");
 const yt = require("ytdl-core");
 const discord = require("discord.js");
 
@@ -43,16 +42,6 @@ module.exports.run = async (client, msg) => {
   return null;
 };
 
-module.exports.conf = {
-  enabled: true,
-  runIn: ["text"],
-  aliases: [],
-  permLevel: 0,
-  botPerms: []
-};
-
 module.exports.help = {
-  name: "play",
-  description: "Plays the queue of music.",
-  usage: "[songURL:str]"
+    name: "play",
 };
