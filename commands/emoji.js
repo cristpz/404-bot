@@ -1,6 +1,6 @@
 const discord = require("discord.js");
 
-exports.run = async (client, msg, [Name, ID]) => {
+module.exports.run = async (client, msg, [Name, ID]) => {
     const prefix = msg.guild.settings.prefix || client.config.prefix;
 
     msg.delete();
@@ -20,7 +20,7 @@ exports.run = async (client, msg, [Name, ID]) => {
     } else { msg.channel.send({files: [`https://cdn.discordapp.com/emojis/${emoji[0][0]}.${type}`]}); }
 };
 
-exports.conf = {
+module.exports.conf = {
     enabled: true,
     runIn: ["text"],
     aliases: ["e", "emote"],
@@ -28,7 +28,7 @@ exports.conf = {
     botPerms: ["ATTACH_FILES", "ADD_REACTIONS", "MANAGE_MESSAGES"]
 };
 
-exports.help = {
+module.exports.help = {
     name: "emoji",
     description: "Displays an enlargened emoji.",
     usage: "[Name:str] [messageID:str]",
