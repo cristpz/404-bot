@@ -1,6 +1,6 @@
 const discord = require("discord.js");
 
-module.exports.run = async (client, msg, [user]) => {
+module.exports.run = async (bot, message, args) => {
 let user = message.mentions.users.first() || message.author;
     
     let avatarembed = new Discord.RichEmbed()
