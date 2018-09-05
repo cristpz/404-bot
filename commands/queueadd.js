@@ -24,18 +24,8 @@ module.exports.run = async (client, msg, [song]) => {
   msg.send(`🎵 Added **${info.title}** to the queue 🎶`);
 };
 
-module.exports.conf = {
-  enabled: true,
-  runIn: ["text"],
-  aliases: [],
-  permLevel: 0,
-  botPerms: []
-};
-
 module.exports.help = {
-  name: "queueadd",
-  description: "Adds a song the the queue.",
-  usage: "[song:str]",
+    name: "queueadd",
 };
 
 module.exports.init = (client) => { client.queue = new client.methods.Collection(); };
