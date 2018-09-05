@@ -1,3 +1,4 @@
+const discord = require("discord.js");
 const yt = require("ytdl-core");
 const discord = require("discord.js");
 
