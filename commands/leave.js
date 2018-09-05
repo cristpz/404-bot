@@ -1,13 +1,13 @@
 const discord = require("discord.js");
 
-exports.run = async (client, message) => {
+module.exports.run = async (client, message) => {
     if (!message.member.voiceChannel) { return message.channel.send("You are not in my voice channel..."); }
 
     message.member.voiceChannel.leave();
     return message.channel.send(`I have left ${message.member.voiceChannel}.`);
   };
 
-  exports.conf = {
+module.exports.conf = {
     enabled: true,
     runIn: ["text"],
     aliases: [],
@@ -16,7 +16,7 @@ exports.run = async (client, message) => {
     requiredFuncs: [],
   };
 
-  exports.help = {
+module.exports.help = {
     name: "leave",
     description: "Leaves the VC that you are in.",
     usage: "",
