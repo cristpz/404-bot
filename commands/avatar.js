@@ -1,13 +1,22 @@
-const Discord = require("discord.js");
-
-module.exports.run = async (bot, message, args) => {
-  let embed = new Discord.RichEmbed()
-  .setDescription(`**Hey look, it's ${message.author}'s avatar!**`)
-  .setImage(message.author.avatarURL)
-  .setColor('#3a0be7')
-  message.channel.send(embed)
+exports.run = async (client, msg, [user]) => {
+    var data = await client.funcs.userSearch(msg, {user: [user], name: this.help.name});
+    
+    if (data.valid !== false) { 
+        client.users.fetch(data.user[0].id).then(avatar => { msg.channel.send("", { files: [avatar.displayAvatarURL()]}); }); 
     }
-
-module.exports.help = {
-  name: "avatar"
-}
+};
+  
+exports.conf = {
+    enabled: true,
+    runIn: ["text"],
+    aliases: [],
+    permLevel: 0,
+    botPerms: ["ATTACH_FILES"],
+    requiredFuncs: ["userSearch"]
+};
+  
+exports.help = {
+    name: "avatar",
+    description: "Fetch a user's avatar!",
+    usage: "[user:str]"
+};
