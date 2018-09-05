@@ -1,6 +1,6 @@
 const discord = require("discord.js");
 
-exports.run = async (client, message, [songID]) => {
+module.exports.run = async (client, message, [songID]) => {
     const voiceChannel = message.member.voiceChannel;
     if (!message.member.voiceChannel) { return message.channel.send("You are not in the voice channel."); }
 
@@ -15,7 +15,7 @@ exports.run = async (client, message, [songID]) => {
     message.channel.send(`${title} has been removed from the queue.`);
 };
 
-exports.conf = {
+module.exports.conf = {
     enabled: true,
     runIn: ["text"],
     aliases: [],
@@ -23,7 +23,7 @@ exports.conf = {
     botPerms: []
 };
 
-exports.help = {
+module.exports.help = {
     name: "remove",
     description: "Removes a song from the queue.",
     usage: "[songID:int]",
