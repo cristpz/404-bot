@@ -2,7 +2,7 @@ const discord = require("discord.js");
 const cheerio = require("cheerio");
 const request = require("request");
 
-exports.run = async (client, msg, [term]) => {
+module.exports.run = async (client, msg, [term]) => {
     const url = "https://myanimelist.net/profile/";
 
     request(url + term, function(err, res, body) {
@@ -92,7 +92,7 @@ exports.run = async (client, msg, [term]) => {
     });
 };
 
-exports.conf = {
+module.exports.conf = {
     enabled: true,
     runIn: ["text"],
     aliases: [],
@@ -101,7 +101,7 @@ exports.conf = {
     cooldown: 30
 };
 
-exports.help = {
+module.exports.help = {
     name: "mal",
     description: "Fetch a user's profile on MyAnimeList",
     usage: "[term:str]",
