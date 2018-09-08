@@ -109,7 +109,7 @@ bot.on("message", async message => {
 }
 if(cmd === `${prefix}🍍`){
   let ananasembed = new Discord.RichEmbed()
-  .setDescription(`**🍍 Hello ${message.author}, here's a picture of what you requested 🍍**`)
+  .setDescription(`**🍍 Hello ${message.author}, ananas. 🍍**`)
   .setColor("#3a0be7")
   .setImage('https://media.fabfab.net/images/products/popup/12_5771_522.jpg');
 	
