@@ -97,11 +97,8 @@ bot.on("message", async message => {
 
     return;
 }
-	if(cmd === `crist`) {
-		return message.channel.send(`that faggot deserves painful death`);
-}
-if(cmd === `${prefix}subreddits`){
-  let bicon = bot.user.displayAvatarURL;
+	if(cmd === `${prefix}subreddits`) {
+		let bicon = bot.user.displayAvatarURL;
   let redditembed = new Discord.RichEmbed()
   .setDescription(`**Hello ${message.author}, those are the subreddit commands that I placed on another command, since discord's char limit is 2000**`)
   .setColor("#3a0be7")
@@ -109,6 +106,14 @@ if(cmd === `${prefix}subreddits`){
   .addField("Subreddits [1]", " `jeepreddit` `toyotareddit` `audireddit` `ferrarireddit` `porschereddit` `mazdareddit` `mazdaprotegereddit` `hondareddit` `s2000reddit` `crownvictoriareddit` `hyundaireddit` `mr2reddit` `fordreddit` `lexusreddit` `corvettereddit` `corollareddit` `ft86reddit` `scionreddit` `mitsubishireddit` `dsmreddit` `4g63reddit` `300zxreddit` `mustangreddit` `peugeotreddit` `citroenreddit` `teslamotorsreddit` `voltreddit` `mercedesreddit` `jaguarreddit` `pontiacreddit` `volkswagenreddit` `beetlereddit` `fahrvergnugenreddit` `dodgereddit` `moparreddit` `subarureddit` `240sxreddit` `miatareddit` `camaroreddit` `landroverreddit` `serieslandroverreddit` `bmwreddit` `tiburonreddit` `saabreddit` `toyotasuprareddit` `volvoreddit` `infinitireddit` `dieselreddit` `rotariesreddit` ")
   .addField("Subreddits [2]", " `autosreddit` `drivingreddit` `4wheelsnewsreddit` `askcarsalesreddit` `topgearreddit` `usercarsreddit` `cartalkreddit` `cartalkukreddit` `mechanicadvicereddit` `autodetailingreddit` `shittycarmodsreddit` `projectcarreddit` `caravreddit` `carpornreddit` `f1pornreddit` `rallypornreddit` `motorsportpornreddit` `spottedreddit` `exoticspottingreddit` `justtrolledintotheshopreddit` `askashittymechanicreddit` `automotivetrainingreddit` `motorsportsreddit` `formula1reddit` `indycarreddit` `formulaereddit` `wecreddit` `wtccreddit` `roadrallysreddit` `driftingreddit` `racingreddit` `kartingreddit` `rallyreddit` `autoxreddit` `autocrossreddit` `nascarreddit` `overlandingreddit` `4x4reddit` `startmotorsportreddit` `stancereddit` `fitmentreddit` `trucksreddit` `jdmreddit` `importsreddit` `musclecarreddit` `mylittlemotorheadreddit` ");
    return message.channel.send(redditembed);
+}
+if(cmd === `${prefix}🍍`){
+  let ananasembed = new Discord.RichEmbed()
+  .setDescription(`**🍍 Hello ${message.author}, here's a picture of what you requested 🍍**`)
+  .setColor("#3a0be7")
+  .setImage('https://media.fabfab.net/images/products/popup/12_5771_522.jpg');
+	
+   return message.channel.send(ananasembed);
   }
 
 if(cmd === `${prefix}help`){
