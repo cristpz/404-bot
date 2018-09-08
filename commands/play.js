@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args, ops) => {
 
 if (!message.member.voiceChannel) return message.channel.send('Please connect to a voice channel.');
 
-if (message.guild.me.voiceChannel) return message.channel.send('Sorry, the bot is already connected to one of the guild's voice channels.');
+if (message.guild.me.voiceChannel) return message.channel.send('Sorry, the bot is already connected to the guild.');
 
 if (!args[0]) return message.channel.send('Sorry, please input a url following the command.');
 
