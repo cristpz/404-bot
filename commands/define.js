@@ -1,11 +1,11 @@
 const Discord = require("discord.js");
 const superagent = require("superagent");
 
-//.def [term] - Gets definition of term from urban dictionary
+
 module.exports.run = async (bot, message, args) => {
   //Checks if term is provided
   if (!args[0])
-    return message.channel.send("Error. Specify a term! `.def [term]`\nNote: if you have spaces in the term use `_` instead of spaces. Example: `.def netflix_and_chill`.");
+    return message.channel.send("Error. Specify a term! `404define [term]`\nNote: if you have spaces in the term use `_` instead of spaces. Example: `404define james_may`.");
 
   let term = convertTerm(args[0]); //Checks for multiple terms and replaces _ to %20 for API
 
@@ -15,7 +15,6 @@ module.exports.run = async (bot, message, args) => {
   if (define.length == '3') {
     let embed = new Discord.RichEmbed()
       .setTitle(`Definition of ${term.toUpperCase()} from Urban Dictionary`)
-      .setDescription(`**View all**: ${define.url}\n**Note**: If you like the bot and want it to be active, use the **\`404donate\`** command to support the bot's hosting costs.`)
       .setThumbnail(`https://www.digzoo.com/sites/default/files/2017-09/image1_31.jpeg`)
       .setColor("#3a0be7")
       .addField("Term", define.term[0])
