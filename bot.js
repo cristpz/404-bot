@@ -114,6 +114,9 @@ if(cmd === `${prefix}help`){
   if(cmd === `${prefix}hello`){
    return message.channel.send("Hey there lad!");
 }
+if(cmd === `${prefix} are you alive`){
+ return message.channel.send("Ready to serve everyone in here, just like the good old days.");
+}
 if(cmd === `${prefix}die`){
  return message.channel.send("no u ");
 }
