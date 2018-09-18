@@ -23,7 +23,7 @@ fs.readdir("./commands/", (err, files) => {
 bot.on("ready", async () => {
 
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-  bot.user.setActivity(`gtasa tutorials | 404help`, {type: "WATCHING"});
+  bot.user.setActivity(`the void | 404help`, {type: "WATCHING"});
 
 });
 		
