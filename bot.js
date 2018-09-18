@@ -96,15 +96,15 @@ if(cmd === `${prefix}help`){
   .setDescription(`**Hello ${message.author}, I'm 404, a basic multi-purpose bot made by Akemi#4040**`)
   .setColor("#3a0be7")
   .setThumbnail(bicon)
-  .addField("Command Count", "169 currently")
+  .addField("Command Count", "170 currently")
   .addField("Cars", " `nsx` `cliowilliams` `accord` `sc300` `lanos` `matiz` `polonez` `206` `207` `306` `307` `406` `407` `hakosuka` `corolla` `corollawrc` `a4` `impreza` `eclipse` `w8` `gt40` `s2k` ")
   .addField("Fun", " `8ball` `cat` `dog` `google` `pick` `rate` `ratewaifu` `neko` `generateavatar` `yn` `lizard` `gasmoji` `coinflip` `define` `motivate` `meme` `shitpost` `roll` ")
   .addField("Music", " `coming soon (idk when so stfu)` ")
   .addField("Actions", " `suicide` `slap` `pat` `hug` `cuddle` `kiss` `smug` `poke` `feed` ")
   .addField("Lewd (NSFW only)", " `lewdneko` `lewdtrap` `fuck` `randomhentai` `randomhentaigif` `spank` `bj` `lewdholo` `lewdkitsune` `feet` ")
   .addField("Moderation", " `kick` `ban` `addrole` `removerole` ")
-  .addField("Miscellaneous", " `ping` `avatar` `hello` `salute` `die` `nou` `botowner` `botusers` `help` `info` ")
-  .addField("Vote/Invite", "https://discordbots.org/bot/468180436032421898")
+  .addField("Miscellaneous", " `ping` `avatar` `hello` `salute` `die` `nou` `botowner` `botusers` `help` `info` `serverinfo` ")
+  .addField("Vote/Invite", "https://discordbots.org/bot/491600976009101324")
   .addField("Patreon", "https://www.patreon.com/404bot")
   .addField("PayPal", "https://www.paypal.me/dametucosita")
   .setFooter("Check 404subreddits for more commands!")
@@ -114,7 +114,7 @@ if(cmd === `${prefix}help`){
   if(cmd === `${prefix}hello`){
    return message.channel.send("Hey there lad!");
 }
-if(cmd === `${prefix} are you alive`){
+if(cmd === `${prefix}are you alive`){
  return message.channel.send(`Ready to serve everyone in here, just like the good old days.`);
 }
 if(cmd === `${prefix}die`){
