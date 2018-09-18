@@ -41,24 +41,6 @@ bot.on("message", async message => {
   if(message.author.bot) return;
   if(message.channel.type === "dm") return;
 
-//	if(!coins[message.author.id]){
-//    coins[message.author.id] = {
-//     coins: 0
-//    };
-//  }
-
-//  let coinAmt = Math.floor(Math.random() * 15) + 1;
-//  let baseAmt = Math.floor(Math.random() * 15) + 1;
-//  console.log(`${coinAmt} ; ${baseAmt}`);
-
-//  if(coinAmt === baseAmt){
-//    coins[message.author.id] = {
-//      coins: coins[message.author.id].coins + coinAmt
-//    };
-//  fs.writeFile("./coins.json", JSON.stringify(coins), (err) => {
-//   if (err) console.log(err)
-// });
-
   let prefix = botconfig.prefix;
   let messageArray = message.content.split(" ");
   let cmd = messageArray[0];
@@ -72,7 +54,7 @@ bot.on("message", async message => {
 
   if(cmd === `${prefix}report`){
 
-    //4!report @Crist1234 you're a shit developer
+    //404report @Crist1234 you're a shit developer
 
     let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!rUser) return message.channel.send("Sorry lad I cannot find that user.")
@@ -1220,15 +1202,15 @@ Curb weight: 1,274 kg (2,809 lb)
 
 Image Link: https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/HondaS2000-004.jpg/1280px-HondaS2000-004.jpg`);	 
 }
-	// Bot Mention Embed
+	
   if(message.content.toLowerCase() === '<@421925809532436481>'){
-    let embed = new Discord.RichEmbed()
+    let mentionembed = new Discord.RichEmbed()
     .setTitle("404 Bot")
     .addField("Prefix", `\`${prefix}\``, true)
     .addField("Help", `\`${prefix}info\``, true)
     .setThumbnail(bot.user.displayAvatarURL)
     .setColor("#3a0be7");
-    message.channel.send(embed);
+    message.channel.send(mentionembed);
 };
 });
 
