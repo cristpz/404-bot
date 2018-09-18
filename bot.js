@@ -114,9 +114,6 @@ if(cmd === `${prefix}help`){
   if(cmd === `${prefix}hello`){
    return message.channel.send("Hey there lad!");
 }
-if(cmd === `${prefix}are you alive`){
- return message.channel.send(`Ready to serve everyone in here, just like the good old days.`);
-}
 if(cmd === `${prefix}die`){
  return message.channel.send("no u ");
 }
@@ -1206,7 +1203,7 @@ Curb weight: 1,274 kg (2,809 lb)
 Image Link: https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/HondaS2000-004.jpg/1280px-HondaS2000-004.jpg`);	 
 }
 	
-  if(message.content.toLowerCase() === '<@421925809532436481>'){
+  if(message.content.toLowerCase() === '@404#7945'){
     let mentionembed = new Discord.RichEmbed()
     .setTitle("404 Bot")
     .addField("Prefix", `\`${prefix}\``, true)
