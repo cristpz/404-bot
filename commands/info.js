@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("Version", `${package.version}`)
     .addField("Running on", `${bot.guilds.size} servers`)
     .addField("Developed by", `<@306104099185623042>`)
-    .addField("Created on", bot.user.createdAt);
+    .addField("Created on", "Sunday, July 15th of 2018 / 22:21:54");
   message.channel.send(embed)
     }
 
