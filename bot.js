@@ -104,7 +104,6 @@ if(cmd === `${prefix}help`){
   .addField("Lewd (NSFW only)", " `lewdneko` `lewdtrap` `fuck` `randomhentai` `randomhentaigif` `spank` `bj` `lewdholo` `lewdkitsune` `feet` ")
   .addField("Moderation", " `kick` `ban` `addrole` `removerole` ")
   .addField("Miscellaneous", " `ping` `avatar` `hello` `salute` `die` `nou` `botowner` `botusers` `help` `info` `serverinfo` ")
-  .addField("Vote/Invite", "https://discordbots.org/bot/491600976009101324")
   .addField("Patreon", "https://www.patreon.com/404bot")
   .addField("PayPal", "https://www.paypal.me/dametucosita")
   .setFooter("Check 404subreddits for more commands!")
