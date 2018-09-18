@@ -1233,4 +1233,4 @@ Image Link: https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/HondaS2000
 };
 });
 
-bot.login(process.env.BOT_TOKEN);
+bot.login(process.env.NDY4MTgwNDM2MDMyNDIxODk4.DoJ95g.VEDrDBRGU_tRYFtX_ytgN0ngJx4);
