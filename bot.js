@@ -107,14 +107,6 @@ bot.on("message", async message => {
   .addField("Subreddits [2]", " `autosreddit` `drivingreddit` `4wheelsnewsreddit` `askcarsalesreddit` `topgearreddit` `usercarsreddit` `cartalkreddit` `cartalkukreddit` `mechanicadvicereddit` `autodetailingreddit` `shittycarmodsreddit` `projectcarreddit` `caravreddit` `carpornreddit` `f1pornreddit` `rallypornreddit` `motorsportpornreddit` `spottedreddit` `exoticspottingreddit` `justtrolledintotheshopreddit` `askashittymechanicreddit` `automotivetrainingreddit` `motorsportsreddit` `formula1reddit` `indycarreddit` `formulaereddit` `wecreddit` `wtccreddit` `roadrallysreddit` `driftingreddit` `racingreddit` `kartingreddit` `rallyreddit` `autoxreddit` `autocrossreddit` `nascarreddit` `overlandingreddit` `4x4reddit` `startmotorsportreddit` `stancereddit` `fitmentreddit` `trucksreddit` `jdmreddit` `importsreddit` `musclecarreddit` `mylittlemotorheadreddit` ");
    return message.channel.send(redditembed);
 }
-if(cmd === `${prefix}🍍`){
-  let ananasembed = new Discord.RichEmbed()
-  .setDescription(`**🍍 Hello ${message.author}, ananas. 🍍**`)
-  .setColor("#3a0be7")
-  .setImage('https://media.fabfab.net/images/products/popup/12_5771_522.jpg');
-	
-   return message.channel.send(ananasembed);
-  }
 
 if(cmd === `${prefix}help`){
 
