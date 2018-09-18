@@ -1233,4 +1233,4 @@ Image Link: https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/HondaS2000
 };
 });
 
-bot.login(process.env.botconfig.token);
+bot.login(process.env.BOT_TOKEN);
