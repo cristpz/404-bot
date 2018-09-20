@@ -23,7 +23,7 @@ fs.readdir("./commands/", (err, files) => {
 bot.on("ready", async () => {
 
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-  bot.user.setActivity(`cuties! | rr!help`, {type: "WATCHING"});
+  bot.user.setActivity(`nekopara vol 6 | rr!help`, {type: "PLAYING"});
 
 });
 		
@@ -115,11 +115,7 @@ if(cmd === `${prefix}help`){
 }
 if(cmd === `${prefix}die`){
  return message.channel.send("no u ");
-}
-if (message.content("who is ragio?") {
-  message.channel.send("<@239514119751991297> oki");
-}
-	
+}	
 if(cmd === `${prefix}botowner`){
   return message.channel.send("<@306104099185623042>")
 }
