@@ -93,7 +93,7 @@ if(cmd === `${prefix}help`){
 
   let bicon = bot.user.displayAvatarURL;
   let botembed = new Discord.RichEmbed()
-  .setDescription(`**Hello ${message.author}, I'm RagioBot, a basic multi-purpose bot made by Akemi#4040**`)
+  .setDescription(`**Hello ${message.author}, I'm Ragio, a basic multi-purpose bot made by Akemi#4040**`)
   .setColor("#3a0be7")
   .setThumbnail(bicon)
   .addField("Command Count", "170 currently")
