@@ -23,7 +23,7 @@ fs.readdir("./commands/", (err, files) => {
 bot.on("ready", async () => {
 
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-  bot.user.setActivity(`the void | 404help`, {type: "WATCHING"});
+  bot.user.setActivity(`cuties! | rr!help`, {type: "WATCHING"});
 
 });
 		
@@ -93,7 +93,7 @@ if(cmd === `${prefix}help`){
 
   let bicon = bot.user.displayAvatarURL;
   let botembed = new Discord.RichEmbed()
-  .setDescription(`**Hello ${message.author}, I'm 404, a basic multi-purpose bot made by Akemi#4040**`)
+  .setDescription(`**Hello ${message.author}, I'm RagioBot, a basic multi-purpose bot made by Akemi#4040**`)
   .setColor("#3a0be7")
   .setThumbnail(bicon)
   .addField("Command Count", "170 currently")
@@ -116,6 +116,10 @@ if(cmd === `${prefix}help`){
 if(cmd === `${prefix}die`){
  return message.channel.send("no u ");
 }
+if (message.content("who is ragio?") {
+  message.channel.send("<@239514119751991297> oki");
+}
+	
 if(cmd === `${prefix}botowner`){
   return message.channel.send("<@306104099185623042>")
 }
