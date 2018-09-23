@@ -4,27 +4,21 @@ const google = require("google");
 
 module.exports.run = async (client, message, args) => {
 
-  google.resultsPerPage = 1
-  google.protocol = 'https'
-  var nextCounter = 0
+    let google = args.slice(0).join('+');
 
-  google(args, function (err, res) {
-    if (err) console.log(err);
-
-    for (var i = 0; i < res.links.length; ++i) {
-      var link = res.links[i];
-
-      message.channel.send(link.title + " " + link.href);
-    }
-
-    if (nextCounter < 1) {
-      nextCounter += 1
-      if (res.next) res.next()
-    }
-
-  });
-
-
+        let link = `https://www.google.com/search?q=` + google;
+        if(!link)return message.reply("Console error")
+        let embed = new Discord.RichEmbed()
+	
+    .setColor("#3a0be7")
+    .setTimestamp()
+	.addField("Searching for", `${args.slice(0).join(' ')}`)
+	.addField('Link', `${link}`)
+	.setFooter(`Requested By ${message.author}`, message.author.avatarURL);
+          
+	message.channel.send(embed);
+	message.author.send(`You have searched for ${link} in ${ message.guild.name}`);
+  
 }
 
 module.exports.help = {
