@@ -1,5 +1,4 @@
 const Discord = require("discord.js");
-const superagent = require("superagent");
 
 module.exports.run = async (bot, message, args) => {
 let youtube = args.slice(1).join('+');
@@ -8,4 +7,4 @@ let youtube = args.slice(1).join('+');
 
 module.exports.help = {
   name: "youtube"
-};
+}
