@@ -1,6 +1,6 @@
 {
   "name": "404bot",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "a basic multi-purpose bot",
   "main": "index.js",
   "scripts": {
@@ -9,16 +9,21 @@
   "author": "crist",
   "license": "ISC",
   "dependencies": {
+    "bufferutil": "^4.0.0",
     "cheerio": "^1.0.0-rc.2",
     "discord-eco": "0.0.10",
     "discord.js": "^11.3.2",
     "ffmpeg": "0.0.4",
     "google": "^2.1.0",
+    "mal-scraper": "^2.4.5",
     "moment": "^2.22.2",
     "moment-duration-format": "^2.2.2",
     "mongoose": "^5.2.10",
     "ms": "^2.1.1",
     "nekos.life": "^1.1.4",
+    "node-gyp": "^3.8.0",
+    "opusscript": "0.0.6",
+    "rebuild": "^0.1.2",
     "request": "^2.88.0",
     "superagent": "^3.8.3",
     "url": "^0.11.0",
@@ -29,3 +34,4 @@
     "eslint": "^5.1.0"
   }
 }
+
