@@ -1,3 +1,6 @@
+const Discord = require("discord.js");
+
+module.exports.run = async (bot, message, args) => {
 return message.channel.send("**Smoking!**").then(async msg => {
                         setTimeout(() => {
                             msg.edit('🚬');
@@ -24,7 +27,10 @@ return message.channel.send("**Smoking!**").then(async msg => {
                             msg.edit(`**weeeeeeeeeeeeeeeeeeeeeeeeeeeeed**`);
                         }, 1500);
                         setTimeout(() => {
-                            msg.delete(`**yeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeet**`);
+                            msg.delete(`**weeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeed**`);
                         }, 6000);
                     });
                 };
+module.exports.help = {
+  name:"weed"
+}
