@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-module.exports.run = async (bot, message, args) => {
+module.exports.run = async (client, message, args) => {
   let special = {
       "0": ":zero:",
       "1": ":one:",
@@ -22,7 +22,7 @@ module.exports.run = async (bot, message, args) => {
       "÷": ":heavy_division_sign:",
       ".": ":radio_button:"
   }
-  var emoji = message.suffix.toLowerCase().split("");
+  var emoji = message.toLowerCase().split("");
     let done = "";
 
     for (c = 0; c < emoji.length; c++) {
