@@ -6,16 +6,16 @@ const disagree = "❌";
 module.exports.run = async (bot, message, args) => {
 
   if (message.mentions.users.size === 0){
-    return message.reply(":x: " + "| Please Mention A User To Kick Next Time");
+    return message.reply(":no_entry_sign: " + "| Please Mention A User To Kick Next Time");
   }
 
   let kickmember = message.guild.member(message.mentions.users.first());
   if(!kickmember){
-    message.reply(":x: " + "| That User Does Not Seem Valid!");
+    message.reply(":no_entry_sign: " + "| That User Does Not Seem Valid!");
   }
 
   if(!message.guild.member(bot.user).hasPermission("KICK_MEMBERS")){
-    return message.reply(":x: " + "| i need the \"KICK_MEMBERS\" permission!").catch(console.error);
+    return message.reply(":no_entry_sign: " + "| i need the \"KICK_MEMBERS\" permission!").catch(console.error);
   }
 
   let msg = await message.channel.send("Vote now! (10 Seconds)");
@@ -43,7 +43,7 @@ module.exports.run = async (bot, message, args) => {
                                           "NOTE: Votes needed to kick (3+)\n" +
                                           "----------------------------------------", true)
 
-            .setColor("0x#FF0000")
+            .setColor("0x3a0be7")
 
   await message.channel.send({embed: sumsum});
 
@@ -54,7 +54,7 @@ module.exports.run = async (bot, message, args) => {
     })
   }else{
 
-    message.channel.send("\n" + "SAFE..... FOR NOW");
+    message.channel.send("\n" + "Damn lad, that was a close one");
   }
 
 }
