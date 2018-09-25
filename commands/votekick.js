@@ -6,16 +6,16 @@ const disagree = "❌";
 module.exports.run = async (bot, message, args) => {
 
   if (message.mentions.users.size === 0){
-    return message.reply(":no_entry_sign: " + " Please mention a user to kick!");
+    return message.reply("Please mention a user to kick!");
   }
 
   let kickmember = message.guild.member(message.mentions.users.first());
   if(!kickmember){
-    message.reply(":no_entry_sign: " + " That user does not seem valid!");
+    message.reply("That user does not seem valid!");
   }
 
   if(!message.guild.member(bot.user).hasPermission("KICK_MEMBERS")){
-    return message.reply(":no_entry_sign: " + " I need the \"KICK_MEMBERS\" permission to kick!").catch(console.error);
+    return message.reply ("I need the \"KICK_MEMBERS\" permission to kick!").catch(console.error);
   }
 
   let msg = await message.channel.send("Vote now! (10 Seconds)");
