@@ -36,7 +36,6 @@ module.exports.run = async (bot, message, args) => {
 
   var sumsum = new Discord.RichEmbed()
             
-            .setDescription("Vote Results") 
             .addField("Total votes (NO):", `${NO_Count-1}`)
             .addField("Total votes (YES):", `${YES_Count-1}`)
             .setFooter("NOTE: Votes needed to kick (3+)")
