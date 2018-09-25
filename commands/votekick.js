@@ -6,16 +6,16 @@ const disagree = "❌";
 module.exports.run = async (bot, message, args) => {
 
   if (message.mentions.users.size === 0){
-    return message.reply(":no_entry_sign: " + "| Please Mention A User To Kick Next Time");
+    return message.reply(":no_entry_sign: " + " Please mention a user to kick!");
   }
 
   let kickmember = message.guild.member(message.mentions.users.first());
   if(!kickmember){
-    message.reply(":no_entry_sign: " + "| That User Does Not Seem Valid!");
+    message.reply(":no_entry_sign: " + " That user does not seem valid!");
   }
 
   if(!message.guild.member(bot.user).hasPermission("KICK_MEMBERS")){
-    return message.reply(":no_entry_sign: " + "| i need the \"KICK_MEMBERS\" permission!").catch(console.error);
+    return message.reply(":no_entry_sign: " + " I need the \"KICK_MEMBERS\" permission to kick!").catch(console.error);
   }
 
   let msg = await message.channel.send("Vote now! (10 Seconds)");
@@ -35,15 +35,12 @@ module.exports.run = async (bot, message, args) => {
   }
 
   var sumsum = new Discord.RichEmbed()
-  
-            .addField("Voting Finished:", "----------------------------------------\n" +
-                                          "Total votes (NO): " + `${NO_Count-1}\n` +
-                                          "Total votes (Yes): " + `${YES_Count-1}\n` +
-                                          "----------------------------------------\n" +
-                                          "NOTE: Votes needed to kick (3+)\n" +
-                                          "----------------------------------------", true)
-
-            .setColor("0x3a0be7")
+            
+            .setDescription("Vote Results") 
+            .addField("Total votes (NO):", `${NO_Count-1}`)
+            .addField("Total votes (YES):", `${YES_Count-1}`)
+            .setFooter("NOTE: Votes needed to kick (3+)")
+            .setColor("0x3a0be7");
 
   await message.channel.send({embed: sumsum});
 
