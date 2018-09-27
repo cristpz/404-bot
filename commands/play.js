@@ -26,7 +26,7 @@ module.exports.run = async (client, message, args, ops) => {
     announceChannel: mesage.channel.id
   }};
 
-  if (!data.dispatcher) play(client, ops, data);
+  if (!data.dispatcher) playStream(client, ops, data);
   else {
     message.channel.send(`Added to Queue: ${info.title} | Requested By: ${message.author.id}`);
   }
@@ -53,7 +53,7 @@ module.exports.run = async (client, message, args, ops) => {
     if (fetched.queue.length > 0) {
       ops.active.set(dispatcher.guildID, fetched);
 
-      play(client, ops, fetched);
+      playStream(client, ops, fetched);
     } else {
       ops.active.delete(dispatcher.guildID);
 
