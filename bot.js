@@ -2,6 +2,7 @@ const botconfig = require("./botconfig.json");
 const Discord = require("discord.js");
 const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
+const client = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
 
 fs.readdir("./commands/", (err, files) => {
@@ -34,6 +35,14 @@ bot.on("guildCreate", guild => {
 
 bot.on("guildDelete", guild => {
   console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
+});
+
+client.on("guildMemberAdd", (member) => {
+    message.channel.send(`Welcome ${member} to ${guild.name}, have a nice stay!`);
+});
+
+client.on("guildMemberRemove", (member) => {
+    message.channel.send(`Goodbye ${member}, take care without us!`)
 });
 
 bot.on("message", async message => {
