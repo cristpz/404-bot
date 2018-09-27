@@ -50,7 +50,7 @@ bot.on("message", async message => {
   if(message.author.bot) return;
   if(message.channel.type === "dm") return;
 
-  let prefix = botconfig.prefix;
+  let prefix = '404';
   let messageArray = message.content.split(" ");
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
@@ -58,9 +58,10 @@ bot.on("message", async message => {
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot,message,args);
 
-
-
-
+  if(cmd === `${prefix} ping`){
+  message.channel.send(new Date().getTime() - message.createdTimestamp + " ms currently.");
+  }
+	
   if(cmd === `${prefix}report`){
 
     //404report @Crist1234 you're a shit developer
