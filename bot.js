@@ -3,6 +3,7 @@ const Discord = require("discord.js");
 const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
 const client = new Discord.Client({disableEveryone: true});
+const active = new Map();
 bot.commands = new Discord.Collection();
 
 fs.readdir("./commands/", (err, files) => {
@@ -12,6 +13,10 @@ fs.readdir("./commands/", (err, files) => {
   if(jsfile.length <= 0){
     console.log("Couldn't find commands.");
     return;
+  }
+let opts = {
+    ownerID: botconfig.ownerID,
+    active: active
   }
 
   jsfile.forEach((f, i) =>{
