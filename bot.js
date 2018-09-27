@@ -38,11 +38,11 @@ bot.on("guildDelete", guild => {
 });
 
 client.on("guildMemberAdd", (member) => {
-    message.channel.send(`Welcome ${member} to ${guild.name}, have a nice stay!`);
+    message.channel.send(`Welcome ${member.user} to ${guild.name}, have a nice stay!`);
 });
 
 client.on("guildMemberRemove", (member) => {
-    message.channel.send(`Goodbye ${member}, take care without us!`)
+    message.channel.send(`Goodbye ${member.user}, take care without us!`)
 });
 
 bot.on("message", async message => {
@@ -98,6 +98,13 @@ bot.on("message", async message => {
   .addField("Subreddits [2]", " `autosreddit` `drivingreddit` `4wheelsnewsreddit` `askcarsalesreddit` `topgearreddit` `usercarsreddit` `cartalkreddit` `cartalkukreddit` `mechanicadvicereddit` `autodetailingreddit` `shittycarmodsreddit` `projectcarreddit` `caravreddit` `carpornreddit` `f1pornreddit` `rallypornreddit` `motorsportpornreddit` `spottedreddit` `exoticspottingreddit` `justtrolledintotheshopreddit` `askashittymechanicreddit` `automotivetrainingreddit` `motorsportsreddit` `formula1reddit` `indycarreddit` `formulaereddit` `wecreddit` `wtccreddit` `roadrallysreddit` `driftingreddit` `racingreddit` `kartingreddit` `rallyreddit` `autoxreddit` `autocrossreddit` `nascarreddit` `overlandingreddit` `4x4reddit` `startmotorsportreddit` `stancereddit` `fitmentreddit` `trucksreddit` `jdmreddit` `importsreddit` `musclecarreddit` `mylittlemotorheadreddit` ");
    return message.channel.send(redditembed);
 }
+	 if(cmd === `${prefix}reload`) {
+            console.clear();
+               bot.destroy()
+               bot.login(process.env.BOT_TOKEN);
+             message.channel.send("Reloaded, have fun lads.");
+         return;
+        }
 
 if(cmd === `${prefix}help`){
 
@@ -108,15 +115,16 @@ if(cmd === `${prefix}help`){
   .setThumbnail(bicon)
   .addField("Command Count", "175 currently")
   .addField("Cars", " `nsx` `cliowilliams` `accord` `sc300` `lanos` `matiz` `polonez` `206` `207` `306` `307` `406` `407` `hakosuka` `corolla` `corollawrc` `a4` `impreza` `eclipse` `w8` `gt40` `s2k` ")
-  .addField("Fun", " `8ball` `cat` `dog` `google` `pick` `rate` `ratewaifu` `neko` `generateavatar` `yn` `lizard` `gasmoji` `coinflip` `define` `motivate` `meme` `shitpost` `roll` `weed` `anime` `csgo` `fortnite` ")
+  .addField("Fun", " `8ball` `cat` `dog` `google` `pick` `rate` `ratewaifu` `neko` `generateavatar` `yn` `lizard` `gasmoji` `coinflip` `define` `motivate` `meme` `shitpost` `roll` `weed` `anime` `csgo` ")
   .addField("Music", " `coming soon (idk when so stfu)` ")
   .addField("Actions", " `suicide` `slap` `pat` `hug` `cuddle` `kiss` `smug` `poke` `feed` ")
   .addField("Lewd (NSFW only)", " `lewdneko` `lewdtrap` `fuck` `randomhentai` `randomhentaigif` `spank` `bj` `lewdholo` `lewdkitsune` `feet` ")
   .addField("Moderation", " `kick` `ban` `addrole` `removerole` `votekick` ")
   .addField("Miscellaneous", " `ping` `avatar` `hello` `salute` `die` `nou` `botowner` `botusers` `help` `info` `serverinfo` ")
+  .addField("Bot Owner ONLY", " `reload` ")
   .addField("Patreon", "https://www.patreon.com/404bot")
   .addField("PayPal", "https://www.paypal.me/dametucosita")
-  .setFooter("Check 404subreddits for more commands!")
+  .setFooter("Check 404subreddits for more commands!");
 
    return message.channel.send(botembed);
   }
