@@ -33,10 +33,6 @@ module.exports.run = async (client, message, args, ops) => {
 
   ops.active.set(message.guild.id, data);
 
-
-  }
-
-
   async function play(client, ops, data) {
     client.channels.get(data.queue[0].announceChannel).send(`Now Playing: ${data.queue[0].songTitle} | Requested By: ${data.queue[0].requester}`);
 
@@ -65,10 +61,10 @@ module.exports.run = async (client, message, args, ops) => {
       if (vc) vc.leave();
     }
   }
+}
 
 
 
 module.exports.help = {
   name: "play"
 }
-
