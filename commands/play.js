@@ -23,7 +23,7 @@ module.exports.run = async (client, message, args, ops) => {
     songTitle: info.title,
     requester: message.author.tag,
     url: args[0],
-    announceChannel: mesage.channel.id
+    announceChannel: message.channel.id
   }};
 
   if (!data.dispatcher) playStream(client, ops, data);
