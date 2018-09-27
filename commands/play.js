@@ -30,6 +30,7 @@ module.exports.run = async (client, message, args, ops) => {
   else {
     message.channel.send(`Added to Queue: ${info.title} | Requested By: ${message.author.id}`);
   }
+  
 
   ops.active.set(message.guild.id, data);
 
@@ -61,7 +62,7 @@ module.exports.run = async (client, message, args, ops) => {
     } else {
       ops.active.delete(dispatcher.guildID);
 
-      let vc = cliend.guilds.get(dispatcher.guildID).me.voiceChannel;
+      let vc = client.guilds.get(dispatcher.guildID).me.voiceChannel;
       if (vc) vc.leave();
     }
   }
