@@ -99,6 +99,7 @@ bot.on("message", async message => {
    return message.channel.send(redditembed);
 }
 	 if(cmd === `${prefix}reload`) {
+            if(message.author.id !== botconfig.ownerID) return;
             console.clear();
                bot.destroy()
                bot.login(process.env.BOT_TOKEN);
