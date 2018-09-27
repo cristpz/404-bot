@@ -8,15 +8,16 @@ bot.commands = new Discord.Collection();
 
 fs.readdir("./commands/", (err, files) => {
 
+	let opts = {
+    ownerID: botconfig.ownerID,
+    active: active
+  }
+	
   if(err) console.log(err);
   let jsfile = files.filter(f => f.split(".").pop() === "js");
   if(jsfile.length <= 0){
     console.log("Couldn't find commands.");
     return;
-  }
-let opts = {
-    ownerID: botconfig.ownerID,
-    active: active
   }
 
   jsfile.forEach((f, i) =>{
