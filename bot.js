@@ -58,7 +58,7 @@ bot.on("message", async message => {
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot,message,args);
 
-  if(cmd === `${prefix} ping`){
+  if(cmd === `${prefix}ping`){
   message.channel.send(new Date().getTime() - message.createdTimestamp + " ms currently.");
   }
 	
