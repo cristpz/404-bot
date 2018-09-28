@@ -16,8 +16,6 @@ module.exports.run = async (client, message, args, ops) => {
 
   if (!validate) return message.channel.send('Please input a valid url.');
   
-  let info = await ytdl.getInfo(args[0]);
-  
   let connection = await message.member.voiceChannel.join();
   
   let dispatcher = await connection.playStream(ytdl(args[0], { filter: 'audioonly' }));
