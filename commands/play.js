@@ -12,9 +12,9 @@ module.exports.run = async (client, message, args, ops) => {
 
   let validate = await ytdl.validateURL(args[0]);
 
-  let info = await ytdl.getInfo(args[0]);
-
   if (!validate) return message.channel.send('Please input a valid url.');
+  
+  let info = await ytdl.getInfo(args[0]);
   
   let connection = await message.member.voiceChannel.join();
   
