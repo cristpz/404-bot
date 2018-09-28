@@ -1,11 +1,14 @@
 const Discord  = module.require('discord.js');
+const errors = require("../utils/errors.js");
 
 const agree    = "✅";
 const disagree = "❌";
 
 module.exports.run = async (bot, message, args) => {
+ 
  if(!message.member.hasPermission("KICK_MEMBERS")) return errors.noPerms(message, "KICK_MEMBERS");
-  if (message.mentions.users.size === 0){
+ 
+ if (message.mentions.users.size === 0){
     return message.reply("Please mention a user to kick!");
   }
 
