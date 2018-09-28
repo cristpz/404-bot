@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const ytdl = require('ytdl-core');
+const active = new Map();
 
 module.exports.run = async (client, message, args, ops) => {
 
