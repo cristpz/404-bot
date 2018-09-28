@@ -20,7 +20,7 @@ module.exports.run = async (client, message, args, ops) => {
   if (!data.queue) data.queue = [];
   data.guildID = message.guild.id;
 
-  data.queue.push{{
+  data.queue.push{
     songTitle: info.title,
     requester: message.author.tag,
     url: args[0],
