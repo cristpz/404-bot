@@ -20,18 +20,18 @@ module.exports.run = async (client, message, args, ops) => {
   if (!data.queue) data.queue = [];
   data.guildID = message.guild.id;
 
-  data.queue.push{
+  data.queue.push{{
     songTitle: info.title,
     requester: message.author.tag,
     url: args[0],
     announceChannel: message.channel.id
   }};
-
+{
   if (!data.dispatcher) playStream(client, ops, data);
 } else {
     message.channel.send(`Added to Queue: ${info.title} | Requested By: ${message.author.id}`);
   }
-  
+{  
 
   ops.active.set(message.guild.id, data);
 
@@ -59,7 +59,7 @@ module.exports.run = async (client, message, args, ops) => {
     if (fetched.queue.length > 0) {
       ops.active.set(dispatcher.guildID, fetched);
 
-      playStream(client, ops, fetched);
+      play(client, ops, fetched);
     } else {
       ops.active.delete(dispatcher.guildID);
 
@@ -67,6 +67,7 @@ module.exports.run = async (client, message, args, ops) => {
       if (vc) vc.leave();
     }
   }
+}
 
 
 
