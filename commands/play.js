@@ -28,7 +28,7 @@ module.exports.run = async (client, message, args, ops) => {
   }};
 
   if (!data.dispatcher) playStream(client, ops, data);
-  else {
+} else {
     message.channel.send(`Added to Queue: ${info.title} | Requested By: ${message.author.id}`);
   }
   
