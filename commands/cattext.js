@@ -5,6 +5,8 @@ const neko = new client();
 
 
 module.exports.run = async (bot, message, args) => {
+ 
+ let catText = neko.getSFWCatText();
 
  neko.getSFWCatText().then((catText) => console.log(catText));
  
