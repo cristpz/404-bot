@@ -4,13 +4,13 @@ const superagent = require("superagent");
 
 
 module.exports.run = async (client, message, args) => {
-  let {response} = await superagent
+  let {body} = await superagent
   .get(`https://nekos.life/api/v2/why`);
 
   let whyembed = new Discord.RichEmbed()
   .setColor("#3a0be7")
-  .addField(`${message.author.username} why though`, response.why);
-
+  .setTitle(`${message.author.username} why though`)
+  .setDescription(body.why);
   message.channel.send(whyembed);
 
 }
