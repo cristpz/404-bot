@@ -5,15 +5,19 @@ const neko = new client();
 
 
 module.exports.run = async (bot, message, args) => {
- async function work() {
-  let owo = await neko.getSFWOwOify({text: 'This is a text message'});
-  console.log(owo);
-  message.channel.send(owo);
-}
+ 
+ let {body} = await superagent
+  .get(`https://nekos.life/api/v2/owoify`);
 
-work();
+  let owoembed = new Discord.RichEmbed()
+  .setColor("#3a0be7")
+  .setTitle(body.text)
+
+  message.channel.send(owoembed);
+
+ 
 }
 
 module.exports.help = {
-  name: "owotest"
+  name: "owoify"
 }
