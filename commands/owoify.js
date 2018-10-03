@@ -5,7 +5,7 @@ const superagent = require("snekfetch");
 
 
 
-module.exports.run = async (bot, message, args) => {
+module.exports.run = async (client, message, args) => {
     let stats = await client.getStats();
     stats.why++;
     client.saveStats(stats);
