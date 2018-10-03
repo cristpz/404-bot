@@ -10,7 +10,7 @@ module.exports.run = async (client, message, args) => {
 
   let whyembed = new Discord.RichEmbed()
   .setColor("#3a0be7")
-  .addField(`${message.author} why though`, r.body.text);
+  .addField(`${message.author} why though`, body.text);
 
   message.channel.send(whyembed);
 
