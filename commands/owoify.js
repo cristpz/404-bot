@@ -5,15 +5,15 @@ const neko = new client();
 
 
 module.exports.run = async (bot, message, args) => {
- 
- let catText = neko.getSFWCatText();
+ async function work() {
+  let owo = await neko.getSFWOwOify({text: 'This is a text message'});
+  console.log(owo);
+  message.channel.send(owo);
+}
 
- neko.getSFWCatText().then((catText) => console.log(catText));
- 
- message.channel.send(catText);
-
+work();
 }
 
 module.exports.help = {
-  name: "cattext"
+  name: "owotest"
 }
