@@ -10,7 +10,7 @@ module.exports.run = async (client, message, args) => {
   let factembed = new Discord.RichEmbed()
   .setColor("#3a0be7")
   .setTitle(`Random Fact:`)
-  .setDescription(body.why);
+  .setDescription(body.fact);
   message.channel.send(factembed);
 
 }
