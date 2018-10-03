@@ -9,7 +9,7 @@ module.exports.run = async (client, message, args) => {
 
   let whyembed = new Discord.RichEmbed()
   .setColor("#3a0be7")
-  .setTitle(`${message.author.username} why though`)
+  .setTitle(`${message.author.username}, why though`)
   .setDescription(body.why);
   message.channel.send(whyembed);
 
