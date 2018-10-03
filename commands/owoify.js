@@ -7,7 +7,8 @@ const superagent = require("snekfetch");
 
 module.exports.run = async (bot, message, args) => {
     let stats = await client.getStats();
-
+    stats.why++;
+    client.saveStats(stats);
     await client.snekfetch.get('https://nekos.life/api/v2/owoify')
         .then(r => message.channel.send({
             embed: {
