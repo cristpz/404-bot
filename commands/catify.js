@@ -7,9 +7,11 @@ const neko = new client();
 module.exports.run = async (bot, message, args) => {
 
  neko.getSFWCatText().then((catText) => console.log(catText));
+ 
+ message.channel.send(catText);
 
 }
 
 module.exports.help = {
-  name: "catify"
+  name: "cattext"
 }
