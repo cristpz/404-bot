@@ -30,7 +30,7 @@ fs.readdir("./commands/", (err, files) => {
 bot.on("ready", async () => {
 
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-  bot.user.setActivity(`with the new 404special command! | 404help`, {type: "PLAYING"});
+  bot.user.setActivity(`the void | 404help`, {type: "WATCHING"});
 
 });
 		
@@ -43,12 +43,12 @@ bot.on("guildDelete", guild => {
   console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
 });
 
-client.on("guildMemberAdd", (member) => {
-    message.channel.send(`Welcome ${member.user} to ${guild.name}, have a nice stay!`);
+bot.on("guildMemberAdd", (member) => {
+    message.channel.send(`Welcome **${member.username}** to ${guild.name}, have a nice stay!`);
 });
 
-client.on("guildMemberRemove", (member) => {
-    message.channel.send(`Goodbye ${member.user}, take care without us!`)
+bot.on("guildMemberRemove", (member) => {
+    message.channel.send(`Goodbye **${member.username}**, take care without us!`)
 });
 
 bot.on("message", async message => {
@@ -120,14 +120,14 @@ if(cmd === `${prefix}help`){
   .setDescription(`**Hello ${message.author}, I'm 404, a basic multi-purpose bot made by Akemi#4040**`)
   .setColor("#3a0be7")
   .setThumbnail(bicon)
-  .addField("Command Count", "182 currently")
+  .addField("Command Count", "183 currently")
   .addField("Cars", " `nsx` `cliowilliams` `accord` `sc300` `lanos` `matiz` `polonez` `206` `207` `306` `307` `406` `407` `hakosuka` `corolla` `corollawrc` `a4` `impreza` `eclipse` `w8` `gt40` `s2k` ")
   .addField("Fun", " `8ball` `cat` `dog` `google` `pick` `rate` `ratewaifu` `neko` `generateavatar` `yn` `lizard` `gasmoji` `coinflip` `define` `motivate` `meme` `shitpost` `roll` `weed` `anime` `csgo` `generatewp` `why` `fact` ")
   .addField("Music", " `play (url only)` `leave` `search[temporarily disabled]` ")
-  .addField("Actions", " `suicide` `slap` `pat` `hug` `cuddle` `kiss` `smug` `poke` `feed` `lewd` ")
-  .addField("Lewd (NSFW only)", " `lewdneko` `lewdtrap` `fuck` `randomhentai` `randomhentaigif` `spank` `bj` `lewdholo` `lewdkitsune` `feet` ")
+  .addField("Actions", " `suicide` `slap` `pat` `hug` `cuddle` `kiss` `smug` `poke` `feed` ")
+  .addField("Lewd (NSFW only)", " `lewdneko` `lewdtrap` `fuck` `randomhentai` `randomhentaigif` `spank` `bj` `lewdholo` `lewdkitsune` `feet` `lewd` ")
   .addField("Moderation", " `kick` `ban` `addrole` `removerole` `votekick` ")
-  .addField("Miscellaneous", " `ping` `avatar` `hello` `salute` `die` `nou` `botowner` `botusers` `help` `info` `serverinfo` ")
+  .addField("Miscellaneous", " `ping` `avatar` `hello` `salute` `die` `nou` `botowner` `botusers` `help` `info` `serverinfo` `special` ")
   .addField("Bot Owner ONLY", " `reload` ")
   .addField("Patreon", "https://www.patreon.com/404bot")
   .addField("PayPal", "https://www.paypal.me/dametucosita")
