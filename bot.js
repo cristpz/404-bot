@@ -43,14 +43,6 @@ bot.on("guildDelete", guild => {
   console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
 });
 
-bot.on("guildMemberAdd", (member) => {
-    message.channel.send(`Welcome **${member.username}** to ${guild.name}, have a nice stay!`);
-});
-
-bot.on("guildMemberRemove", (member) => {
-    message.channel.send(`Goodbye **${member.username}**, take care without us!`)
-});
-
 bot.on("message", async message => {
 
   if(message.author.bot) return;
