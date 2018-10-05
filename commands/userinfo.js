@@ -21,7 +21,7 @@ module.exports.run = async (bot, message, args) => {
         .setColor(0x3a0be7)
         .addField("Full Username:", `${memberInfo.user.username}#${memberInfo.user.discriminator}`)
         .addField("ID:", memberInfo.id)
-        .addField("Joined at", message.memberInfo.joinedAt)
+        .addField("Joined at", message.member.joinedAt)
         .addField("Created at:", memberInfo.user.createdAt);
 
         message.channel.send(userinfo);
