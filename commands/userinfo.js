@@ -9,20 +9,22 @@ module.exports.run = async (bot, message, args) => {
         .setColor(0x3a0be7)
         .addField("Full Username:", `${message.author.username}#${message.author.discriminator}`)
         .addField("ID:", message.author.id)
-        .addField("Created At:", message.author.createdAt)
+        .addField("Joined at:", message.author.joinedAt)
+        .addField("Created at:", message.author.createdAt);
 
         message.channel.send(userinf);
 
   }else{
 
-    var userinfoo = new Discord.RichEmbed()
+    var userinfo = new Discord.RichEmbed()
         .setThumbnail(memberInfo.user.avatarURL)
         .setColor(0x3a0be7)
         .addField("Full Username:", `${memberInfo.user.username}#${memberInfo.user.discriminator}`)
         .addField("ID:", memberInfo.id)
-        .addField("Created At:", memberInfo.user.createdAt)
+        .addField("Joined at", memberInfo.user.joinedAt)
+        .addField("Created at:", memberInfo.user.createdAt);
 
-        message.channel.send(userinfoo);
+        message.channel.send(userinfo);
   }
 }
 
