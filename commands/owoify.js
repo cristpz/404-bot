@@ -4,15 +4,11 @@ const superagent = require("superagent");
 
 
 module.exports.run = async (client, message, args) => {
-  let {body} = await superagent
-  .get(`https://nekos.life/api/v2/owoify`);
-
-  let owoembed = new Discord.RichEmbed()
-  .setColor("#3a0be7")
-  .setTitle(`OwOified Text:`)
-  .setDescription(body.msg);
-  message.channel.send(owoembed);
-
+ let owoified = text.replace(/r|l/g, "w").replace(/R|L/g, "W").replace(/owo/i, 'OwO').replace(/uwu/i, 'UwU');
+        let owoembed = new Discord.RichEmbed()
+        .setColor('#3a0be7')
+        .addField('OwOified Text', owoified);
+        message.channel.send(owoembed);
 }
 
 module.exports.help = {
