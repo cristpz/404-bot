@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
         .setColor(0x3a0be7)
         .addField("Full Username:", `${message.author.username}#${message.author.discriminator}`)
         .addField("ID:", message.author.id)
-        .addField("Joined at:", message.author.joinedAt)
+        .addField("Joined at:", message.member.joinedAt)
         .addField("Created at:", message.author.createdAt);
 
         message.channel.send(userinf);
@@ -21,7 +21,7 @@ module.exports.run = async (bot, message, args) => {
         .setColor(0x3a0be7)
         .addField("Full Username:", `${memberInfo.user.username}#${memberInfo.user.discriminator}`)
         .addField("ID:", memberInfo.id)
-        .addField("Joined at", memberInfo.user.joinedAt)
+        .addField("Joined at", memberInfo.member.joinedAt)
         .addField("Created at:", memberInfo.user.createdAt);
 
         message.channel.send(userinfo);
