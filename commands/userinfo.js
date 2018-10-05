@@ -6,7 +6,6 @@ module.exports.run = async (bot, message, args) => {
   if(!memberInfo){
     var userinf = new Discord.RichEmbed()
         .setThumbnail(message.author.avatarURL)
-        .setDescription("User Information")
         .setColor(0x3a0be7)
         .addField("Full Username:", `${message.author.username}#${message.author.discriminator}`)
         .addField("ID:", message.author.id)
@@ -18,7 +17,6 @@ module.exports.run = async (bot, message, args) => {
 
     var userinfoo = new Discord.RichEmbed()
         .setThumbnail(memberInfo.user.avatarURL)
-        .setDescription("User Information")
         .setColor(0x3a0be7)
         .addField("Full Username:", `${memberInfo.user.username}#${memberInfo.user.discriminator}`)
         .addField("ID:", memberInfo.id)
