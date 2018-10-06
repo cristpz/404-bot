@@ -41,12 +41,12 @@ module.exports.run = async (bot, message, args) => {
             
             .addField("Total votes (NO):", `${NO_Count-1}`)
             .addField("Total votes (YES):", `${YES_Count-1}`)
-            .setFooter("NOTE: Votes needed to kick (3+)")
+            .setFooter("NOTE: Votes needed to kick (5+)")
             .setColor("0x3a0be7");
 
   await message.channel.send({embed: sumsum});
 
-  if(YES_Count >= 4 && YES_Count > NO_Count){
+  if(YES_Count >= 5 && YES_Count > NO_Count){
 
     kickmember.kick().then(member => {
       message.reply(`${member.user.username} was succesfully kicked`)
