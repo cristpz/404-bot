@@ -16,6 +16,8 @@ let user = message.mentions.users.first() || message.author;
     .setColor("#3a0be7")
     .setThumbnail(`${user.displayAvatarURL}`)
     .setAuthor(`${user.username} (${user.id})`)
+    .addField("Bot?", user.bot, true)
+    .addField("Discriminator", user.discriminator, true)
     .addField("Status", `${status[user.presence.status]}`, true)
     .addField("Playing", `${user.presence.game ? `${user.presence.game.name}` : "nothing currently."}`, true)
     .addField("Created At", `${moment.utc(user.createdAt).format("dddd, MMMM Do YYYY, HH:mm:ss")}`, true);
