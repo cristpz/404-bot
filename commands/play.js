@@ -1,13 +1,14 @@
 const Discord = require('discord.js');
-const botconfig = require("../botconfig.json");
 const ytdl = require('ytdl-core');
+
+module.exports.run = async (client, message, args, ops) => {
+const ytdl = require('ytdl-core');
+const botconfig = require("../botconfig.json");
 const active = new Map();
 let opts = {
     ownerID: botconfig.ownerID,
     active: active
 }
-
-module.exports.run = async (client, message, args, ops) => {
 
   if (!message.member.voiceChannel) return message.channel.send('Please connect to a voice channel first.');
  
