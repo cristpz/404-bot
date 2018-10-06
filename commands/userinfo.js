@@ -11,7 +11,7 @@ const status = {
 module.exports.run = async (bot, message, args) => {
   const member = msg.mentions.members.first() || msg.guild.members.get(args[0]) || msg.member;
   if (!member) return msg.reply("Please provide a valid username.");
-  let bot;
+  let bot =
   if (member.user.bot === true) {
     bot = "Yes";
   } else {
