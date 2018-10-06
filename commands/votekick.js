@@ -21,11 +21,11 @@ module.exports.run = async (bot, message, args) => {
     return message.reply ("I need the \"KICK_MEMBERS\" permission to kick!").catch(console.error);
   }
 
-  let msg = await message.channel.send("Vote now! (10 Seconds)");
+  let msg = await message.channel.send("Vote now! (30 Seconds)");
   await msg.react(agree);
   await msg.react(disagree);
 
-  const reactions = await msg.awaitReactions(reaction => reaction.emoji.name === agree || reaction.emoji.name === disagree, {time: 10000});
+  const reactions = await msg.awaitReactions(reaction => reaction.emoji.name === agree || reaction.emoji.name === disagree, {time: 30000});
   msg.delete();
 
   var NO_Count = reactions.get(disagree).count;
