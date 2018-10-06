@@ -9,15 +9,10 @@ const status = {
 };
 
 module.exports.run = async (bot, message, args) => {
-  const member = msg.mentions.members.first() || msg.guild.members.get(args[0]) || msg.member;
-  if (!member) return msg.reply("Please provide a valid username.");
-  let bot =
-  if (member.user.bot === true) {
-    bot = "Yes";
-  } else {
-    bot = "No";
-  }
-  const userinfoembed = new Discord.MessageEmbed()
+  let member = message.mentions.members.first() || message.guild.members.get(args[0]) || message.member;
+  if (!member) return message.reply("Please provide a valid username.");
+  
+  let userinfoembed = new Discord.MessageEmbed()
     .setColor("#3a0be7")
     .setThumbnail(`${member.user.displayAvatarURL()}`)
     .setAuthor(`${member.user.tag} (${member.id})`, `${member.user.avatarURL()}`)
@@ -26,7 +21,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("Guild", `${bot}`, true)
     .addField("Status", `${status[member.user.presence.status]}`, true)
     .addField("Playing", `${member.user.presence.game ? `${member.user.presence.game.name}` : "nothing currently."}`, true)
-    .addField("Roles", `${member.roles.filter(r => r.id !== msg.guild.id).map(roles => `\`${roles.name}\``).join(" **|** ") || "No Roles"}`, true)
+    .addField("Roles", `${member.roles.filter(r => r.id !== message.guild.id).map(roles => `\`${roles.name}\``).join(" **|** ") || "No Roles"}`, true)
     .addField("Joined At", `${moment.utc(member.joinedAt).format("dddd, MMMM Do YYYY, HH:mm:ss")}`, true)
     .addField("Created At", `${moment.utc(member.user.createdAt).format("dddd, MMMM Do YYYY, HH:mm:ss")}`, true);
 
