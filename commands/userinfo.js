@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
   let member = message.mentions.members.first() || message.guild.members.get(args[0]) || message.member;
   if (!member) return message.reply("Please provide a valid username.");
   
-  let userinfoembed = new Discord.MessageEmbed()
+  let userinfoembed = new Discord.RichEmbed()
     .setColor("#3a0be7")
     .setThumbnail(`${member.user.displayAvatarURL()}`)
     .setAuthor(`${member.user.tag} (${member.id})`, `${member.user.avatarURL()}`)
