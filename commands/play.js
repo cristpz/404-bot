@@ -4,7 +4,7 @@ const ytdl = require('ytdl-core');
 module.exports.run = async (client, message, args, ops) => {
 const ytdl = require('ytdl-core');
 const botconfig = require("../botconfig.json");
-const active = new Map();
+let active = new Map();
 let opts = {
     ownerID: botconfig.ownerID,
     active: active
