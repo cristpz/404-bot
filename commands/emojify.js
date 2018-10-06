@@ -45,5 +45,5 @@ let special = {
 }
 
 module.exports.help = {
-  name: "emojify
+  name: "emojify"
 }
