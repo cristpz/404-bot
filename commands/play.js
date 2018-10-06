@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const botconfig = require("./botconfig.json");
+const botconfig = require("../botconfig.json");
 const ytdl = require('ytdl-core');
 const active = new Map();
 let opts = {
