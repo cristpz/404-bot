@@ -15,7 +15,7 @@ let user = message.mentions.users.first() || message.author;
   let userinfoembed = new Discord.RichEmbed()
     .setColor("#3a0be7")
     .setThumbnail(`${user.displayAvatarURL}`)
-    .setAuthor(`${user.user.tag} (${user.id})`, `${user.avatarURL}`)
+    .setAuthor(`${user.username} (${user.id})`, `${user.avatarURL}`)
     .addField("Nickname:", `${user.nickname !== null ? `Nickname: ${user.nickname}` : "No nickname"}`, true)
     .addField("Status", `${status[user.presence.status]}`, true)
     .addField("Playing", `${user.presence.game ? `${user.presence.game.name}` : "nothing currently."}`, true)
