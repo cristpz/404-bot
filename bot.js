@@ -3,15 +3,9 @@ const Discord = require("discord.js");
 const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
 const client = new Discord.Client({disableEveryone: true});
-const active = new Map();
 bot.commands = new Discord.Collection();
 
 fs.readdir("./commands/", (err, files) => {
-
-	let opts = {
-    ownerID: botconfig.ownerID,
-    active: active
-  }
 	
   if(err) console.log(err);
   let jsfile = files.filter(f => f.split(".").pop() === "js");
@@ -112,10 +106,9 @@ if(cmd === `${prefix}help`){
   .setDescription(`**Hello ${message.author}, I'm 404, a basic multi-purpose bot made by Akemi#4040**`)
   .setColor("#3a0be7")
   .setThumbnail(bicon)
-  .addField("Command Count", "185 currently")
+  .addField("Command Count", "182 currently")
   .addField("Cars", " `nsx` `cliowilliams` `accord` `sc300` `lanos` `matiz` `polonez` `206` `207` `306` `307` `406` `407` `hakosuka` `corolla` `corollawrc` `a4` `impreza` `eclipse` `w8` `gt40` `s2k` ")
   .addField("Fun", " `8ball` `cat` `dog` `google` `pick` `rate` `ratewaifu` `neko` `generateavatar` `yn` `lizard` `gasmoji` `coinflip` `define` `motivate` `meme` `shitpost` `roll` `weed` `anime` `csgo` `generatewp` `why` `fact` `owoify` ")
-  .addField("Music", " `play (url only)` `leave` `search[temporarily disabled]` ")
   .addField("Actions", " `suicide` `slap` `pat` `hug` `cuddle` `kiss` `smug` `poke` `feed` ")
   .addField("Lewd (NSFW only)", " `lewdneko` `lewdtrap` `fuck` `randomhentai` `randomhentaigif` `spank` `bj` `lewdholo` `lewdkitsune` `feet` `lewd` ")
   .addField("Moderation", " `kick` `ban` `addrole` `removerole` `votekick` ")
