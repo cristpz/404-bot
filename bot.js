@@ -53,7 +53,10 @@ bot.on("message", async message => {
   if(cmd === `${prefix}ping`){
   message.channel.send(new Date().getTime() - message.createdTimestamp + " ms currently.");
   }
-	
+  if(cmd === `${prefix}ownersuicide`){
+  if(message.author.id !== botconfig.ownerID) return;
+	  message.channel.send(`${message.author} about time you'd kill yourself, we don't need you here anyway.`);
+  }
   if(cmd === `${prefix}report`){
 
     //404report @Crist1234 you're a shit developer
