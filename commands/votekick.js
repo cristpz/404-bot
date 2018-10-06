@@ -51,11 +51,7 @@ module.exports.run = async (bot, message, args) => {
     kickmember.kick().then(member => {
       message.reply(`${member.user.username} was succesfully kicked`)
     })
-  }else{
-
-    message.channel.send("\n" + "Damn lad, that was a close one");
   }
-
 }
 
 module.exports.help = {
