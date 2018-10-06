@@ -114,7 +114,7 @@ if(cmd === `${prefix}help`){
   .addField("Moderation", " `kick` `ban` `addrole` `removerole` `votekick` ")
   .addField("Miscellaneous", " `ping` `avatar` `hello` `salute` `die` `nou` `botowner` `botusers` `help` `info` `serverinfo` `userinfo` `special` ")
   .addField("Bot Owner ONLY", " `reload` ")
-  .addField("Add me to your server too", "https://discordbots.org/bot/491600976009101324")
+  .addField("Invite", "https://discordbots.org/bot/491600976009101324")
   .addField("Patreon", "https://www.patreon.com/404bot")
   .addField("PayPal", "https://www.paypal.me/dametucosita")
   .setFooter("Check 404subreddits for more commands!");
