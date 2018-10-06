@@ -14,8 +14,8 @@ module.exports.run = async (bot, message, args) => {
   
   let userinfoembed = new Discord.RichEmbed()
     .setColor("#3a0be7")
-    .setThumbnail(`${member.user.displayAvatarURL()}`)
-    .setAuthor(`${member.user.tag} (${member.id})`, `${member.user.avatarURL()}`)
+    .setThumbnail(`${member.user.displayAvatarURL}`)
+    .setAuthor(`${member.user.tag} (${member.id})`, `${member.user.avatarURL}`)
     .addField("Nickname:", `${member.nickname !== null ? `Nickname: ${member.nickname}` : "No nickname"}`, true)
     .addField("Status", `${status[member.user.presence.status]}`, true)
     .addField("Playing", `${member.user.presence.game ? `${member.user.presence.game.name}` : "nothing currently."}`, true)
