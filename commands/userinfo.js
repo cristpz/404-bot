@@ -9,7 +9,7 @@ const status = {
 };
 
 module.exports.run = async (bot, message, args) => {
-  let member = message.mentions.members.first() || message.guild.members.get(args[0]) || message.author;
+  let member = message.mentions.users.first() || message.author;
   if (!member) return message.reply("Please provide a valid username.");
   
   let userinfoembed = new Discord.RichEmbed()
