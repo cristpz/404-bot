@@ -15,7 +15,7 @@ let user = message.mentions.users.first() || message.author;
   let userinfoembed = new Discord.RichEmbed()
     .setColor("#3a0be7")
     .setThumbnail(`${user.displayAvatarURL}`)
-    .setAuthor(`${user.username} (${user.id})`)
+    .setAuthor(`${user.username} | ID: ${user.id}`)
     .addField("Bot?", user.bot, true)
     .addField("Discriminator", user.discriminator, true)
     .addField("Status", `${status[user.presence.status]}`, true)
