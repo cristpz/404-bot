@@ -18,7 +18,7 @@ let user = message.mentions.users.first() || message.author;
     .setAuthor(`${user.username} (${user.id})`)
     .addField("Status", `${status[user.presence.status]}`, true)
     .addField("Playing", `${user.presence.game ? `${user.presence.game.name}` : "nothing currently."}`, true)
-    .addField("Joined At", `${moment.utc(user.joinedAt).format("dddd, MMMM Do YYYY, HH:mm:ss")}`, true)
+    .addField("Roles", `${user.roles.filter(r => r.id !== message.guild.id).map(roles => `\`${roles.name}\``).join(" **|** ") || "No Roles"}`, true)
     .addField("Created At", `${moment.utc(user.createdAt).format("dddd, MMMM Do YYYY, HH:mm:ss")}`, true);
 
   message.channel.send(userinfoembed);
