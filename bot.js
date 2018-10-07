@@ -58,21 +58,23 @@ bot.on("message", async message => {
   let specialcuddleembed = new Discord.RichEmbed()
      .setTitle(`${message.author.tag}, here have a cuddle from me ^-^`)
      .setColor("#3a0be7")
-     .setImage("https://cdn.discordapp.com/attachments/463023443571507210/498584775855177729/BiodegradableFluffyBluefish-size_restricted-9.png");
+     .setImage("https://thumbs.gfycat.com/BiodegradableFluffyBluefish-size_restricted.gif");
   message.channel.send(specialcuddleembed);
   }
 		 if(cmd === `${prefix}specialcuddle`){
   if(message.author.id !== botconfig.glidelasID) return;
   let specialcuddleembed = new Discord.RichEmbed()
      .setTitle(`${message.author}, here have a cuddle from me ^-^`)
-     .setImage("https://cdn.discordapp.com/attachments/463023443571507210/498584775855177729/BiodegradableFluffyBluefish-size_restricted-9.png");
+     .setColor("#3a0be7")
+     .setImage("https://thumbs.gfycat.com/BiodegradableFluffyBluefish-size_restricted.gif");
   message.channel.send(specialcuddleembed);
   }
 		 if(cmd === `${prefix}specialcuddle`){
   if(message.author.id !== botconfig.chuckleID) return;
   let specialcuddleembed = new Discord.RichEmbed()
      .setTitle(`${message.author}, here have a cuddle from me ^-^`)
-     .setImage("https://cdn.discordapp.com/attachments/463023443571507210/498584775855177729/BiodegradableFluffyBluefish-size_restricted-9.png");
+     .setColor("#3a0be7")
+     .setImage("https://thumbs.gfycat.com/BiodegradableFluffyBluefish-size_restricted.gif");
   message.channel.send(specialcuddleembed);
   }
   if(cmd === `${prefix}report`){
