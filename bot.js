@@ -61,22 +61,9 @@ bot.on("message", async message => {
      .setImage("https://thumbs.gfycat.com/BiodegradableFluffyBluefish-size_restricted.gif");
   message.channel.send(specialcuddleembed);
   }
-		 if(cmd === `${prefix}specialcuddle`){
-  if(message.author.id !== botconfig.glidelasID) return;
-  let specialcuddleembed = new Discord.RichEmbed()
-     .setTitle(`${message.author}, here have a cuddle from me ^-^`)
-     .setColor("#3a0be7")
-     .setImage("https://thumbs.gfycat.com/BiodegradableFluffyBluefish-size_restricted.gif");
-  message.channel.send(specialcuddleembed);
-  }
-		 if(cmd === `${prefix}specialcuddle`){
-  if(message.author.id !== botconfig.chuckleID) return;
-  let specialcuddleembed = new Discord.RichEmbed()
-     .setTitle(`${message.author}, here have a cuddle from me ^-^`)
-     .setColor("#3a0be7")
-     .setImage("https://thumbs.gfycat.com/BiodegradableFluffyBluefish-size_restricted.gif");
-  message.channel.send(specialcuddleembed);
-  }
+if (message.isMentioned(bot.user)) {
+    message.reply(`Hi ${message.author}, my prefix is `404`, use `404help` for more commands!`);
+}
   if(cmd === `${prefix}report`){
 
     //404report @Crist1234 you're a shit developer
