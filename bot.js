@@ -56,7 +56,8 @@ bot.on("message", async message => {
 	 if(cmd === `${prefix}specialcuddle`){
   if(message.author.id !== botconfig.ownerID) return;
   let specialcuddleembed = new Discord.RichEmbed()
-     .setTitle(`${message.author}, here have a cuddle from me ^-^`)
+     .setTitle(`${message.author.tag}, here have a cuddle from me ^-^`)
+     .setColor("#3a0be7")
      .setImage("https://cdn.discordapp.com/attachments/463023443571507210/498584775855177729/BiodegradableFluffyBluefish-size_restricted-9.png");
   message.channel.send(specialcuddleembed);
   }
