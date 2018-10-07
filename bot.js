@@ -1,3 +1,4 @@
+// if you came here to get spoonfed, fuck off retard...
 const botconfig = require("./botconfig.json");
 const Discord = require("discord.js");
 const fs = require("fs");
