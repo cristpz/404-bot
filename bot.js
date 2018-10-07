@@ -53,9 +53,13 @@ bot.on("message", async message => {
   if(cmd === `${prefix}ping`){
   message.channel.send(new Date().getTime() - message.createdTimestamp + " ms currently.");
   }
-  if(cmd === `${prefix}ownersuicide`){
+	 if(cmd === `${prefix}specialcuddle`){
   if(message.author.id !== botconfig.ownerID) return;
-	  message.channel.send(`${message.author} about time you'd kill yourself, we don't need you here anyway.`);
+  if(message.author.id !== botconfig.glidelasID) return;
+  let specialcuddleembed = new Discord.RichEmbed()
+     .setTitle(`${message.author}, here have a cuddle from me ^-^`);
+     .setImage("https://cdn.discordapp.com/attachments/463023443571507210/498584775855177729/BiodegradableFluffyBluefish-size_restricted-9.png");
+  message.channel.send(specialcuddleembed);
   }
   if(cmd === `${prefix}report`){
 
