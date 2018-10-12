@@ -63,7 +63,7 @@ bot.on("message", async message => {
   message.channel.send(specialcuddleembed);
   }
 if (message.isMentioned(bot.user)) {
-    message.reply(`my prefix is **404**, use **404help** for more commands!`);
+    message.reply('my prefix is `404`, use `404help` for more commands!');
 }
   if(cmd === `${prefix}report`){
 
