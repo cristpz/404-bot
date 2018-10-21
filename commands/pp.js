@@ -9,7 +9,6 @@ let replies = [` non existent!`, ` an inch long!`, ` 2 inches long!`, ` 3 inches
 let result = Math.floor((Math.random() * replies.length));
 
 let ppembed = new Discord.RichEmbed()
-.setAuthor(message.author.tag)
 .setColor("3a0be7")
 .addField(`${message.author.username}'s pp size`, replies[result])
 
