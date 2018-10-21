@@ -55,7 +55,6 @@ bot.on("message", async message => {
   message.channel.send(new Date().getTime() - message.createdTimestamp + " ms currently.");
   }
 	 if(cmd === `${prefix}specialcuddle`){
-  if(message.author.id !== botconfig.ownerID) return;
   let specialcuddleembed = new Discord.RichEmbed()
      .setTitle(`${message.author.tag}, here have a cuddle from me ^-^`)
      .setColor("#3a0be7")
@@ -1223,16 +1222,6 @@ Curb weight: 1,274 kg (2,809 lb)
 
 Image Link: https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/HondaS2000-004.jpg/1280px-HondaS2000-004.jpg`);	 
 }
-	
-  if(message.content.toLowerCase() === '@404#7945'){
-    let mentionembed = new Discord.RichEmbed()
-    .setTitle("404 Bot")
-    .addField("Prefix", `\`${prefix}\``, true)
-    .addField("Help", `\`${prefix}info\``, true)
-    .setThumbnail(bot.user.displayAvatarURL)
-    .setColor("#3a0be7");
-    message.channel.send(mentionembed);
-};
 });
 
 bot.login(process.env.BOT_TOKEN);
