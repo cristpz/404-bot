@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
 
   //404tidsize
-let replies = [` its a loli, take cover!`, ` a cups, cute!`, ` b cups, uwu!`, ` c cups, aaaaa!`, ` d cups, mommy pls no...`, ` dd cups, mommy A`, ` dd+ cups, PAPA HELP`];
+let replies = [` it's a loli, take cover!`, ` a cups, cute!`, ` b cups, uwu!`, ` c cups, aaaaa!`, ` d cups, mommy pls no...`, ` dd cups, mommy A`, ` dd+ cups, PAPA HELP`];
 
 let result = Math.floor((Math.random() * replies.length));
 
