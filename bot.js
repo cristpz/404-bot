@@ -1238,7 +1238,7 @@ Image Link: https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/HondaS2000
 //userData[author.id].messagesSent++;
 
 //fs.writeFile('./userData.json', JSON.stringify(userData), (err) => {
-  if (err) console.error(err);
+  //if (err) console.error(err);
 //});
 });
 
