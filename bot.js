@@ -47,6 +47,7 @@ bot.on("message", async message => {
   let messageArray = message.content.split(" ");
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
+  let author = message.author
 
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot,message,args);
@@ -1222,6 +1223,22 @@ Curb weight: 1,274 kg (2,809 lb)
 
 Image Link: https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/HondaS2000-004.jpg/1280px-HondaS2000-004.jpg`);	 
 }
+	if (cmd === `${prefix}points`) {
+  let pointembed = new Discord.RichEmbed()
+  .setColor("3a0be7")
+  .addField(`${message.author.username}'s points`, `${userData[author.id].messagesSent}`);
+  message.channel.send(pointembed);
+}
+
+if (!userData[author.id]) userData[author.id] = {
+  messagesSent: 0
+}
+
+userData[author.id].messagesSent++;
+
+fs.writeFile('./userData.json', JSON.stringify(userData), (err) => {
+  if (err) console.error(err);
+});
 });
 
 bot.login(process.env.BOT_TOKEN);
