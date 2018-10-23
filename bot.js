@@ -1,4 +1,4 @@
-// if you came here to get spoonfed, fuck off retard...
+// ok this is epic (750 commits ✔️)
 const botconfig = require("./botconfig.json");
 const Discord = require("discord.js");
 const fs = require("fs");
