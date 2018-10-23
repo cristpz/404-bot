@@ -1,14 +1,14 @@
 const Discord = require("discord.js");
 const Report = require("../models/suggest.js")
 const mongoose = require("mongoose");
-mongoose.connect('mongodb://404-bot-tw2dx.gcp.mongodb.net/404-bot.suggestions');
+mongoose.connect('mongodb://404-bot-tw2dx.gcp.mongodb.net/suggestions');
 
 module.exports.run = async (bot, message, args) => {
   await message.delete();
   let suggestion = args.slice(1).join(" ");
   if (!suggestion) return message.reply("Please enter a valid suggestion!");
 
-  const report = new Report({
+  const suggestion = new Suggestion({
     _id: mongoose.Types.ObjectId(),
     username: rUser.user.username,
     userID: rUser.id,
@@ -16,7 +16,7 @@ module.exports.run = async (bot, message, args) => {
     time: message.createdAt
   });
 
-  report.save()
+  suggestion.save()
   .then(result => console.log(result))
   .catch(err => console.log(err));
 
