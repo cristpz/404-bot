@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
   let suggestion = args.slice(1).join(" ");
   if (!suggestion) return message.reply("Please enter a valid suggestion!");
 
-  const suggestion = new Suggestion({
+  const report = new Report({
     _id: mongoose.Types.ObjectId(),
     username: rUser.user.username,
     userID: rUser.id,
@@ -16,7 +16,7 @@ module.exports.run = async (bot, message, args) => {
     time: message.createdAt
   });
 
-  suggestion.save()
+  report.save()
   .then(result => console.log(result))
   .catch(err => console.log(err));
 
