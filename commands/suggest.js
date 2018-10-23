@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const Report = require("../models/suggestion.js")
+const Report = require("../models/suggest.js")
 const mongoose = require("mongoose");
 mongoose.connect('mongodb://404-bot-tw2dx.gcp.mongodb.net/404-bot.suggestions');
 
