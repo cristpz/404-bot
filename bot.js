@@ -6,6 +6,11 @@ const bot = new Discord.Client({disableEveryone: true});
 const client = new Discord.Client({disableEveryone: true});
 const prefix = '404';
 //const userData = JSON.parse(fs.readFileSync('./userData.json', 'utf8'));
+const mongoose = require("mongoose");
+mongoose.connect("mongodb://404-bot-tw2dx.gcp.mongodb.net/404-bot", {
+  useNewUrlParser: true
+});
+const Money = require("./models/money.js");
 bot.commands = new Discord.Collection();
 
 fs.readdir("./commands/", (err, files) => {
@@ -50,8 +55,31 @@ bot.on("message", async message => {
   let args = messageArray.slice(1);
   let author = message.author
 
+  if (message.content.startsWith(prefix)) {
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot,message,args);
+} else {
+  let coinstoadd = Math.ceil(Math.random() * 50);
+  console.log(coinstoadd + " coins")
+  Money.findOne({
+    userID: message.author.id,
+    serverID: message.guild.id
+  }, (err, money) => {
+    if(err) console.log(err);
+    if(!money){
+      const newMoney = new Money({
+        userID: message.author.id,
+        serverID: message.guild.id,
+        money: coinstoadd
+      })
+
+      newMoney.save().catch(err => console.log(err));
+    } else {
+      money.money = money.money + coinstoadd;
+      money.save().catch(err => console.log(err));
+    }
+  })
+  }
 
   if(cmd === `${prefix}ping`){
   message.channel.send(new Date().getTime() - message.createdTimestamp + " ms currently.");
