@@ -6,7 +6,6 @@ module.exports.run = async (bot, message, args) => {
   if (!suggestion) return message.reply("Please enter a valid suggestion!");
   let guildID = "500244270373011466";
   let channelID = "504743305427550219"
-bot.guilds.get(guildID).channels.get(channelID)
   let suggestembed = new Discord.RichEmbed
   .setAuthor(message.author.username)
   .addField("With ID", message.author.id)
