@@ -53,6 +53,20 @@ bot.on("message", async message => {
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot,message,args);
 
+	if(cmd === `${prefix}suggest`){
+  await message.delete();
+  let suggestion = args.slice(0).join(" ");
+  if (!suggestion) return message.reply("Please enter a valid suggestion!");
+  let suggestembed = new Discord.RichEmbed
+  .setAuthor(message.author.username)
+  .addField("With ID", message.author.id)
+  .addField("Time/Date", message.createdAt)
+  .setColor("3a0be7");
+client.guilds.get('500244270373011466').channels.get('504743305427550219').send(suggestembed);
+  
+ message.reply("That suggestion has been saved, thank you!");
+	}
+	
   if(cmd === `${prefix}ping`){
   message.channel.send(new Date().getTime() - message.createdTimestamp + " ms currently.");
   }
@@ -118,13 +132,13 @@ if(cmd === `${prefix}help`){
   .setDescription(`**Hello ${message.author}, I'm 404, a basic multi-purpose bot made by Akemi#4040**`)
   .setColor("#3a0be7")
   .setThumbnail(bicon)
-  .addField("Command Count", "187 currently")
+  .addField("Command Count", "188 currently")
   .addField("Cars", " `nsx` `cliowilliams` `accord` `sc300` `lanos` `matiz` `polonez` `206` `207` `306` `307` `406` `407` `hakosuka` `corolla` `corollawrc` `a4` `impreza` `eclipse` `w8` `gt40` `s2k` ")
-  .addField("Fun", " `8ball` `cat` `dog` `google` `pick` `rate` `ratewaifu` `neko` `generateavatar` `yn` `lizard` `gasmoji` `coinflip` `define` `motivate` `meme` `shitpost` `roll` `weed` `anime` `csgo` `generatewp` `why` `fact` `owoify` `generatewaifu` `ppsize` `tidsize`")
+  .addField("Fun", " `8ball` `cat` `dog` `google` `pick` `rate` `ratewaifu` `neko` `generateavatar` `yn` `lizard` `gasmoji` `coinflip` `define` `motivate` `meme` `shitpost` `roll` `weed` `anime` `csgo` `generatewp` `why` `fact` `owoify` `generatewaifu` `ppsize` `tidsize` ")
   .addField("Actions", " `suicide` `slap` `pat` `hug` `cuddle` `kiss` `smug` `poke` `feed` ")
   .addField("Lewd (NSFW only)", " `lewdneko` `lewdtrap` `fuck` `randomhentai` `randomhentaigif` `spank` `bj` `lewdholo` `lewdkitsune` `feet` `lewd` `analfuck` `femdom` ")
   .addField("Moderation", " `kick` `ban` `addrole` `removerole` `votekick` ")
-  .addField("Miscellaneous", " `ping` `avatar` `hello` `salute` `die` `nou` `botowner` `botusers` `help` `info` `serverinfo` `userinfo` `special` ")
+  .addField("Miscellaneous", " `ping` `avatar` `hello` `salute` `die` `nou` `botowner` `botusers` `help` `info` `serverinfo` `userinfo` `special` `suggest` ")
   .addField("Bot Owner ONLY", " `reload` ")
   .addField("Invite", "https://discordbots.org/bot/491600976009101324")
   .addField("Patreon", "https://www.patreon.com/404bot")
