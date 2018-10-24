@@ -7,6 +7,7 @@ mongoose.connect('mongodb+srv://404:404-2409@404bot-3efij.mongodb.net/test?retry
   console.log('Ah heck! Error Code:', error);
    useNewUrlParser: true
 });
+});
 const Money = require("../models/money.js")
 
 module.exports.run = async (bot, message, args) => {
