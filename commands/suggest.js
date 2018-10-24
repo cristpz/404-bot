@@ -6,8 +6,15 @@ module.exports.run = async (bot, message, args) => {
   if (!suggestion) return message.reply("Please enter a valid suggestion!");
   let guildID = "500244270373011466";
   let channelID = "504743305427550219"
-bot.guilds.get(guildID).channels.get(channelID).send(suggestion + `by ${message.author.username} with ID ${message.author.id} at ${message.createdAt}`)
-  message.reply("That suggestion has been saved, thank you!")
+bot.guilds.get(guildID).channels.get(channelID)
+  let suggestembed = new Discord.RichEmbed
+  .setAuthor(message.author.username)
+  .addField("With ID", message.author.id)
+  .addField("Time/Date", message.createdAt)
+  .setColor("3a0be7");
+client.guilds.get(guildID).channels.get(channelID).send(suggestembed);
+  
+  message.reply("That suggestion has been saved, thank you!");
 
 }
 
