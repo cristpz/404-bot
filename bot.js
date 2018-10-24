@@ -1,5 +1,5 @@
 // ok this is epic (750 commits ✔️)
-const Discord = require('discord.js');
+const discord = require("discord.js");
 const botconfig = require("./botconfig.json");
 const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
