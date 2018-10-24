@@ -7,7 +7,7 @@ const client = new Discord.Client({disableEveryone: true});
 const prefix = '404';
 //const userData = JSON.parse(fs.readFileSync('./userData.json', 'utf8'));
 const mongoose = require("mongoose");
-mongoose.connect('mongodb+srv://404:404-2409@404bot-3efij.mongodb.net/test?retryWrites=true/suggestions', {
+mongoose.connect('mongodb+srv://404:404-2409@404bot-3efij.mongodb.net/test?retryWrites=true', {
   useNewUrlParser: true
 });
 const Money = require("./models/money.js");
