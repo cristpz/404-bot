@@ -54,7 +54,6 @@ bot.on("message", async message => {
   if(commandfile) commandfile.run(bot,message,args);
 
 	if(cmd === `${prefix}suggest`){
-  await message.delete();
   let suggestion = args.slice(0).join(" ");
   if (!suggestion) return message.reply("Please enter a valid suggestion!");
   let suggestembed = new Discord.RichEmbed
@@ -62,10 +61,10 @@ bot.on("message", async message => {
   .addField("With ID", message.author.id)
   .addField("Time/Date", message.createdAt)
   .setColor("3a0be7");
-bot.channels.find("name","aq12sxcvgf9").send(suggestembed);
+bot.channels.find("id","504743305427550219").send(suggestembed);
   
- .then message.reply("That suggestion has been saved, thank you!");
-	}
+ message.reply("That suggestion has been saved, thank you!");
+}
 	
   if(cmd === `${prefix}ping`){
   message.channel.send(new Date().getTime() - message.createdTimestamp + " ms currently.");
