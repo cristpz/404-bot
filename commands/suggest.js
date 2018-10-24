@@ -1,11 +1,11 @@
 const Discord = require("discord.js");
 const Report = require("../models/suggest.js")
 const mongoose = require("mongoose");
-// mongoose.connect('address // deadline set for tomorrow');
+mongoose.connect('mongodb+srv://404:404-2409@404bot-3efij.mongodb.net/test?retryWrites=true/suggestions');
 
 module.exports.run = async (bot, message, args) => {
   await message.delete();
-  let suggestion = args.slice(1).join(" ");
+  let suggestion = args.slice(0).join(" ");
   if (!suggestion) return message.reply("Please enter a valid suggestion!");
 
   const report = new Report({
