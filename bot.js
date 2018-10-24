@@ -61,9 +61,7 @@ bot.on("message", async message => {
   .addField("With ID", message.author.id)
   .addField("Time/Date", message.createdAt)
   .setColor("3a0be7");
-bot.channels.find("id","504743305427550219").send(suggestembed);
-  
- message.reply("That suggestion has been saved, thank you!");
+message.channel.send(suggestembed);
 }
 	
   if(cmd === `${prefix}ping`){
