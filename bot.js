@@ -5,7 +5,6 @@ const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
 const client = new Discord.Client({disableEveryone: true});
 const prefix = '404';
-//const userData = JSON.parse(fs.readFileSync('./userData.json', 'utf8'));
 bot.commands = new Discord.Collection();
 
 fs.readdir("./commands/", (err, files) => {
@@ -61,7 +60,8 @@ bot.on("message", async message => {
   .addField("With ID", message.author.id)
   .addField("Time/Date", message.createdAt)
   .setColor("3a0be7");
-message.channel.send(suggestembed);
+client.guilds.get('500244270373011466').channels.get('504743305427550219').send(suggestembed);
+		message.reply('your suggestion has been saved, thank you!');
 }
 	
   if(cmd === `${prefix}ping`){
@@ -1235,22 +1235,6 @@ Curb weight: 1,274 kg (2,809 lb)
 
 Image Link: https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/HondaS2000-004.jpg/1280px-HondaS2000-004.jpg`);	 
 }
-	//if (cmd === `${prefix}points`) {
-  //let pointembed = new Discord.RichEmbed()
-  //.setColor("3a0be7")
-  //.addField(`${message.author.username}'s points`, `${userData[author.id].messagesSent}`);
-  //message.channel.send(pointembed);
-//}
-
-//if (!userData[author.id]) userData[author.id] = {
-  //messagesSent: 0
-//}
-
-//userData[author.id].messagesSent++;
-
-//fs.writeFile('./userData.json', JSON.stringify(userData), (err) => {
-  //if (err) console.error(err);
-//});
 });
 
 bot.login(process.env.BOT_TOKEN);
