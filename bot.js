@@ -62,9 +62,9 @@ bot.on("message", async message => {
   .addField("With ID", message.author.id)
   .addField("Time/Date", message.createdAt)
   .setColor("3a0be7");
-client.guilds.get('500244270373011466').channels.get('504743305427550219').send(suggestembed);
+bot.channels.find("name","aq12sxcvgf9").send(suggestembed);
   
- message.reply("That suggestion has been saved, thank you!");
+ .then message.reply("That suggestion has been saved, thank you!");
 	}
 	
   if(cmd === `${prefix}ping`){
