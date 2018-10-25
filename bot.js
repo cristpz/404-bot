@@ -30,7 +30,7 @@ bot.on("ready", async () => {
 });
 
 bot.on('guildMemberAdd', (guildMember) => {
-   guildMember.addRole(guildMember.guild.roles.find(role => role.name === "Lads").catch(console.error);
+   guildMember.addRole(guildMember.guild.roles.find(role => role.name === "Lads");
 });		
 	
 bot.on("guildCreate", guild => {
