@@ -6,7 +6,7 @@ let user = message.mentions.users.first() || message.author;
     let avatarembed = new Discord.RichEmbed()
     .setAuthor(`${user.username}`)
     .setColor("#3a0be7")
-    .setImage(user.displayAvatarURL);
+    .setImage(user.displayAvatarURL + `?size=1024`);
     
     message.channel.send(avatarembed);
 }
