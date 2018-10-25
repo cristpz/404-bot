@@ -28,7 +28,11 @@ bot.on("ready", async () => {
   bot.user.setActivity(`the void | 404help`, {type: "WATCHING"});
 
 });
-		
+
+bot.on("memberAdd", guild => {
+  let welcomerole = message.guild.roles.find(role => role.name === "Lads");
+	member.addRole(welcomerole).catch(console.error);
+});		
 	
 bot.on("guildCreate", guild => {
   console.log(`New guild added : ${guild.name}, owned by ${guild.owner.user.username}`);
