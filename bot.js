@@ -57,11 +57,11 @@ bot.on("message", async message => {
   let suggestembed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .addField("With ID", message.author.id)
+  .addField("Suggestion", suggestion)
   .addField("Time/Date", message.createdAt)
   .setColor("3a0be7");
-client.guilds.get('500244270373011466').channels.get('504743305427550219').send(suggestembed);
-		message.reply('your suggestion has been saved, thank you!');
-}
+client.channels.get("500244270373011466").send(suggestembed);
+	}
 	
   if(cmd === `${prefix}ping`){
   message.channel.send(new Date().getTime() - message.createdTimestamp + " ms currently.");
