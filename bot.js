@@ -51,17 +51,17 @@ bot.on("message", async message => {
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot,message,args);
 
-	if(cmd === `${prefix}suggest`){
-  let suggestion = args.slice(0).join(" ");
-  if (!suggestion) return message.reply("Please enter a valid suggestion!");
-  let suggestembed = new Discord.RichEmbed
-  .setAuthor(message.author.username)
-  .addField("With ID", message.author.id)
-  .addField("Time/Date", message.createdAt)
-  .setColor("3a0be7");
-client.guilds.get('500244270373011466').channels.get('504743305427550219').send(suggestembed);
-		message.reply('your suggestion has been saved, thank you!');
-}
+//	if(cmd === `${prefix}suggest`){
+//  let suggestion = args.slice(0).join(" ");
+//  if (!suggestion) return message.reply("Please enter a valid suggestion!");
+//  let suggestembed = new Discord.RichEmbed
+//  .setAuthor(message.author.username)
+//  .addField("With ID", message.author.id)
+//  .addField("Time/Date", message.createdAt)
+//  .setColor("3a0be7");
+//client.guilds.get('500244270373011466').channels.get('504743305427550219').send(suggestembed);
+//		message.reply('your suggestion has been saved, thank you!');
+//}
 	
   if(cmd === `${prefix}ping`){
   message.channel.send(new Date().getTime() - message.createdTimestamp + " ms currently.");
