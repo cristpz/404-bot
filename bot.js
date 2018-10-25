@@ -66,7 +66,7 @@ bot.on("message", async message => {
   .addField("Suggestion", suggestion)
   .addField("Time/Date", message.createdAt)
   .setColor("3a0be7");
- client.channels.get("500244270373011466");
+ client.channel.get("500244270373011466");
 message.channel.send(suggestembed);
 }
 	
