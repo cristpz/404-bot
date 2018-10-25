@@ -54,7 +54,7 @@ bot.on("message", async message => {
 	if(cmd === `${prefix}suggest`){
   let suggestion = args.slice(0).join(" ");
   if (!suggestion) return message.reply("Please enter a valid suggestion!");
-  let suggestembed = new Discord.RichEmbed
+  let suggestembed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .addField("With ID", message.author.id)
   .addField("Time/Date", message.createdAt)
