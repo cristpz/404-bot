@@ -29,9 +29,10 @@ bot.on("ready", async () => {
 
 });
 
-bot.on('guildMemberAdd', (guildMember) => {
-   guildMember.addRole(guildMember.guild.roles.find(role => role.name === "Lads");
-});		
+bot.on('guildMemberAdd', member => {
+  var role = member.guild.roles.find('name', 'Lads');
+  member.addRole(role);
+});
 	
 bot.on("guildCreate", guild => {
   console.log(`New guild added : ${guild.name}, owned by ${guild.owner.user.username}`);
