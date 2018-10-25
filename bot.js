@@ -53,7 +53,7 @@ bot.on("message", async message => {
 
 	if(cmd === `${prefix}suggestiontest`){
 	  if(message.author.id !== botconfig.ownerID) return;
-	      client.guilds.get('500244270373011466').channels.get('504743305427550219').send('cool, it worked.');
+	      client.channel.get('504743305427550219').send('cool, it worked.');
 
 	}
 	
@@ -66,8 +66,8 @@ bot.on("message", async message => {
   .addField("Suggestion", suggestion)
   .addField("Time/Date", message.createdAt)
   .setColor("3a0be7");
- client.channel.get("500244270373011466");
-message.channel.send(suggestembed);
+client.channel.get('504743305427550219').send(suggestembed);
+  message.reply('your suggestion has been saved, thank you!');
 }
 	
   if(cmd === `${prefix}ping`){
