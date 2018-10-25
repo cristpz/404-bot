@@ -29,8 +29,7 @@ bot.on("ready", async () => {
 
 });
 
-client.on('guildMemberAdd', (guildMember) => {
-	message.channel.send(`Welcome ${guildMember} to ${guild.name}`);
+bot.on('guildMemberAdd', (guildMember) => {
    guildMember.addRole(guildMember.guild.roles.find(role => role.name === "Lads").catch(console.error);
 });		
 	
