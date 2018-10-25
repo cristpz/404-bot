@@ -51,6 +51,12 @@ bot.on("message", async message => {
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot,message,args);
 
+	if(cmd === `${prefix}suggestiontest`){
+	  if(message.author.id !== botconfig.ownerID) return;
+	      client.guilds.get('500244270373011466').channels.get('504743305427550219').send('cool, it worked.');
+
+	}
+	
 	if(cmd === `${prefix}suggest`){
   let suggestion = args.slice(0).join(" ");
   if (!suggestion) return message.reply("Please enter a valid suggestion!");
