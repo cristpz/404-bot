@@ -54,6 +54,13 @@ bot.on("message", async message => {
   
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot,message,args);
+	
+	if (message.channel.id === '505302099769163777') {
+	    if (isNaN(message.content)) {
+	        message.delete()
+		message.author.send('This channel is for posting bot IDs, please post a valid bot ID.');
+	    }
+	}
 
 	if(cmd === `${prefix}suggestiontest`){
 	  if(message.author.id !== botconfig.ownerID) return;
