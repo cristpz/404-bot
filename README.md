@@ -1,6 +1,10 @@
 <h1 style="color: #5e9ca0;">404</h1>
 <p><span style="color: #ffff00;"><span style="color: #000000;">A multi-purpose Discord bot made by Crist.</span></span></p>
 <p>&nbsp;</p>
+<h2 style="color: #2e6c80;">Bot Stats:</h2>
+<a href="https://discordbots.org/bot/491600976009101324" >
+  <img src="https://discordbots.org/api/widget/491600976009101324.svg" alt="404" />
+</a>
 <h2 style="color: #2e6c80;">How to invite the bot:</h2>
 <p>Go to:&nbsp;<a href="https://discordbots.org/bot/491600976009101324">https://discordbots.org/bot/491600976009101324</a></p>
 <p>Click the <span style="background-color: #2b2301; color: #fff; display: inline-block; padding: 3px 10px; font-weight: bold; border-radius: 5px;">Invite</span> button and select the server you'd like to invite the bot to.</p>
@@ -52,11 +56,5 @@
 </tr>
 </tbody>
 </table>
-
-
-<a href="https://discordbots.org/bot/491600976009101324" >
-  <img src="https://discordbots.org/api/widget/491600976009101324.svg" alt="404" />
-</a>
-
 
 Copyright © 2018 Christopher Kargakos
