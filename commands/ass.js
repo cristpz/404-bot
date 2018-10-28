@@ -5,10 +5,10 @@ module.exports.run = async (bot, message, args) => {
   //Checks is <number> has been provided
   if (args[0]) {
     let num = parseInt(args[0]); //Converts into <number> format.
-    if (num == "NaN" || num > 50 || num < 2)
+    if (num == "NaN" || num > 10 || num < 2)
       //Checks if <number> meets requirements. b/w 2-100
       return message.channel.send(
-        "Error. Spam number needs to be a **valid** number (2-50)."
+        "Error. Spam number needs to be a **valid** number (2-10)."
       ); //Error message
 
     //Generates <number> random memes
@@ -26,7 +26,7 @@ module.exports.run = async (bot, message, args) => {
 
     if (meme.link == "video") {
       return message.channel.send(
-        "Error, please try again or use `404ass (2-50)`"
+        "Error, please try again or use `404ass (2-10)`"
       ); //Sends error message
     }
 
@@ -46,13 +46,14 @@ module.exports.run = async (bot, message, args) => {
       return message.channel.send(embed); //Sends meme
     } else {
       return message.channel.send(
-        "Error, please try again or use `404ass (2-50)"
+        "Error, please try again or use `404ass (2-10)"
       ); //Sends error message
     }
 
     async function getSubReddit() {
       let memeSubs = [
         "Mooning",
+        "SpreadEm"
       ]; //List of meme subreddits
 
       let randomSub = randomNumber(memeSubs.length); //Randomely selects a subreddit
