@@ -150,7 +150,7 @@ if(cmd === `${prefix}help`){
   .addField("Fun", " `8ball` `cat` `dog` `google` `pick` `rate` `ratewaifu` `neko` `generateavatar` `yn` `lizard` `gasmoji` `coinflip` `define` `motivate` `meme` `shitpost` `roll` `weed` `anime` `csgo` `generatewp` `why` `fact` `owoify` `generatewaifu` `ppsize` `tidsize` ")
   .addField("Actions", " `suicide` `slap` `pat` `hug` `cuddle` `kiss` `smug` `poke` `feed` ")
   .addField("Lewd (NSFW only)", " `lewdneko` `lewdtrap` `fuck` `randomhentai` `randomhentaigif` `spank` `bj` `lewdholo` `lewdkitsune` `feet` `lewd` `analfuck` `femdom` `wank` ")
-  .addField("Moderation", " `kick` `ban` `addrole` `removerole` `votekick` `purge` `purgeall` ")
+  .addField("Moderation", " `kick` `ban` `addrole` `removerole` `votekick` `purge` `lockdown` ")
   .addField("Miscellaneous", " `ping` `avatar` `hello` `salute` `die` `nou` `botowner` `botusers` `help` `info` `serverinfo` `userinfo` `special` `suggest` `server` ")
   .addField("Bot Owner ONLY", " `reload` ")
   .addField("Invite", "https://discordbots.org/bot/491600976009101324")
