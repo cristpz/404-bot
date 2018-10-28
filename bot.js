@@ -876,12 +876,6 @@ Successor: Peugeot 307
 
 Image Link: https://upload.wikimedia.org/wikipedia/commons/3/33/Peugeot_306_rear_20080822.jpg`)
 }
-if (cmd === `${prefix}purge`) {
-  if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("Sorry, you don't have the permission to execute this command");
-  if(!args[0]) return message.channel.send("Please provide a valid number of messages to delete");
-  message.channel.bulkDelete(args[0]).then(() => {
-  message.channel.send(`Deleted ${args[0]} messages.`).then(msg => msg.delete(2000));
-});
 if (cmd === `${prefix}purgeall`) {
       if (!message.channel.permissionsFor(message.author).hasPermission("MANAGE_MESSAGES")) {
         message.channel.sendMessage("Sorry, you don't have the permission to execute this command");
