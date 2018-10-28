@@ -29,7 +29,7 @@ module.exports.run = (client, message, args) => {
                     message.channel.overwritePermissions(message.guild.id, {
                         SEND_MESSAGES: null,
                         READ_MESSAGES: null
-                    }).then(message.channel.send('**Lockdown over cheers lads.**')).catch(console.error);
+                    }).then(message.channel.send('**Lockdown over, cheers lads.**')).catch(console.error);
                     delete bot.lockit[message.channel.id];
                 }, ms(time));
 
