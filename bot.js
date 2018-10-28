@@ -876,32 +876,6 @@ Successor: Peugeot 307
 
 Image Link: https://upload.wikimedia.org/wikipedia/commons/3/33/Peugeot_306_rear_20080822.jpg`)
 }
-if (cmd === `${prefix}purgeall`) {
-      if (!message.channel.permissionsFor(message.author).hasPermission("MANAGE_MESSAGES")) {
-        message.channel.sendMessage("Sorry, you don't have the permission to execute this command");
-        console.log("Sorry, you don't have the permission to execute this command");
-        return;
-      } else if (!message.channel.permissionsFor(bot.user).hasPermission("MANAGE_MESSAGES")) {
-        message.channel.sendMessage("Sorry, I don't have the permission to execute this command");
-        console.log("Sorry, I don't have the permission to execute this command");
-        return;
-      }
-      if (message.channel.type == 'text') {
-        message.channel.fetchMessages()
-          .then(messages => {
-            message.channel.bulkDelete(messages);
-            messagesDeleted = messages.array().length; // number of messages deleted
-
-	    message.channel.sendMessage("Total messages deleted: "+messagesDeleted);
-            console.log('Total messages deleted: '+messagesDeleted)
-          })
-          .catch(err => {
-            console.log('Error while doing Bulk Delete');
-            console.log(err);
-          });
-      }
-    }
-});
 if(cmd === `${prefix}say`) {
     const sayMessage = args.join(" ");
     message.delete().catch(O_o=>{});
