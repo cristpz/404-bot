@@ -876,21 +876,32 @@ Successor: Peugeot 307
 
 Image Link: https://upload.wikimedia.org/wikipedia/commons/3/33/Peugeot_306_rear_20080822.jpg`)
 }
-if(cmd === `${prefix}purge`) {
-    // This command removes all messages from all users in the channel, up to 100.
+if (message.content == CLEAR_MESSAGES) {
+      if (!message.channel.permissionsFor(message.author).hasPermission("MANAGE_MESSAGES")) {
+        message.channel.sendMessage("Sorry, you don't have the permission to execute this command");
+        console.log("Sorry, you don't have the permission to execute this command");
+        return;
+      } else if (!message.channel.permissionsFor(bot.user).hasPermission("MANAGE_MESSAGES")) {
+        message.channel.sendMessage("Sorry, I don't have the permission to execute this command");
+        console.log("Sorry, I don't have the permission to execute this command");
+        return;
+      }
+      if (message.channel.type == 'text') {
+        message.channel.fetchMessages()
+          .then(messages => {
+            message.channel.bulkDelete(messages);
+            messagesDeleted = messages.array().length; // number of messages deleted
 
-    // get the delete count, as an actual number.
-    const deleteCount = parseInt(args[0], 10);
-
-    // Ooooh nice, combined conditions. <3
-    if(!deleteCount || deleteCount < 2 || deleteCount > 100)
-      return message.reply("Please provide a valid number between 2 and 100");
-
-    // So we get our messages, and delete them. Simple enough, right?
-    const fetched = await message.channel.fetchMessages({limit: deleteCount});
-    message.channel.bulkDelete(fetched)
-      .catch(error => message.reply(`Couldn't delete messages, reason: ${error}`));
-}
+	    message.channel.sendMessage("Total messages deleted: "+messagesDeleted);
+            console.log('Total messages deleted: '+messagesDeleted)
+          })
+          .catch(err => {
+            console.log('Error while doing Bulk Delete');
+            console.log(err);
+          });
+      }
+    }
+});
 if(cmd === `${prefix}say`) {
     const sayMessage = args.join(" ");
     message.delete().catch(O_o=>{});
