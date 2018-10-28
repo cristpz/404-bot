@@ -12,7 +12,7 @@ module.exports.run = (client, message, args) => {
             SEND_MESSAGES: null,
             READ_MESSAGES: null
         }).then(() => {
-            message.channel.sendMessage('**Lockdown lifted.**');
+            message.channel.sendMessage('**Lockdown over, cheers lads.**');
             clearTimeout(bot.lockit[message.channel.id]);
             delete bot.lockit[message.channel.id];
         }).catch(error => {
@@ -27,8 +27,9 @@ module.exports.run = (client, message, args) => {
 
                 bot.lockit[message.channel.id] = setTimeout(() => {
                     message.channel.overwritePermissions(message.guild.id, {
-                        SEND_MESSAGES: null
-                    }).then(message.channel.send('**Lockdown lifted.**')).catch(console.error);
+                        SEND_MESSAGES: null,
+                        READ_MESSAGES: null
+                    }).then(message.channel.send('**Lockdown over cheers lads.**')).catch(console.error);
                     delete bot.lockit[message.channel.id];
                 }, ms(time));
 
