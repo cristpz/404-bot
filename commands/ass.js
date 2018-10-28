@@ -5,10 +5,10 @@ module.exports.run = async (bot, message, args) => {
   //Checks is <number> has been provided
   if (args[0]) {
     let num = parseInt(args[0]); //Converts into <number> format.
-    if (num == "NaN" || num > 100 || num < 2)
+    if (num == "NaN" || num > 50 || num < 2)
       //Checks if <number> meets requirements. b/w 2-100
       return message.channel.send(
-        "Error. Spam number needs to be a **valid** number (2-100)."
+        "Error. Spam number needs to be a **valid** number (2-50)."
       ); //Error message
 
     //Generates <number> random memes
@@ -26,7 +26,7 @@ module.exports.run = async (bot, message, args) => {
 
     if (meme.link == "video") {
       return message.channel.send(
-        "Error, please try again or use `404ass (2-100)`"
+        "Error, please try again or use `404ass (2-50)`"
       ); //Sends error message
     }
 
@@ -46,7 +46,7 @@ module.exports.run = async (bot, message, args) => {
       return message.channel.send(embed); //Sends meme
     } else {
       return message.channel.send(
-        "Error, please try again or use `404ass (2-100)"
+        "Error, please try again or use `404ass (2-50)"
       ); //Sends error message
     }
 
@@ -70,7 +70,7 @@ module.exports.run = async (bot, message, args) => {
             "Error occurred while retrieving posts. Try again."
             );
         });
-      let randomMeme = randomNumber(100000); //Randomely selects a post out of 100000 posts
+      let randomMeme = randomNumber(100); //Randomely selects a post out of 100 posts
       let link = body.data.children[randomMeme].data.url; //Url of post
       let checkUrl = linkChecker(link); //Checks if url contains an image or gif
       let memeLink = "image";
