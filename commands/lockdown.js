@@ -9,7 +9,8 @@ module.exports.run = (client, message, args) => {
 
     if (validUnlocks.includes(time)) {
         message.channel.overwritePermissions(message.guild.id, {
-            SEND_MESSAGES: null
+            SEND_MESSAGES: null,
+            READ_MESSAGES: null
         }).then(() => {
             message.channel.sendMessage('**Lockdown lifted.**');
             clearTimeout(bot.lockit[message.channel.id]);
