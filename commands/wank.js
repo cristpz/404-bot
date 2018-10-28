@@ -6,12 +6,12 @@ module.exports.run = async (bot, message, args) => {
   let {body} = await superagent
   .get(`https://nekos.life/api/v2/img/pwankg`);
 
-  let analfuckembed = new Discord.RichEmbed()
+  let wankembed = new Discord.RichEmbed()
   .setColor("#3a0be7")
   .setTitle(`${message.author.username} wanks...`)
   .setImage(body.url);
 
-  message.channel.send(analfuckembed);
+  message.channel.send(wankembed);
 
 }
 
