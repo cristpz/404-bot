@@ -51,8 +51,8 @@ bot.on("message", async message => {
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
+  if (!message.content.startsWith(prefix)) return;
   if(commandfile) commandfile.run(bot,message,args);
-  if (!message.content.startWith(prefix)) return;
   var author = message.author;
 	
 	if (message.channel.id === '505302099769163777') {
