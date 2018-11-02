@@ -1,15 +1,9 @@
 <h1 style="color: #5e9ca0;">404</h1>
-<p><span style="color: #ffff00;"><span style="color: #000000;">A multi-purpose Discord bot made by Crist.</span></span></p>
+<p><span style="color: #ffff00;"><span style="color: #000000;">A multi-purpose Discord bot made by Crist, now free on github :-(</span></span></p>
 <p>&nbsp;</p>
 <h2 style="color: #2e6c80;">Bot Stats:</h2>
-<a href="https://discordbots.org/bot/491600976009101324" >
-  <img src="https://discordbots.org/api/widget/491600976009101324.svg" alt="404" />
-</a>
+<p><b> This project is free to use from now and on, the bot is down... </b></p>
 
-<h2 style="color: #2e6c80;">How to invite the bot:</h2>
-<p>Go to:&nbsp;<a href="https://discordbots.org/bot/491600976009101324">https://discordbots.org/bot/491600976009101324</a></p>
-<p>Click the <span style="background-color: #2b2301; color: #fff; display: inline-block; padding: 3px 10px; font-weight: bold; border-radius: 5px;">Invite</span> button and select the server you'd like to invite the bot to.</p>
-<p>&nbsp;</p>
 <h2 style="color: #2e6c80;">Features:</h2>
 <table class="editorDemoTable" style="height: 425px; width: 560px;">
 <thead>
