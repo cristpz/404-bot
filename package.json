@@ -1,6 +1,6 @@
 {
   "name": "404bot",
-  "version": "1.0.0-Unstable",
+  "version": "1.0.0",
   "description": "a basic multi-purpose bot",
   "main": "bot.js",
   "scripts": {
@@ -36,7 +36,7 @@
     "ytdl-core": "^0.25.2"
   },
   "engines": {
-    "node": "6.11.1" 
+    "node": "^6.11.1" 
   },
   "devDependencies": {
     "eslint": "^5.1.0"
