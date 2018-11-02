@@ -69,9 +69,7 @@ bot.guilds.get("500244270373011466").channels.get("504743305427550219").send("co
 	if(cmd === `${prefix}website`) {
 		message.channel.send(`
 I have a website now! :wave:
-https://cristpz-404.herokuapp.com/
-
-(Repository: https://github.com/cristpz/404-site)`);
+https://cristpz-404.herokuapp.com/`);
 
 	}
 	
