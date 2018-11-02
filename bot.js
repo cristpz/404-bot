@@ -66,6 +66,14 @@ bot.on("message", async message => {
 	  if(message.author.id !== botconfig.ownerID) return;
 bot.guilds.get("500244270373011466").channels.get("504743305427550219").send("cool, it worked.");
 	}
+	if(cmd === `${prefix}website`) {
+		message.channel.send(`
+I have a website now! :wave:
+https://cristpz-404.herokuapp.com/
+
+(Repository: https://github.com/cristpz/404-site)`);
+
+	}
 	
 	if(cmd === `${prefix}suggest`){
   let suggestion = args.slice(0).join(" ");
