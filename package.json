@@ -35,6 +35,9 @@
     "yt-search": "^0.2.0",
     "ytdl-core": "^0.25.2"
   },
+  "engines": {
+    "node": "6.4.1"
+  }
   "devDependencies": {
     "eslint": "^5.1.0"
   }
