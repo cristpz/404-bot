@@ -1,8 +1,8 @@
 {
-  "name": "404bot",
+  "name": "404-bot",
   "version": "0.7.2",
   "description": "a basic multi-purpose bot",
-  "main": "bot.js",
+  "main": "index.js",
   "scripts": {
     "start": "now script launched!"
   },
@@ -38,3 +38,4 @@
     "eslint": "^5.1.0"
   }
 }
+
