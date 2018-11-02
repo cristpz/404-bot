@@ -20,6 +20,7 @@
     "mal-scraper": "^2.4.5",
     "moment": "^2.22.2",
     "moment-duration-format": "^2.2.2",
+    "mongodb": "^3.1.8",
     "mongoose": "^5.2.10",
     "ms": "^2.1.1",
     "nekos.life": "^1.1.4",
@@ -38,4 +39,3 @@
     "eslint": "^5.1.0"
   }
 }
-
