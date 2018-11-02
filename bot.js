@@ -133,7 +133,7 @@ if (message.isMentioned(bot.user)) {
             if(message.author.id !== botconfig.ownerID) return;
             console.clear();
                bot.destroy()
-               bot.login(process.env.BOT_TOKEN);
+               bot.login(botconfig.token);
              message.channel.send("Reloaded, have fun lads.");
          return;
         }
@@ -142,7 +142,7 @@ if(cmd === `${prefix}help`){
 
   let bicon = bot.user.displayAvatarURL;
   let botembed = new Discord.RichEmbed()
-  .setDescription(`**Hello ${message.author}, I'm 404, a basic multi-purpose bot made by Akemi#4040**`)
+  .setDescription(`**Hello ${message.author}, I'm 404, a basic multi-purpose bot made by Akemi#4040, but now I'm free on github...**`)
   .setColor("#3a0be7")
   .setThumbnail(bicon)
   .addField("Command Count", "195 currently")
@@ -156,6 +156,7 @@ if(cmd === `${prefix}help`){
   .addField("Invite", "YOUR INVITE LINK HERE")
   .addField("Patreon", "YOUR PATREON LINK")
   .addField("PayPal", "YOUR PAYPAL LINK")
+  .addField("Github", "YOUR GITHUB LINK")
   .setFooter("Check 404subreddits for more commands!");
 
    return message.channel.send(botembed);
