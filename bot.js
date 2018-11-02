@@ -153,9 +153,9 @@ if(cmd === `${prefix}help`){
   .addField("Moderation", " `kick` `ban` `addrole` `removerole` `votekick` `clear` `lockdown` ")
   .addField("Miscellaneous", " `ping` `avatar` `hello` `salute` `die` `nou` `botowner` `botusers` `help` `info` `serverinfo` `userinfo` `special` `suggest` `server` `website` ")
   .addField("Bot Owner ONLY", " `reload` ")
-  .addField("Invite", "https://discordbots.org/bot/491600976009101324")
-  .addField("Patreon", "https://www.patreon.com/404bot")
-  .addField("PayPal", "https://www.paypal.me/dametucosita")
+  .addField("Invite", "YOUR INVITE LINK HERE")
+  .addField("Patreon", "YOUR PATREON LINK")
+  .addField("PayPal", "YOUR PAYPAL LINK")
   .setFooter("Check 404subreddits for more commands!");
 
    return message.channel.send(botembed);
@@ -1238,4 +1238,4 @@ Image Link: https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/HondaS2000
 }
 });
 
-bot.login(process.env.BOT_TOKEN);
+bot.login(botconfig.token);
