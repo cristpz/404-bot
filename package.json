@@ -9,6 +9,7 @@
   "author": "crist",
   "license": "ISC",
   "dependencies": {
+    "node": "10.x",
     "bufferutil": "^4.0.0",
     "cheerio": "^1.0.0-rc.2",
     "discord-eco": "0.0.10",
@@ -34,8 +35,5 @@
     "util": "^0.11.0",
     "yt-search": "^0.2.0",
     "ytdl-core": "^0.25.2"
-  },
-  "devDependencies": {
-    "eslint": "^5.1.0"
   }
 }
