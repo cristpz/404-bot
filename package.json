@@ -9,6 +9,7 @@
   "author": "crist",
   "license": "ISC",
   "dependencies": {
+    "node": "10.9.4",
     "bufferutil": "^4.0.0",
     "cheerio": "^1.0.0-rc.2",
     "discord-eco": "0.0.10",
