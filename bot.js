@@ -4,7 +4,6 @@ const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
 const client = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
-require('http').createServer().listen(3000)
 
 fs.readdir("./commands/", (err, files) => {
 	
@@ -1239,4 +1238,4 @@ Image Link: https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/HondaS2000
 }
 });
 
-bot.login(process.env.TOKEN);
+bot.login(process.env.BOT_TOKEN);
